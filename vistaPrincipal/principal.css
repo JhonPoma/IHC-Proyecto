@@ -149,9 +149,10 @@ footer{
 
 }
 
-/*=====================*/
-/*   REGISTRO   */
-#divRegistro {
+/*====================================================================================*/
+/*   REGISTRO Y LOGIN   */
+/*#divRegistro {*/
+.divLoginRegistro{    
     background-color: #878787;
     border-radius: 20px;
     text-align: center; /* Centra el contenido horizontalmente */
@@ -163,10 +164,13 @@ footer{
     width: 300px;
     height: 438px; /* Centra verticalmente y ocupa el 100% de la altura de la ventana */
   }
-#divRegistro a{
+.divLoginRegistro a{
     color: black;
 }
-
+.divLoginRegistro div{
+    display: flex;
+    flex-direction: column;
+}
 
 
 

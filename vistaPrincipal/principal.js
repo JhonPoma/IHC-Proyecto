@@ -1,4 +1,4 @@
-//CARRUSEL
+// ================  CARRUSEL  =================================
 const slides = document.querySelectorAll('.carruselCard li');
 let currentSlide = 0;
 
@@ -26,16 +26,12 @@ const interval = setInterval(autoSlide, 5000);
 // Manualmente lo hacemos tambien
 document.getElementById('prevBoton').addEventListener('click', prevSlide);
 document.getElementById('nextBoton').addEventListener('click', nextSlide);
-    
-// INICIAR SESION
-document.getElementById('iniciarSesion').addEventListener('click',e=>{
-    //alert("hola");
-    var contenedorLogin = document.getElementById('contenedorLogin');
-  if (contenedorLogin.style.display === 'none') {
-    contenedorLogin.style.display = 'block';
-  } else {
-    contenedorLogin.style.display = 'none';
-  }
+
+
+
+// ============== LOGO ============
+document.getElementById('logo').addEventListener('click',e=>{
+  alert("holaaaaa");
 });
 
 

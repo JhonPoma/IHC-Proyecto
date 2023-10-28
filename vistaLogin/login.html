@@ -3,11 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro</title>
+    <link rel="stylesheet" href="../vistaPrincipal/principal.css">
 </head>
 <body>
-    <h1>LOGIN</h1>
 
-    <button><a href="../vistaPrincipa">VOLVER A LA PRINCIPAL</a></button>
+    
+    <header>
+        <div class="contenedor-header">
+            <div class="panel-izquierdo">
+                <a href="../vistaPrincipal/principal.html">
+                    <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px"> 
+                </a>
+                
+                <nav>
+                    <ul class="lista1">
+                        <li> <a href="#">Inicio</a> </li> 
+                        <li> <a href="#">Curso</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="panel-derecho">
+                <input type="text" placeholder="Buscar" >
+                <button>  <a href="../vistaLogin/login.html">Iniciar Sesion</a>  </button>
+                <button> <a href="../vistaRegistro/registro.html">Registrarse</a></button>
+               
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <div class="divLoginRegistro">
+        <h2> Inicia sesion en UniStudyHub </h2>
+        <form>
+            <input type="text" placeholder="Correo">
+            <input type="password" placeholder="Contraseña">
+        </form>
+        <div >
+            <button type="submit">Iniciar Sesion</button>
+            <button ><a href="#">He olvidado la contraseña</a></button>
+            <div>No tienes cuenta? <a href="../vistaRegistro/registro.html">Registrate</a></div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="contenedor-header">
+            <div class="panel-izquierdo">
+                <nav>
+                    <ul class="lista1">
+                        <li> <a href="#" style="color: white;">Sobre Nosotros</a> </li> 
+                        <li> <a href="#" style="color: white;">Contactenos</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </footer>
+
+    <script src="login.js"></script>
+
 </body>
 </html>
