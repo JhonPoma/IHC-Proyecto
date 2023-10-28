@@ -7,3 +7,36 @@
     margin-left: 150px;
     margin-right: 20px;
 }
+
+
+/*========================= Estilo para el carrusel ===================================*/
+#carrusel {
+    position: relative;
+    z-index: 1; /* Ajusta el valor de z-index del carrusel */
+  }
+
+/*======================== MENU-usuario (oculto al inicio) ============================*/
+.menu-oculto {
+    display: none;
+    position: absolute;
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+    margin-left: 1000px;
+    z-index: 2;/*z-index 2 , lo pondremos encima del carrusel*/
+  }
+  
+  /* Estilo para los elementos del menú */
+  .menu-oculto ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-oculto li {
+    margin-bottom: 10px;
+  }
+
+
+
+
