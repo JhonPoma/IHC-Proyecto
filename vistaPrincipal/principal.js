@@ -22,17 +22,9 @@ function autoSlide(){
 }
 // Agregamos un temporizador para cambiar las imágenes cada 5 segundos
 const interval = setInterval(autoSlide, 5000);
-
 // Manualmente lo hacemos tambien
 document.getElementById('prevBoton').addEventListener('click', prevSlide);
 document.getElementById('nextBoton').addEventListener('click', nextSlide);
-
-
-
-// ============== LOGO ============
-document.getElementById('logo').addEventListener('click',e=>{
-  alert("holaaaaa");
-});
 
 
 

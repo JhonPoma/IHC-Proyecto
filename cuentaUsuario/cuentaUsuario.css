@@ -1,0 +1,9 @@
+.panel-derecho{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+#iconUsuario{
+    margin-left: 150px;
+    margin-right: 20px;
+}
