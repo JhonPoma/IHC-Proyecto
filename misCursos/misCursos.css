@@ -93,120 +93,21 @@ a:hover {
   color: var(--clr-fuente-selec);
 }
 
-/* Principal */
 
-.contenedor {
-  padding: 7vh 5vw;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 5vw;
-}
-
-.contenidos {
-  padding: 1rem;
-  box-shadow: var(--dark-shadow);
-}
-
-.contenido {
-  padding: 1rem;
-}
-
-h1 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+.panel-derecho{
+  position: absolute;
+  left: 783px;
+  width: 323px;
 }
 
 
 
 
 
-/* Contenidos */
 
-.modulos,
-.lecciones,
-.materiales {
-  list-style: none;
-}
 
-.modulo {
-  margin-bottom: 1rem;
-}
 
-.modulo ion-icon {
-  margin-right: 1rem;
-}
 
-.lecciones {
-  margin-top: 0.75rem;
-  margin-left: 2rem;
-}
 
-.leccion {
-  margin-bottom: 0.75rem;
-}
 
-.material {
-  margin-top: 0.75rem;
-  margin-left: 2rem;
-}
 
-.seleccionado {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.btn-mostrar-ocultar-lecciones:hover {
-  cursor: pointer;
-}
-
-.btn-mostrar-ocultar-materiales:hover {
-  cursor: pointer;
-}
-
-.material ion-icon {
-  cursor: pointer;
-}
-
-/* Auxiliares */
-
-.oculto {
-  display: none;
-}
-
-.lista {
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* Test */
-
-.pregunta {
-  font-size: 24px;
-  margin-top: 1rem;
-  margin-bottom: 0.7rem;
-  font-weight: 700;
-}
-
-input[type='radio'] {
-  margin-bottom: 1rem;
-}
-
-.btn-enviar {
-  font-size: 1.5rem;
-  padding: 0.5rem 3rem;
-  background-color: var(--clr-primario);
-  border: none;
-  border-radius: 0.5rem;
-  color: var(--clr-fuente-clar);
-  margin-top: 1rem;
-}
-
-.btn-enviar:hover {
-  background-color: var(--clr-primario-selec);
-  cursor: pointer;
-}

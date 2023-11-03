@@ -4,22 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MisCursos</title>
-    <link rel="stylesheet" href="curso.css">
+    <link rel="stylesheet" href="misCursos.css">
     <link rel="stylesheet" href="../vistaPrincipal/principal.css">
+    <link rel="stylesheet" href="../cuentaUsuario/cuentaUsuario.css">
 </head>
 <body>
     
   <nav class="nav">
-    <a href="#" class="logo">UNI STUDY HUB</a>
-    <a href="#" class="nombre-curso">Inicio</a>
-    <a href="#" class="nombre-curso">Cursos</a>
+    <div>
+      <a href="#" class="logo">UNI STUDY HUB</a>
+      <a href="#" class="nombre-curso" style="margin-left: 20px;">Inicio</a>
+      <a href="#" class="nombre-curso" style="margin-left: 20px;">Cursos</a>
+    </div>
     
     <div class="panel-derecho">
       <input type="text" placeholder="Buscar" >
     </div>
-    <img src="" alt="">
-    <ion-icon id="iconUsuario" name="person-circle-outline" class="icono-usuario"></ion-icon>
+    <a href="#">
+      <ion-icon id="iconUsuario" name="person-circle-outline" class="icono-usuario" style="color: #ffffff;"></ion-icon>
+  </a>
+    
+
   </nav>
+<!--==========================================-->
+<!-- Agrega el menú de opciones con un estilo oculto al principio -->
+<div id="menuOpciones" class="menu-oculto">
+  <ul>
+    <li><a href="#">Perfil</a></li>
+    <li><a href="../misCursos/misCursos.html">Mis Cursos</a></li>
+    <li><a href="#">Configuración</a></li>
+    <li><a href="#">Cerrar Sesión</a></li>
+  </ul>
+</div>
+
+
+<!--==========================================-->
+
 
   <div class="contenedor">
 
