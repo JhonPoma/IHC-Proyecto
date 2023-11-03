@@ -1,0 +1,93 @@
+<style>
+ 
+    .boxCrearCurso {
+        background-color: #FAFAFA;
+        position: absolute;
+        left: 39px;
+        top: 4%;
+        width: 80%;
+        height: 18%;
+    }
+
+    .boxObjetivos {
+        background-color: #FAFAFA;
+        position: absolute;
+        left: 39px;
+        top: 30%;
+        width: 80%;
+        height: 18%;
+    }
+
+    p {
+        font-family: 'Arial Narrow', sans-serif;
+        margin-top: 0.7%;
+        margin-left: 0.7%;
+        position: top-left;
+    }
+
+    .form_row {
+        display: inline-block;
+        justify-content: space-between;
+        margin-left: 7%;
+
+    }
+
+    .form-row label,
+    .form-row input {
+        margin-bottom: 6%;
+        width: 45%;
+    }
+    textarea {
+        width: 150%;
+        height: 70%;
+    }
+    button{
+        position: absolute;
+        top: 55%;
+        left: 39%;
+    }
+
+</style>
+</style>
+
+<div class="boxCrearCurso">
+    <p>Crear curso</p>
+    <form>
+        <div class="form_row">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            <br>
+            <label for="idioma">Idioma:</label><br>
+            <input type="text" id="idioma" name="idioma"><br>
+        </div>
+        <div class="form_row">
+            <label for="descripcion">Descripcion:</label><br>
+            <input type="text" id="descripcion" name="descripcion"><br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="form_row">
+            <label for="categoria">Categoria:</label><br>
+            <input type="text" id="categoria" name="categoria"><br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </form>
+
+</div>
+
+<div class="boxObjetivos">
+    <p>OBJETIVOS</p>
+    <form>
+        <div class="form_row">
+            <textarea id="objetivos" name="objetivos"></textarea><br>
+            <br>
+        </div>
+      
+    </form>
+
+</div>
+
+<button type="button" onclick="submitForms()">Crear Curso</button>

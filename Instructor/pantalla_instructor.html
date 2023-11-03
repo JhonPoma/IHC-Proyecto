@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .header {
+      height: 89px, absolute;
+      background-color: #2F83EC;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      /* Add some padding to move the links a bit away from the edge */
+      /* overflow: hidden; */
+    }
+
+    .header a {
+      font-family: 'Roboto', sans-serif;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    .profile-pic {
+      position: absolute;
+      left: 1345px;
+      /* x position */
+      top: 19px, absolute;
+      /* y position */
+      width: 61px;
+      /* width */
+      height: 59px;
+      /* height */
+      border-radius: 50%;
+      background-image: url('default_profile.png');
+      background-size: cover;
+    }
+
+    .search-box {
+      position: absolute;
+      left: 783px;
+      width: 323px;
+      /* width of the search box */
+      height: 30px;
+      /* height of the search box */
+    }
+
+    .box {
+      background-color: white;
+      position: absolute;
+      left: 39px;
+      top: 110px;
+      width: 230px;
+      height: 580px;
+      /* adjust as needed */
+      padding: 20px;
+      box-shadow: 0px 0px 10px black;
+    }
+
+
+    .box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .box li {
+      padding: 10px 0;
+    }
+
+    .container {
+      display: flex;
+      /* this will arrange the child elements in a row */
+    }
+
+    .content {
+      position: absolute;
+      margin-left: 20px;
+      top: 110px;
+      left: 390px;
+      width: 900px;
+      height: 1000px;
+      /* add some space between the box and the content */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <div>
+      <a href="uni_study_hub.html">UNI STUDY HUB</a>
+      <a href="inicio.html">Inicio</a>
+      <a href="cursos.html">Cursos</a>
+    </div>
+
+    <input type="text" class="search-box" placeholder="Search...">
+
+    <div class="profile-pic" id="profilePic"></div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <ul>
+        <li id="cursos">Cursos agregados</li>
+        <li id="info">Informacion personal</li>
+        <li id="crear">Crear curso</li>
+      </ul>
+    </div>
+    <div class="content">
+      <!-- Content will be inserted here -->
+    </div>
+  </div>
+
+
+
+  <script>
+    // Check if the user has a profile picture
+    var userHasProfilePic = false; // Replace this with the actual check
+
+    if (userHasProfilePic) {
+      document.getElementById('profilePic').style.backgroundImage = "url('user-profile.png')";
+    }
+
+    // document.getElementById('cursos').addEventListener('click', function () {
+    //   fetch('cursosInstructor.html')
+    //     .then(response => response.text())
+    //     .then(data => {
+    //       document.querySelector('.content').innerHTML = data;
+    //     });
+    // });
+
+    document.getElementById('cursos').addEventListener('click', function () {
+      // Select the .content div.
+      const contentDiv = document.querySelector('.content');
+
+      // Create a new iframe element.
+      const iframe = document.createElement('iframe');
+
+      // Set the src attribute of the iframe to 'cursosInstructor.html'.
+      iframe.src = 'cursosInstructor.html';
+
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+
+      iframe.style.border = 'none';
+
+
+      // Append the iframe to the .content div.
+      contentDiv.innerHTML = ''; // Clear the .content div
+      contentDiv.appendChild(iframe);
+    });
+
+    document.getElementById('info').addEventListener('click', function () {
+      // Select the .content div.
+      const contentDiv = document.querySelector('.content');
+
+      // Create a new iframe element.
+      const iframe = document.createElement('iframe');
+
+      // Set the src attribute of the iframe to 'cursosInstructor.html'.
+      iframe.src = 'informacion_Personal.html';
+
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+
+      iframe.style.border = 'none';
+
+
+      // Append the iframe to the .content div.
+      contentDiv.innerHTML = ''; // Clear the .content div
+      contentDiv.appendChild(iframe);
+    });
+  
+    document.getElementById('crear').addEventListener('click', function () {
+      // Select the .content div.
+      const contentDiv = document.querySelector('.content');
+
+      // Create a new iframe element.
+      const iframe = document.createElement('iframe');
+
+      // Set the src attribute of the iframe to 'cursosInstructor.html'.
+      iframe.src = 'crearCurso.html';
+
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+
+      iframe.style.border = 'none';
+
+
+      // Append the iframe to the .content div.
+      contentDiv.innerHTML = ''; // Clear the .content div
+      contentDiv.appendChild(iframe);
+    });
+
+   
+
+    // document.getElementById('crear').addEventListener('click', function () {
+    //   document.querySelector('.content').innerHTML = 'Content for Crear curso';
+    // });
+
+
+
+  </script>
+
+</body>
+
+</html>
