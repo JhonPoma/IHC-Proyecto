@@ -335,7 +335,8 @@ input[type='radio'] {
 }
 
 .tabla-progesos {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   border-collapse: collapse;
 }
 
@@ -350,4 +351,22 @@ td:nth-child(2) {
 
 td:last-child {
   text-align: right;
+}
+
+/* Notas */
+.contedor-notas {
+  padding: 0 2.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.tabla-progesos th {
+  font-size: 2rem;
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+.contedor-notas .tabla-progesos {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
