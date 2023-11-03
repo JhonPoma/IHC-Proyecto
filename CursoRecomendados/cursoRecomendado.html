@@ -4,8 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CursoRecomenaddo</title>
+    <link rel="stylesheet" href="../vistaPrincipal/principal.css">
+    <link rel="stylesheet" href="cursoRecomendado.css">
 </head>
 <body>
-    <h1> CUROSSSSSSSSSSSSSSSSS Recomendados</h1>
+
+    <header>
+        <div class="contenedor-header">
+            <div class="panel-izquierdo">
+                <a href="../vistaPrincipal/principal.html">
+                    <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px"> 
+                </a>
+                
+                <nav>
+                    <ul class="lista1">
+                        <li> <a href="#">Inicio</a> </li> 
+                        <li> <a href="#">Curso</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="panel-derecho">
+                <input type="text" placeholder="Buscar" >
+                <button>  <a href="../vistaLogin/login.html">Iniciar Sesion</a>  </button>
+                <button> <a href="../vistaRegistro/registro.html">Registrarse</a>  </button>
+               
+            </div>
+        </div>
+    </header>
+
+    <div id="cursoRecomendado">
+        <div id="curso">
+            <h2>PROGRAMACION ORIENTADA A OBJETOS</h2>
+            <div class="contenidoCurso">
+                Aprende Programacion Orientada a objeto (POO) con JAVA desde lo basico hasta lo <br>
+                avanzado de forma sencilla y con ayudas
+            </div>
+            <div class="ranking">
+                <span> 7.5 
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </span>
+                3574 estudiantes 
+            </div>
+            <div class="contenidoCurso">
+                Creado por Carlos Bazan
+            </div>
+        </div>
+    </div>
+
+
+    <div id="infoCurso" > 
+        <div id="logoCurso">
+            <img src="./img/poo.png" alt="poo" width="280px" height="140px">
+        </div>
+
+        <div>
+            <h1> S/60.00  <h3> S/199.99</h3></h1>
+            70 % de descuento
+            <div>
+                <ion-icon name="alarm-outline"></ion-icon>
+                !Esta oferta termina en 6 horas!
+            </div>
+
+            <div id="opcionesCurso">
+                <button> <a href="../misCursos/misCursos.html" style="color: black;"> Comprar Ahora </a>   </button>
+            </div>
+            
+            <div>
+                <h3>Este curso incluye:</h3>
+                <div class="cursoIncluye">
+                    <ion-icon name="videocam-outline"></ion-icon>
+                    40 horas de video
+                    <br>
+                    <ion-icon name="create-outline"></ion-icon>
+                    Tareas
+                    <br>
+                    <ion-icon name="trophy-outline"></ion-icon>
+                    Certificado de finalizacion
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="infoCurso2">
+        <div class="columnas">
+            
+            <div>
+                <h2> Lo que aprenderas</h2>
+                <ion-icon name="checkmark-outline"></ion-icon> Como crear objetos (Abstraccion) <br>
+                <ion-icon name="checkmark-outline"></ion-icon> Encapsulamiento (public,private, protected) <br>
+                <ion-icon name="checkmark-outline"></ion-icon> Herencia Simple y Herencia Mulriple <br>
+            </div>
+            <div id="info">
+                <ion-icon name="checkmark-outline"></ion-icon> Diferentes tipos de constructores y como manejar la memoria con los destructores <br>
+                <ion-icon name="checkmark-outline"></ion-icon> Implementacion de seguridad en el codigo<br>
+                <ion-icon name="checkmark-outline"></ion-icon> Sobrecarga<br>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenidoCurso2">
+        <h2>Contenido del curso</h2>
+        <div class="menuContenido">
+            <h3>Introduccion          2 clases-10min</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 1...</p>
+            </div>
+        </div>
+
+        <div class="menuContenido">
+            <h3>Objeto</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 2...</p>
+            </div>
+        </div>
+
+        <div class="menuContenido">
+            <h3>Herencia</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 3...</p>
+            </div>
+        </div>
+
+        <div class="menuContenido">
+            <h3>Polimorfismo y Herencia Multiple</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 4...</p>
+            </div>
+        </div>
+
+        <div class="menuContenido">
+            <h3>Polimorfismo y Herencia Multiple</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 4...</p>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+
+
+
+    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
+    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
 </body>
+
+   
 </html>

@@ -1,0 +1,77 @@
+
+#cursoRecomendado{
+    background-color: #2d2f31;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 1; 
+}
+
+#cursoRecomendado span{
+    color: gold;
+}
+
+#curso{
+    margin-left: 100px;
+
+}
+
+
+#infoCurso{
+    border: 4px solid #ccc;
+    width: 280px;
+    height: 30em;
+    position: absolute;
+    z-index: 2;     /*z-index 2 , lo pondremos encima del curso*/
+    top: 130px;
+    margin-left: 700px;
+}
+
+
+#infoCurso2{
+    border: 4px solid #ccc;
+    width: 600px;
+    height: 250px;
+    margin-left: 70px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.columnas{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.columnas > div {
+    flex: 1; 
+    padding: 5px; 
+}
+#info{
+    margin-top: 65px;
+}
+
+
+#contenidoCurso{
+    margin-left: 70px;
+}
+
+/*=======CONTENIDO DEL CURSO ====*/
+#contenidoCurso2 {
+    margin: 20px;
+    width: 600px;
+    height: 450px;
+    margin-left: 70px;
+    margin-top: 20px;
+    border: 4px solid #ccc;
+}
+
+
+
+
+
+
+
+
