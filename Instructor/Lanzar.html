@@ -1,0 +1,44 @@
+<style>
+    .rectangle {
+        position: relative;
+        top: 35px;
+        width: 228px;
+        /* Set to the width of the rectangle */
+        height: 128px;
+        margin-right: 20px;
+        /* Set to the height of the rectangle */
+        background-image: url('CursoImage.jpg');
+        /* Replace 'imageURL' with the URL of the image */
+        background-size: cover;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .text {
+        position: relative;
+        top: 37px;
+    }
+
+    .subirContenido {
+        position: relative;
+        top: 75px;
+    }
+    .gestionarContenido {
+        position: relative;
+        top: 92px;
+        margin-left: 20px;
+        width: 117px;
+        height: 20px;
+    }
+</style>
+
+<div class="row">
+    <div class="rectangle"></div>
+    <div class="text-and-button">
+      <div class="text">Fundamentos de Programacion en C</div>
+      <button class="subirContenido">Subir</button>
+    </div>
+    <button class="gestionarContenido" onclick="window.top.location.href='GestionarCurso.html'">Gestionar</button>
+</div>
