@@ -1,0 +1,77 @@
+<style>
+    a {
+        margin-left: 20px;
+    }
+    /* .tpt {
+        height: 4000px;
+        
+    } 
+    .container2 {
+        height: 1000px;
+    } */
+</style> 
+
+<body>
+    <div class="container2">
+        <div>
+            <a id="lanzar">Por lanzar</a>
+            <a id="lanzados">Lanzados</a>
+            <hr>
+        </div>
+        <div class="tpt">
+            <!-- Content will be inserted here -->
+
+        </div>
+    </div>
+    <script>
+        // document.getElementById("lanzar").addEventListener("click", function () {
+        //     document.querySelector(".tpt").innerHTML = "Lobito Por lanzar";
+        // });
+        // document.getElementById("lanzados").addEventListener("click", function () {
+        //     document.querySelector(".tpt").innerHTML = "Lobito Lanzados";
+        // });
+        document.getElementById('lanzados').addEventListener('click', function () {
+            // Select the .content div.
+            const contentDiv = document.querySelector('.tpt');
+
+            // Create a new iframe element.
+            const iframe = document.createElement('iframe');
+
+            // Set the src attribute of the iframe to 'cursosInstructor.html'.
+            iframe.src = 'lanzados.html';
+
+            iframe.style.width = '100%';
+            iframe.style.height = '80%';
+           
+
+            iframe.style.border = 'none';
+
+
+            // Append the iframe to the .content div.
+            contentDiv.innerHTML = ''; // Clear the .content div
+            contentDiv.appendChild(iframe);
+        });
+
+        document.getElementById('lanzar').addEventListener('click', function () {
+            // Select the .content div.
+            const contentDiv = document.querySelector('.tpt');
+
+            // Create a new iframe element.
+            const iframe = document.createElement('iframe');
+
+            // Set the src attribute of the iframe to 'cursosInstructor.html'.
+            iframe.src = 'Lanzar.html';
+
+            iframe.style.width = '100%';
+            iframe.style.height = '80%';
+           
+
+            iframe.style.border = 'none';
+
+
+            // Append the iframe to the .content div.
+            contentDiv.innerHTML = ''; // Clear the .content div
+            contentDiv.appendChild(iframe);
+        });
+    </script>
+</body>
