@@ -6,6 +6,8 @@ const lecciones = document.querySelectorAll('.leccion');
 const materiales = document.querySelectorAll('.material');
 const tituloLeccion = document.querySelector('.titulo-leccion');
 const contLecciones = document.querySelectorAll('.contenido-leccion');
+const btnMenu = document.querySelector('.icono-usuario');
+const menuUsuario = document.querySelector('.menu-usuario');
 
 btnLLMMostrar.addEventListener('click', () => {
   contenedorLLM.classList.toggle('oculto');
@@ -57,4 +59,8 @@ materiales.forEach((material) => {
       });
     }
   });
+});
+
+btnMenu.addEventListener('click', () => {
+  menuUsuario.classList.toggle('oculto');
 });
