@@ -4,6 +4,7 @@ const navCurso = document.getElementById("nav-curso");
 const navTerminado = document.getElementById("nav-terminado");
 const navRetirarse = document.getElementById("nav-retirarse");
 
+
 function cargarContenido(url) {
   fetch(url)
     .then(function (response) {
@@ -44,3 +45,5 @@ navRetirarse.addEventListener("click", function (event) {
   navCurso.classList.remove("enlace-clicked");
   navTerminado.classList.remove("enlace-clicked");
 });
+
+

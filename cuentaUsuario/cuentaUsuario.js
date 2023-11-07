@@ -21,6 +21,3 @@ document.addEventListener('click', (event) => {
 });
 
 
-
-
-

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../vistaPrincipal/principal.css"> 
     <link rel="stylesheet" href="cuentaUsuario.css">
+
+
     <title>VistaPrincipal</title>
 </head>
 <body>
@@ -32,14 +34,16 @@
 <!--==========================================-->
 <!-- Agrega el menú de opciones con un estilo oculto al principio -->
 <div id="menuOpciones" class="menu-oculto">
-    <ul>
-      <li><a href="#">Perfil</a></li>
-      <li><a href="../misCursos/misCursos.html">Mis Cursos</a></li>
-      <li><a href="#">Configuración</a></li>
-      <li><a href="#">Cerrar Sesión</a></li>
-    </ul>
+    <div class="opc-usr2">
+      <a href="../misCursos/misCursos.html">Mis cursos</a>
+    </div>
+    <div class="opc-usr2">
+      <a href="#">Configuración</a>
+    </div>
+    <button class="btn-salir2">
+      CERRAR SESION
+    </button>
   </div>
-  
 
 <!--==========================================-->
     <div id="carrusel">
@@ -172,6 +176,7 @@
 
     <script src="../cuentaUsuario/cuentaUsuario.js"></script>
     <script src="../vistaPrincipal/principal.js"></script>
+
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
