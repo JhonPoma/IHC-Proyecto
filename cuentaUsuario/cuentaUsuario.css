@@ -81,6 +81,9 @@ body {
     border: var(--clr-gris-claro) 3px solid;
     border-radius: 0.5rem;
     color: var(--clr-rojo);
+    width: 380px;
+    position: relative;
+    left: 10px;
     font-weight: 700;
     padding: 0.5rem;
     font-size: 1.1rem;

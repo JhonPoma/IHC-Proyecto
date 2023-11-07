@@ -242,8 +242,11 @@ footer{
 
 
 /*=========*/
-
-
+/*Pagina principal Instructor*/
+#selloInstructor{
+    position: relative;
+    left: 148px;
+}
 
 
 

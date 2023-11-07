@@ -20,4 +20,7 @@ document.addEventListener('click', (event) => {
   }
 });
 
-
+const cerrarSesion = document.querySelector(".btn-salir2");
+cerrarSesion.addEventListener("click", e=>{
+  window.location.href = "../vistaPrincipal/principal.html";
+});
