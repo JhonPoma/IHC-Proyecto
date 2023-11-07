@@ -21,7 +21,7 @@
 
 body {
   font-family: var(--fuente);
-   font-size: 1.2rem; 
+   font-size: 1rem; 
 
 }
 
@@ -91,8 +91,8 @@ button a{
 #carrusel{
     position: relative;
     width: 1200px;
-    height: 200px;
-    background-color: lightblue;
+    height: 300px;
+    background-color: var(--clr-fuente-clar);
     max-width: 1500px; /* Limita el ancho del contenido */
     margin: 0 auto; /* Centra el contenido horizontalmente */
     display: flex;
@@ -100,7 +100,10 @@ button a{
     align-items: center;
 }
 #carrusel button{
-    color: red;
+    color: var(--clr-primario);
+    background-color: var(--clr-fuente-clar);
+    font-size: 40px;
+    border: none;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -108,7 +111,7 @@ button a{
 }
 .carruselImagenes {
     width: 100%;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -121,46 +124,41 @@ button a{
     margin: 0;
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
-  
+  } 
   .carruselCard li {
     flex: 0 0 100%;
   }
-  
   /* Oculta todas las imágenes excepto la primera */
   .carruselCard li:not(:first-child) {
     display: none;
   }
   
 
-
+/*========================================================*/
 /*  CURSOS  */
-#cursos{
+.cursos{
     position: relative;
-    background-color:aquamarine;
+    background-color:var(--clr-fondo);
     display: flex;
     justify-content: space-around;
 }
 .cardCursos{
-    background-color: blanchedalmond;
+    background-color: var(--clr-fuente-clar);
+    border: var(--clr-gris-claro) solid 0.5px;
     width: 250px;
     height: 200px;
 }
 
-#cursosProgramacion{
-    background-color:aquamarine;
-    display: flex;
-    justify-content: space-around;
-}
-#cursosTecnologia{
-    background-color:aquamarine;
-    display: flex;
-    justify-content: space-around;
+.cursos span{
+    font-size: 15px;
+    color: var(--clr-primario-selec);
+    
 }
 
 
 
 
+/*====================================================*/
 /*  FOOTER */
 footer{
     margin-top: 10px;
@@ -188,6 +186,9 @@ footer{
 #loginInstructor{
     position: relative; 
     bottom: 45px;
+}
+#loginInstructor a{
+    color: var(--clr-rojo);
 }
 
 /*====================================================================================*/
