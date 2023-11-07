@@ -80,9 +80,16 @@ a {
   font-size: 1.3rem;
 }
 
+.icono-usuario2 {
+  cursor: pointer;
+  font-size: 56px;
+  color: var(--clr-fuente-clar);
+}
 .icono-usuario {
   cursor: pointer;
   font-size: 56px;
+  position: relative;
+  left: 42px;
   color: var(--clr-fuente-clar);
 }
 

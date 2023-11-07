@@ -19,7 +19,11 @@
 
 }
 
+body {
+  font-family: var(--fuente);
+  /* font-size: 1.2rem; */
 
+}
 
 
 .panel-derecho{
@@ -30,6 +34,7 @@
 #iconUsuario{
     margin-left: 150px;
     margin-right: 20px;
+    font-size: 56px; /*tam del icono logo usuario*/
 }
 
 
@@ -40,6 +45,9 @@
   }
 
 /*======================== MENU-usuario (oculto al inicio) ============================*/
+#menuOpciones{
+  display: none;
+}
 .menu-oculto {
     position: absolute;
     top: 100px;
@@ -54,12 +62,12 @@
     z-index: 2;/*z-index 2 , lo pondremos encima del carrusel*/
   }
 
-
   .opc-usr2 {
     background-color: var(--clr-fondo);
     border: var(--clr-primario) 1px solid;
     border-radius: 0.5rem;
     padding: 0.3rem 1rem;
+    margin: 10px;
   }
   
   .opc-usr2:hover {
@@ -86,9 +94,9 @@
   }
   
   .opc-usr2 a {
+    text-decoration: none;
     color: var(--clr-primario);
   }
-
 
 
 
