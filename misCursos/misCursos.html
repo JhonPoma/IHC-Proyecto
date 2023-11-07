@@ -24,7 +24,6 @@
       <ion-icon id="iconUsuario" name="person-circle-outline" class="icono-usuario" style="color: #ffffff;"></ion-icon>
   </a>
     
-
   </nav>
 <!--==========================================-->
 <!-- Agrega el menú de opciones con un estilo oculto al principio -->
@@ -36,17 +35,35 @@
     <li><a href="#">Cerrar Sesión</a></li>
   </ul>
 </div>
-
-
 <!--==========================================-->
 
 
-  <div class="contenedor">
 
+  <div id="contenedor-opciones">
+    <div class="contenedor-opc">
+      <ion-icon id="icono" name="person-circle-outline" class="icono-usuario" style="color: #ffffff;"></ion-icon>
+      <label class="navDerecha enlace-clicked">Mis Cursos</label>
+      <label class="navDerecha">Informacion personal</label>
+    </div>
   </div>
 
 
+<div id="navegar-curso">
+  <nav id="nav-menu">
+    <a id="nav-curso" href="./navCurso.html" class="enlace-clicked">En curso</a>
+    <a id="nav-terminado" href="./navTerminado.html" style="color: black;"  >Terminado</a>
+    <a id="nav-retirarse" href="#">Retirarse de un curso</a>
+  </nav>
+</div>
+
+
+<div id="contenedor-curso">
+
+</div>
+
   <script src="../cuentaUsuario/cuentaUsuario.js"></script>
+  <script src="./miscursos.js"></script>
+
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

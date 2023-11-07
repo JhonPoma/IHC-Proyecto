@@ -43,6 +43,7 @@ h4 {
 /* Barra de Navegación  */
 a {
   text-decoration: none;
+  margin-right: 20px;
 }
 
 .nav {
@@ -102,10 +103,95 @@ a:hover {
 
 
 
+/*==== menu opciones (mis cursos, infoPersonal*/
+
+#contenedor-opciones{
+  width: 250px;
+  height: 400px;
+  position: absolute;
+  left: 40px;
+  top: 110px;
+  box-shadow: var(--dark-shadow);
+}
+#icono{
+  box-shadow: var(--dark-shadow);
+  margin-bottom: 30px;
+
+}
+.contenedor-opc{
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+label{
+  width: 100%;
+  margin: 5px 0;
+}
+
+label:hover{
+  background-color: #A9E5FF;
+  border-radius: 5px;
+}
 
 
 
+/* === NAV - curso, terminado, retirarse  === */
+#navegar-curso{
+  position: absolute;
+  left: 400px;
+  top: 120px;
+  padding-left: 20px;
+  padding-right: 120px;
+  margin-right: 20px;
+  border-bottom: 2px solid#ccc;
+}
 
+/*=== Contenedor curso ===*/
+#contenedor-curso{
+  /* border: red solid; */
+  position: absolute;
+  width: 800px;
+  height: 350px;
+  left: 400px;
+  top: 160px;
+}
+
+/* cuando hago click en las navegaciones*/
+.enlace-clicked {
+  color: blue;
+}
+
+
+
+/*Menu "mis cursos - cursos*/
+#misCurso1{
+  /* border: blue solid;  */
+  width: 600px;
+  height: 135px;
+  position: absolute;
+  display: flex;
+}
+.imgCurso1 img{
+  width: 250px;
+  height: 114px;
+}
+.infoCurso2{
+  padding-left: 5px;
+}
+
+#misCurso1 button{
+  border-radius: 5px;
+  background-color: #BAFBFF;
+  border: var(--clr-primario) solid 1px;
+  color: var(--clr-primario);
+  width: 80px;
+  position: absolute;
+  left: 480px;
+}
 
 
 
