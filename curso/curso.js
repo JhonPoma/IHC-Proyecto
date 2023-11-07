@@ -8,6 +8,9 @@ const tituloLeccion = document.querySelector('.titulo-leccion');
 const contLecciones = document.querySelectorAll('.contenido-leccion');
 const btnMenu = document.querySelector('.icono-usuario');
 const menuUsuario = document.querySelector('.menu-usuario');
+const btnsIniciarPrueba = document.querySelectorAll('.btn-iniciar-prueba');
+const formulariosPrueba = document.querySelectorAll('.formulario-prueba');
+const btnsMarcarCompleto = document.querySelectorAll('.lectura-completada');
 
 btnLLMMostrar.addEventListener('click', () => {
   contenedorLLM.classList.toggle('oculto');
@@ -70,4 +73,21 @@ document.addEventListener('click', (evt) => {
   if (targetEl != menuUsuario && targetEl != btnMenu) {
     menuUsuario.classList.add('oculto');
   }
+});
+
+btnsIniciarPrueba.forEach((btnIniciarPrueba) => {
+  btnIniciarPrueba.addEventListener('click', (evt) => {
+    console.log(evt.target.parentElement);
+    evt.target.parentElement
+      .querySelector('.formulario-prueba')
+      .classList.remove('oculto');
+    evt.target.classList.add('oculto');
+  });
+});
+
+btnsMarcarCompleto.forEach((btnMarcarCompleto) => {
+  btnMarcarCompleto.addEventListener('click', () => {
+    btnMarcarCompleto.style.backgroundColor = '#099268';
+    btnMarcarCompleto.textContent = 'Completado';
+  });
 });
