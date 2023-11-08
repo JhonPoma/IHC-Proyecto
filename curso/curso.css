@@ -14,6 +14,7 @@
   --clr-rojo: #e03131;
   --color-naranja: #f59f00;
   --clr-verde: #099268;
+  --clr-verde-osc: #087f5b;
   --clr-gris-claro: #dee2e6;
 }
 
@@ -103,7 +104,6 @@ a:hover {
   position: absolute;
   top: 100px;
   right: 20px;
-  /* height: 500px; */
   width: 400px;
   background-color: var(--clr-fondo);
   padding: 2rem;
@@ -122,10 +122,15 @@ a:hover {
 
 .opc-usr:hover {
   background-color: var(--clr-primario);
+  cursor: pointer;
 }
 
 .opc-usr:hover a {
   color: var(--clr-fuente-clar);
+}
+
+.opc-usr a {
+  display: block;
 }
 
 .btn-salir {
@@ -322,7 +327,9 @@ input[type='radio'] {
   margin-bottom: 1rem;
 }
 
-.btn-enviar {
+.btn-enviar,
+.btn-iniciar-prueba,
+.lectura-completada {
   font-size: 1.5rem;
   padding: 0.5rem 3rem;
   background-color: var(--clr-primario);
@@ -332,9 +339,15 @@ input[type='radio'] {
   margin-top: 1rem;
 }
 
-.btn-enviar:hover {
+.btn-enviar:hover,
+.btn-iniciar-prueba:hover,
+.lectura-completada:hover {
   background-color: var(--clr-primario-selec);
   cursor: pointer;
+}
+
+.lectura-completada {
+  font-size: 1.2rem;
 }
 
 /* Progreso */
@@ -401,6 +414,29 @@ td:nth-child(2) {
 
 td:last-child {
   text-align: right;
+}
+
+.btn-avance {
+  font-size: 2rem;
+  background-color: var(--clr-verde);
+  border-radius: 1rem;
+  color: var(--clr-fuente-clar);
+}
+
+.btn-avance:hover {
+  background-color: var(--clr-verde-osc);
+  cursor: pointer;
+}
+
+.explicacion-avance {
+  padding: 1rem;
+  background-color: var(--clr-verde);
+  color: var(--clr-fuente-clar);
+  border-radius: 1rem;
+}
+
+.explicacion-avance p {
+  margin-bottom: 0;
 }
 
 /* Notas */
