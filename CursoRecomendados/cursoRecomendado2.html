@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CursoRecomenaddo</title>
+    <title>CursoRecomendado2-Login</title>
     <link rel="stylesheet" href="../vistaPrincipal/principal.css">
     <link rel="stylesheet" href="cursoRecomendado.css">
+ 
 </head>
 <body>
 
     <header>
         <div class="contenedor-header">
             <div class="panel-izquierdo">
-                <a href="../vistaPrincipal/principal.html">
-                    <!-- <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px">  -->
-                    <a href="../cuentaUsuario/cuentaUsuario.html" class="logo">UNI STUDY HUB</a>  
-                </a>
-                
+                <!-- <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px">  -->
+                <a href="../cuentaUsuario/cuentaUsuario.html" class="logo">UNI STUDY HUB</a>  
                 <nav>
                     <ul class="lista1">
                         <li> <a href="#">Inicio</a> </li> 
@@ -26,13 +24,29 @@
             </div>
     
             <div class="panel-derecho">
-                <input type="text" placeholder="Buscar" >
-                <button>  <a href="../vistaLogin/login.html">Iniciar Sesion</a>  </button>
-                <button> <a href="../vistaRegistro/registro.html">Registrarse</a>  </button>
-               
+                <input type="text" placeholder="Buscar" style="position: relative;
+                bottom: 15px;
+                right: 190px;">
+                <a href="#">
+                    <ion-icon id="iconUsuario" name="person-circle-outline" class="icono-usuario" style="color: white; 
+                    font-size: 55px;
+                    position: relative; 
+                    top: 5px;
+                    right: 50px;"></ion-icon>
+                </a>
             </div>
         </div>
     </header>
+
+<!--==========================================-->
+<!-- Agrega el menú de opciones con un estilo oculto al principio -->
+<div id="menuOpciones" class="menu-oculto" style="width: 320px;">
+    <div class="opc-usr2">   <a href="../misCursos/misCursos.html">Mis cursos</a>  </div>
+    <div class="opc-usr2">   <a href="../cuentaUsuario/perfil.html">Perfil</a>      </div>
+    <button class="btn-salir2" style="width: 300px;">      CERRAR SESION  </button>
+  </div>
+<!--==========================================-->
+
 
     <div id="cursoRecomendado">
         <div id="curso">
@@ -68,7 +82,7 @@
             </div>
 
             <div id="opcionesCurso">
-                <button> <a href="../vistaLogin/login.html" style="color: black;"> Comprar Ahora </a>   </button>
+                <button> <a class="comprarAhora" href="../misCursos/misCursos.html" "> Comprar Ahora </a>   </button>
             </div>
             
             <div>
@@ -157,6 +171,11 @@
                 </nav>
             </div>
     </footer>
+
+
+    <script src="../CursoRecomendados/cursoRecomendado.js"></script>
+    <script src="../cuentaUsuario/cuentaUsuario.js"></script>
+    <script src="../vistaPrincipal/principal.js"></script>
 
 
 

@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../vistaPrincipal/principal.css"> 
     <link rel="stylesheet" href="cuentaUsuario.css">
+
+
     <title>VistaPrincipal</title>
 </head>
 <body>
     <header>
         <div class="contenedor-header">
             <div class="panel-izquierdo">
-                <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px"> 
+                <!-- <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px">  -->
+                <a href="../cuentaUsuario/cuentaUsuario.html" class="logo">UNI STUDY HUB</a>  
                 <nav>
                     <ul class="lista1">
                         <li> <a href="#">Inicio</a> </li> 
@@ -23,7 +26,7 @@
             <div class="panel-derecho">
                 <input type="text" placeholder="Buscar" >
                 <a href="#">
-                    <ion-icon id="iconUsuario" name="person-circle-outline" class="icono-usuario"></ion-icon>
+                    <ion-icon id="iconUsuario" name="person-circle-outline" class="icono-usuario" style="color: white;"></ion-icon>
                 </a>
             </div>
         </div>
@@ -31,38 +34,32 @@
 
 <!--==========================================-->
 <!-- Agrega el menú de opciones con un estilo oculto al principio -->
-<div id="menuOpciones" class="menu-oculto">
-    <ul>
-      <li><a href="#">Perfil</a></li>
-      <li><a href="../misCursos/misCursos.html">Mis Cursos</a></li>
-      <li><a href="#">Configuración</a></li>
-      <li><a href="#">Cerrar Sesión</a></li>
-    </ul>
+<div id="menuOpciones" class="menu-oculto" style="width: 320px;">
+    <div class="opc-usr2">   <a href="../misCursos/misCursos.html">Mis cursos</a>  </div>
+    <div class="opc-usr2">   <a href="../cuentaUsuario/perfil.html">Perfil</a>      </div>
+    <button class="btn-salir2" style="width: 300px;">      CERRAR SESION  </button>
   </div>
-  
-
 <!--==========================================-->
     <div id="carrusel">
-        <button id="prevBoton">Anterior</button>
+        <button id="prevBoton">    <ion-icon name="caret-back-outline"></ion-icon>      </button>
         <div class="carruselImagenes">
             <ul class="carruselCard">
-            <li><img src="../vistaPrincipal/logo/card1.png" alt="Imagen 1" width="500px"></li>
-            <li><img src="../vistaPrincipal/logo/card2.png" alt="Imagen 2" width="500px"></li>
-            <li><img src="../vistaPrincipal/logo/card3.png" alt="Imagen 3" width="500px"></li>
+            <li><img src="../vistaPrincipal/logo/card2.png" alt="Imagen 1" width="700px"></li>
+            <li><img src="../vistaPrincipal/logo/card3.png" alt="Imagen 2" width="700px"></li>
+            <li><img src="../vistaPrincipal/logo/card2.png" alt="Imagen 3" width="700px"></li>
             </ul>
         </div>
-        <button id="nextBoton">Siguiente</button>
+        <button id="nextBoton"><ion-icon name="caret-forward-outline"></ion-icon></button>
     </div>
 
-
-
+<!--===========================================CURSO RECOMENDADOS - CON LOGIN===============================-->
     <h3>Cursos Recomendados</h3>
-    <div id="cursos">
+    <div class="cursos">
         <div class="cardCursos">
-            <a href="../CursoRecomendados/cursoRecomendado.html">
+            <a href="../CursoRecomendados/cursoRecomendado2.html">
                 <div> <img src="../CursoRecomendados/img/poo.png" alt="curso1" width="250px" height="100px">    </div>
                 <div>
-                    <h2>POO</h2>
+                    POO
                 </div>
             </a>
             <span> Carlos Bazan</span>
@@ -70,23 +67,26 @@
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso2">    </div>
-                <div> DescripcionCurso2  </div>
+                <div> <img src="../CursoRecomendados/img/fundamentos.png" alt="curso2" width="250px" height="100px">    </div>
+                <div> Fundamentos de Programacion  C  </div>
             </a>
+            <span> Carlos Diaz </span>
         </div>
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso3">    </div>
-                <div> DescripcionCurso3  </div>
+                <div> <img src="../CursoRecomendados/img/ia.png" alt="curso3"  width="250px" height="100px">    </div>
+                <div> Inteligencia Artificial  </div>
             </a>
+            <span>Marcos Alania</span>
         </div>
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso4">    </div>
-                <div> DescripcionCurso4  </div>
+                <div> <img src="../CursoRecomendados/img/baseDatos.png" alt="curso4"  width="250px" height="100px">    </div>
+                <div> Base de datos  </div>
             </a>
+            <span> Victor Melchor</span>
         </div>
 
     </div>
@@ -94,31 +94,32 @@
 
 
     <h3>Programacion</h3>
-    <div id="cursosProgramacion">
+    <div class="cursos">
+
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso1">    </div>
+                <div> <img src="../CursoRecomendados/img/java.png" alt="curso1" width="250px" height="100px">    </div>
                 <div> DescripcionCurso1  </div>
             </a>
         </div>
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso2">    </div>
+                <div> <img src="../CursoRecomendados/img/javascript.png" alt="curso2" width="250px" height="100px">    </div>
                 <div> DescripcionCurso2  </div>
             </a>
         </div>
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso3">    </div>
+                <div> <img src="../CursoRecomendados/img/python.png" alt="curso3" width="250px" height="100px">    </div>
                 <div> DescripcionCurso3  </div>
             </a>
         </div>
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso4">    </div>
+                <div> <img src="../CursoRecomendados/img/c.png" alt="curso4" width="250px" height="100px">    </div>
                 <div> DescripcionCurso4  </div>
             </a>
         </div>
@@ -126,38 +127,37 @@
     </div>
 
     <h3>Tecnologia</h3>
-    <div id="cursosTecnologia">
+    <div class="cursos">
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso1">    </div>
+                <div> <img src="../CursoRecomendados/img/data.png" alt="curso1" width="250px" height="100px">    </div>
                 <div> DescripcionCurso1  </div>
             </a>
         </div>
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso2">    </div>
+                <div> <img src="../CursoRecomendados/img/ciberseguridad.png" alt="curso2" width="250px" height="100px">    </div>
                 <div> DescripcionCurso2  </div>
             </a>
         </div>
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso3">    </div>
+                <div> <img src="../CursoRecomendados/img/azure.png" alt="curso3" width="250px" height="100px">    </div>
                 <div> DescripcionCurso3  </div>
             </a>
         </div>
 
         <div class="cardCursos">
             <a href="#">
-                <div> <img src="" alt="curso4">    </div>
+                <div> <img src="../CursoRecomendados/img/devops.png" alt="curso4" width="250px" height="100px">    </div>
                 <div> DescripcionCurso4  </div>
             </a>
         </div>
-
     </div>
 
-
+<!--===============================================================================-->
     <footer>
         <div class="contenedor-header">
             <div class="panel-izquierdo">
@@ -170,8 +170,10 @@
             </div>
     </footer>
 
+<!--===============================================================================-->
     <script src="../cuentaUsuario/cuentaUsuario.js"></script>
     <script src="../vistaPrincipal/principal.js"></script>
+
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

@@ -11,7 +11,7 @@
 <body>
 
   <nav class="nav">
-    <a href="#" class="logo">UNI STUDY HUB</a>
+    <a href="../cuentaUsuario/cuentaUsuario.html" class="logo">UNI STUDY HUB</a>
     <a href="#" class="nombre-curso">Fundamentos de programación en C</a>
     <span class="secciones">
       <a href="#" class="seccion activo">Curso</a>
@@ -21,7 +21,7 @@
     </span>
     <ion-icon name="person-circle-outline" class="icono-usuario"></ion-icon>
     <div class="menu-usuario oculto">
-      <div class="opc-usr"><a href="#">Mis cursos</a></div>
+      <div class="opc-usr"><a href="../misCursos/misCursos.html">Mis cursos</a></div>
       <div class="opc-usr"><a href="#">Perfil</a></div>
       <button class="btn-salir">CERRAR SESION</button>
     </div>
@@ -129,6 +129,7 @@
             cuidado si se intercambian dentro de un mismo identificador (aunque esto no es una buena práctica). El
             carácter
             subrayado (_), también lo podemos incluir como una letra.</p>
+          <button class="lectura-completada">Marcar como completo</button>
         </div>
         <div class="contenido-leccion oculto 1-1-3">
           <h2>Variables</h2>
@@ -158,10 +159,12 @@
             como facilidad de uso y confiabilidad del código. Para declarar una constante, se hace despues de declarar
             las librerías
             y antes de las funciones, la sintaxis es la siguiente: #define nombre_constante valor.</p>
+          <button class="lectura-completada">Marcar como completo</button>
         </div>
         <div class="contenido-leccion oculto 1-1-8">
-
-          <form action="#">
+          <p>La siguiente prueba es cronometrada, consta de 10 preguntas y tiene una duración de 15 minutos.</p>
+          <button class="btn-iniciar-prueba">Iniciar Prueba</button>
+          <form action="#" class="formulario-prueba oculto">
             <p class="pregunta">Qué es el lenguaje C?</p>
             <input type="radio" name="preg1">
             <label>Es un lenguaje de programación estructurado de propósito general</label><br>

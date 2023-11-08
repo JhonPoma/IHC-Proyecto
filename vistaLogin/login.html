@@ -13,7 +13,8 @@
         <div class="contenedor-header">
             <div class="panel-izquierdo">
                 <a href="../vistaPrincipal/principal.html">
-                    <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px"> 
+                    <!-- <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px">  -->
+                    <a href="../vistaPrincipal/principal.html" class="logo">UNI STUDY HUB</a>  
                 </a>
                 
                 <nav>
@@ -28,7 +29,6 @@
                 <input type="text" placeholder="Buscar" >
                 <button>  <a href="../vistaLogin/login.html">Iniciar Sesion</a>  </button>
                 <button> <a href="../vistaRegistro/registro.html">Registrarse</a></button>
-               
             </div>
         </div>
     </header>
@@ -37,6 +37,10 @@
 
 
     <div class="divLoginRegistro">
+        <div id="loginInstructor" >
+            <a href="../LoginInstructor/loginInstructor.html"> Eres Instructor? </a>
+        </div>
+     
         <h2> Inicia sesion en UniStudyHub </h2>
         <form>
             <input id="correo" type="text" placeholder="Correo" >
@@ -44,10 +48,10 @@
         </form>
         <div >
             <button id="btnValidaSesion" type="submit" >Iniciar Sesion</button>
-            <button ><a href="#">He olvidado la contraseña</a></button>
-            <div>No tienes cuenta? <a href="../vistaRegistro/registro.html">Registrate</a></div>
+            <button id="olvidePass"><a href="../vistaLogin/recuperarPass.html">¿Haz olvidado la contraseña?</a></button>
+            <div id="notengoCuenta">No tienes cuenta? <a href="../vistaRegistro/registro.html">Registrate</a></div>
         </div>
-
+        
     </div>
 
 

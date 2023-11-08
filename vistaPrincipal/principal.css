@@ -1,6 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+:root {
+  /* dark shades of primary color*/
+  --clr-primario: #2f83ec;
+  --clr-primario-selec: #14519c;
+  --clr-fondo: #f5f5f5;
+  --clr-fuente-osc: #333333;
+  --clr-fuente-clar: #ffffff;
+  --clr-fuente-selec: #dddddd;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --fuente: 'Roboto', 'sans-serif';
+  --clr-rojo: #e03131;
+  --clr-verde: #099268;
+
+  --color-naranja: #f59f00;
+  
+  --clr-gris-claro: #dee2e6;
+
+}
+
+body {
+  font-family: var(--fuente);
+   font-size: 1rem; 
+
+}
+
+.logo{
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    color: var(--clr-fuente-clar);
+    text-decoration: none;
+  }
+
 
 header {
-    background-color: #f5f5f5; /* Fondo gris oscuro */
+    /* background-color: #f5f5f5; Fondo gris oscuro */
+    background-color: var(--clr-primario);
     color: #fff; /* Texto blanco */
     padding: 10px 0;
 }
@@ -25,8 +60,13 @@ header {
 }
 
 .lista1 li {
+    
     display: inline; /* Hace que los elementos de la lista estén en línea */
     margin-right: 20px; /* Espacio entre los elementos de la lista */
+}
+.lista1 a{
+    color: var(--clr-fuente-clar);
+    text-decoration: none;
 }
 
 .panel-derecho input[type="text"] {
@@ -37,25 +77,28 @@ header {
 }
 
 .panel-derecho button {
-    background-color: #007bff; /* Botones azules */
-    color: #fff;
-    border: none;
-    border-radius: 3px;
+    background-color: var(--clr-fondo); /* Botones azules */
+    color: var(--clr-primario);
+    border: var(--clr-primario-selec) solid 2px;
+    border-radius: 15px;
+    font-weight: bold;
     padding: 5px 15px;
     margin-left: 10px; /* Espacio entre botones */
 }
 
 button a{
-    color: white;
+    /* color: white; */
+    color: var(--clr-primario);
     text-decoration: none;
 }
 
+/*======================================================*/
 /* CARRUSEL*/
 #carrusel{
     position: relative;
     width: 1200px;
-    height: 200px;
-    background-color: lightblue;
+    height: 300px;
+    background-color: var(--clr-fuente-clar);
     max-width: 1500px; /* Limita el ancho del contenido */
     margin: 0 auto; /* Centra el contenido horizontalmente */
     display: flex;
@@ -63,7 +106,10 @@ button a{
     align-items: center;
 }
 #carrusel button{
-    color: red;
+    color: var(--clr-primario);
+    background-color: var(--clr-fuente-clar);
+    font-size: 40px;
+    border: none;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -71,7 +117,7 @@ button a{
 }
 .carruselImagenes {
     width: 100%;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -84,46 +130,41 @@ button a{
     margin: 0;
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
-  
+  } 
   .carruselCard li {
     flex: 0 0 100%;
   }
-  
   /* Oculta todas las imágenes excepto la primera */
   .carruselCard li:not(:first-child) {
     display: none;
   }
   
 
-
+/*========================================================*/
 /*  CURSOS  */
-#cursos{
+.cursos{
     position: relative;
-    background-color:aquamarine;
+    background-color:var(--clr-fondo);
     display: flex;
     justify-content: space-around;
 }
 .cardCursos{
-    background-color: blanchedalmond;
+    background-color: var(--clr-fuente-clar);
+    border: var(--clr-gris-claro) solid 0.5px;
     width: 250px;
     height: 200px;
 }
 
-#cursosProgramacion{
-    background-color:aquamarine;
-    display: flex;
-    justify-content: space-around;
-}
-#cursosTecnologia{
-    background-color:aquamarine;
-    display: flex;
-    justify-content: space-around;
+.cursos span{
+    font-size: 15px;
+    color: var(--clr-primario-selec);
+    
 }
 
 
 
 
+/*====================================================*/
 /*  FOOTER */
 footer{
     margin-top: 10px;
@@ -144,15 +185,24 @@ footer{
     right: 100;
     z-index: 1; /* Controla la superposición; un valor mayor pone el formulario encima de otros elementos */
     align-items: center;
+}
 
 
+/* estilo para login del Instructor*/
+#loginInstructor{
+    position: relative; 
+    bottom: 45px;
+}
+#loginInstructor a{
+    color: var(--clr-rojo);
 }
 
 /*====================================================================================*/
 /*   REGISTRO Y LOGIN   */
 /*#divRegistro {*/
 .divLoginRegistro{    
-    background-color: #878787;
+    background-color: var(--clr-fondo);
+    border: var(--clr-gris-claro) 10px solid;
     border-radius: 20px;
     text-align: center; /* Centra el contenido horizontalmente */
     display: flex;
@@ -162,9 +212,9 @@ footer{
     margin-left: 450px;
     width: 300px;
     height: 438px; /* Centra verticalmente y ocupa el 100% de la altura de la ventana */
-  }
+}
 .divLoginRegistro a{
-    color: black;
+    color: var(--clr-primario);
 }
 .divLoginRegistro div{
     display: flex;
@@ -173,7 +223,85 @@ footer{
 
 
 
+#btnValidaSesion{
+    margin: 20px;
+    border: var(--clr-primario-selec);
+    background-color: var(--clr-primario);
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-left: 10px; /* Espacio entre botones */
+    position: relative;
+    left: 4px;
+}
+#olvidePass{
+    border: none;
+    position: relative;
+    top: 10px;
+    right: 5px;
+    color: var(--clr-primario);
+}
+#notengoCuenta{
+    position: relative;
+    top: 20px;
+}
 
+#btnRegistrarse{
+    margin: 20px;
+    border: var(--clr-primario-selec);
+    background-color: var(--clr-primario);
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-left: 10px; /* Espacio entre botones */
+    position: relative;
+    left: 4px;
+}
+
+/*=========*/
+/*Pagina principal Instructor*/
+#selloInstructor{
+    position: relative;
+    left: 148px;
+}
+
+
+/*RECUPERAR CONTRASEÑA*/
+#btnEnviarCodigo{
+    position: absolute;
+    left: 540px;
+    top: 410px;
+    background-color: var(--clr-rojo);
+    border: var(--clr-rojo) 1px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: var(--clr-fuente-clar);
+}
+
+
+
+/*====== ESTILOS PARA EL PERFIL ============================================*/
+#editarPerfil{
+    position: absolute;
+    width: 700px;
+    height: 200px;
+    left: 400px;
+    top: 110px;
+}
+
+#preferencias{
+    position: absolute;
+    width: 700px;
+    height: 200px;
+    left: 400px;
+    top: 320px;
+}
+
+.boxEditando{
+    border: blue solid;
+    display: flex;
+    
+}
 
 
 

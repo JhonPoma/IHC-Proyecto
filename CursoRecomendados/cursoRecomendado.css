@@ -1,4 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+:root {
+  /* dark shades of primary color*/
+  --clr-primario: #2f83ec;
+  --clr-primario-selec: #14519c;
+  --clr-fondo: #f5f5f5;
+  --clr-fuente-osc: #333333;
+  --clr-fuente-clar: #ffffff;
+  --clr-fuente-selec: #dddddd;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --fuente: 'Roboto', 'sans-serif';
+  --clr-rojo: #e03131;
+  --clr-verde: #099268;
 
+  --color-naranja: #f59f00;
+  
+  --clr-gris-claro: #dee2e6;
+
+}
+
+body {
+  font-family: var(--fuente);
+  /* font-size: 1.2rem; */
+
+}
+
+/*======================================================*/
 #cursoRecomendado{
     background-color: #2d2f31;
     color: white;
@@ -20,24 +47,28 @@
 
 
 #infoCurso{
-    border: 4px solid #ccc;
+    border: 4px solid var(--clr-fuente-selec);
+    border-radius: 5px;
     width: 280px;
     height: 30em;
     position: absolute;
     z-index: 2;     /*z-index 2 , lo pondremos encima del curso*/
     top: 130px;
     margin-left: 700px;
+    box-shadow: var(--dark-shadow);
 }
 
 
 #infoCurso2{
-    border: 4px solid #ccc;
+    border-radius: 8px;
     width: 600px;
     height: 250px;
     margin-left: 70px;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+
+    box-shadow: var(--dark-shadow);
 }
 .columnas{
     color: black;
@@ -65,13 +96,79 @@
     height: 450px;
     margin-left: 70px;
     margin-top: 20px;
-    border: 4px solid #ccc;
+    border-radius: 5px;
+    box-shadow: var(--dark-shadow);
 }
 
 
 
+/*======================== MENU-usuario (oculto al inicio) ============================*/
+#menuOpciones{
+    display: none;
+  }
+  .menu-oculto {
+      position: absolute;
+      top: 100px;
+      right: 20px;
+      width: 400px; 
+      background-color: var(--clr-fondo);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border: var(--clr-gris-claro) 10px solid;
+      z-index: 3;/*z-index 2 , lo pondremos encima del carrusel*/
+    }
+  
+    .opc-usr2 {
+      background-color: var(--clr-fondo);
+      border: var(--clr-primario) 1px solid;
+      border-radius: 0.5rem;
+      padding: 0.3rem 1rem;
+      margin: 10px;
+    }
+    
+    .opc-usr2:hover {
+      background-color: var(--clr-primario);
+    }
+    
+    .opc-usr2:hover a {
+      color: var(--clr-fuente-clar);
+    }
+    .btn-salir2 {
+      border: var(--clr-gris-claro) 3px solid;
+      border-radius: 0.5rem;
+      color: var(--clr-rojo);
+      width: 380px;
+      position: relative;
+      left: 10px;
+      font-weight: 700;
+      padding: 0.5rem;
+      font-size: 1.1rem;
+      font-family: var(--fuente);
+    }
+    
+    .btn-salir2:hover {
+      background-color: var(--color-naranja);
+      color: var(--clr-fuente-clar);
+      cursor: pointer;
+    }
+    
+    .opc-usr2 a {
+      text-decoration: none;
+      color: var(--clr-primario);
+    }
+  
 
 
+/*  PRECIO CURSO ==================*/
+#opcionesCurso button{
+  background-color: greenyellow;
+  border-radius: 3px;
+}
+.comprarAhora{
+  color: var(--clr-fuente-osc);
+  background-color: greenyellow;
 
-
+}
 

@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="principal.css"> 
-    <title>VistaPrincipal</title>
+    <link rel="stylesheet" href="../vistaPrincipal/principal.css"> 
+    <link rel="stylesheet" href="../cuentaUsuario/cuentaUsuario.css">
+
+
+    <title>principalInstructor</title>
 </head>
 <body>
     <header>
         <div class="contenedor-header">
             <div class="panel-izquierdo">
-                <!-- <img id="logo" src="./logo/logo2.png" alt="Logo" width="100px">  -->
-                <a href="../vistaPrincipal/principal.html" class="logo">UNI STUDY HUB</a>  
+                <!-- <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px">  -->
+                <a href="../LoginInstructor/principalInstructor.html" class="logo">UNI STUDY HUB</a>  
                 <nav>
                     <ul class="lista1">
                         <li> <a href="#">Inicio</a> </li> 
@@ -22,39 +25,37 @@
     
             <div class="panel-derecho">
                 <input type="text" placeholder="Buscar" >
-                <button>  <a href="../vistaLogin/login.html">Iniciar Sesion</a>  </button>
-                <button> <a href="../vistaRegistro/registro.html">Registrarse</a>  </button>
-               
+                <div id="selloInstructor">
+                    <img src="../LoginInstructor/img/sello.png" alt="" width="40px">
+                </div>
+                <a href="#">
+                    <ion-icon id="iconUsuario" name="person-circle-outline" class="icono-usuario" style="color: white;"></ion-icon>
+                </a>
             </div>
         </div>
     </header>
 
-    
-    <!-- <div id="contenedorLogin" style="display: none;">
-        <form>
-          <input type="text" placeholder="Usuario">
-          <input type="password" placeholder="Contraseña">
-          <button type="submit">Iniciar Sesión</button>
-        </form>
-      </div> -->
-
-
+<!--==========================================-->
+<!-- Agrega el menú de opciones con un estilo oculto al principio -->
+<div id="menuOpciones" class="menu-oculto">
+    <div class="opc-usr2">   <a href="../Instructor/pantalla_instructor.html">Mis cursos</a>  </div>
+    <div class="opc-usr2">   <a href="#">Perfil</a>      </div>
+    <button class="btn-salir2">      CERRAR SESION  </button>
+  </div>
+<!--==========================================-->
     <div id="carrusel">
-        <button id="prevBoton">  <ion-icon name="caret-back-outline"></ion-icon>   </button>
+        <button id="prevBoton">    <ion-icon name="caret-back-outline"></ion-icon>      </button>
         <div class="carruselImagenes">
             <ul class="carruselCard">
-            <li><img src="./logo/card3.png" alt="Imagen 1" width="700px"></li>
-            <li><img src="./logo/card2.png" alt="Imagen 2" width="700px"></li>
-            <li><img src="./logo/card1.png" alt="Imagen 3" width="700px"></li>
-    
-            <!-- Agrega más elementos <li> para más imágenes -->
+            <li><img src="../vistaPrincipal/logo/card1.png" alt="Imagen 1" width="700px"></li>
+            <li><img src="../vistaPrincipal/logo/card2.png" alt="Imagen 2" width="700px"></li>
+            <li><img src="../vistaPrincipal/logo/card3.png" alt="Imagen 3" width="700px"></li>
             </ul>
         </div>
-        <button id="nextBoton"> <ion-icon name="caret-forward-outline"></ion-icon> </button>
+        <button id="nextBoton"><ion-icon name="caret-forward-outline"></ion-icon></button>
     </div>
 
 
-<!--===========================================CURSO RECOMENDADOS - SIN LOGIN ===============================-->
     <h3>Cursos Recomendados</h3>
     <div class="cursos">
         <div class="cardCursos">
@@ -159,11 +160,7 @@
         </div>
     </div>
 
-<!--==================================================================================-->
-
-
-
-
+<!--===============================================================================-->
     <footer>
         <div class="contenedor-header">
             <div class="panel-izquierdo">
@@ -176,9 +173,15 @@
             </div>
     </footer>
 
-    <script src="principal.js"></script>
+<!--===============================================================================-->
+    <script src="../cuentaUsuario/cuentaUsuario.js"></script>
+    <script src="../vistaPrincipal/principal.js"></script>
+
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+
+
