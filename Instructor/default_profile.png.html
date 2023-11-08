@@ -1,0 +1,115 @@
+
+    <html>
+    <head>
+        <title>default_profile.png</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+            }
+    
+            .header {
+                height: 89px, absolute;
+                background-color: #2F83EC;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                /* Add some padding to move the links a bit away from the edge */
+                /* overflow: hidden; */
+            }
+    
+            .header a {
+                font-family: 'Roboto', sans-serif;
+                color: black;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+    
+            .profile-pic {
+                position: absolute;
+                left: 1345px;
+                /* x position */
+                top: 19px, absolute;
+                /* y position */
+                width: 61px;
+                /* width */
+                height: 59px;
+                /* height */
+                border-radius: 50%;
+                background-image: url('default_profile.png');
+                background-size: cover;
+            }
+    
+            .box {
+                background-color: white;
+                position: absolute;
+                left: 39px;
+                top: 110px;
+                width: 230px;
+                height: 580px;
+                /* adjust as needed */
+                padding: 20px;
+                box-shadow: 0px 0px 10px black;
+            }
+    
+            .container {
+                display: flex;
+                /* this will arrange the child elements in a row */
+            }
+    
+            .plus_button {
+                border: none;
+                color: black;
+                padding: 1px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                /* border-radius: 50%; */
+                background-color: white;
+    
+    
+                /* background-color: #4CAF50; */
+                /* Green */
+            }
+    
+            .content {
+                position: absolute;
+                margin-left: 20px;
+                top: 110px;
+                left: 390px;
+                width: 900px;
+                height: 1000px;
+                /* add some space between the box and the content */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+        <div>
+            <a href="uni_study_hub.html">UNI STUDY HUB</a>
+            <a>default_profile.png</a>
+            <a href="cursos.html">Cursos</a>
+        </div>
+
+        <div class="profile-pic" id="profilePic"></div>
+    </div>
+    <div class="containerEdit">
+        <div class="box">
+            <ul id="moduleList">
+            </ul>
+            <button class="plus_button" onclick="addModule()">+</button>
+        </div>
+        <div id ="conten" class="content">
+            <!-- Content will be inserted here -->
+            <h1>lobitoARCANAI</h1>
+        </div>
+    </div>
+    </body>
+    </html>
+    

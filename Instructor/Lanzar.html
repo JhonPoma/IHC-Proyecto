@@ -1,44 +1,166 @@
-<style>
-    .rectangle {
-        position: relative;
-        top: 35px;
-        width: 228px;
-        /* Set to the width of the rectangle */
-        height: 128px;
-        margin-right: 20px;
-        /* Set to the height of the rectangle */
-        background-image: url('CursoImage.jpg');
-        /* Replace 'imageURL' with the URL of the image */
-        background-size: cover;
-    }
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    .row {
-        display: flex;
-    }
+</head>
 
-    .text {
-        position: relative;
-        top: 37px;
-    }
+<body>
+    <script>
+ 
+        window.onload = function () {
 
-    .subirContenido {
-        position: relative;
-        top: 75px;
-    }
-    .gestionarContenido {
-        position: relative;
-        top: 92px;
-        margin-left: 20px;
-        width: 117px;
-        height: 20px;
-    }
-</style>
+            console.log("hola");
 
-<div class="row">
-    <div class="rectangle"></div>
-    <div class="text-and-button">
-      <div class="text">Fundamentos de Programacion en C</div>
-      <button class="subirContenido">Subir</button>
-    </div>
-    <button class="gestionarContenido" onclick="window.top.location.href='GestionarCurso.html'">Gestionar</button>
-</div>
+            // Get course objects from local storage
+            var cursos = JSON.parse(localStorage.getItem('cursos'));
+            console.log(cursos);
+            console.log(cursos.length);
+
+            // For each course object
+            for (var i = 0; i < cursos.length; i++) {
+                var curso = cursos[i];
+
+                // Create a new row div
+                var rowDiv = document.createElement('div');
+                rowDiv.className = 'row';
+
+                // rowDiv.style.margin = '10px'; // Add margin
+                rowDiv.style.height = '26%';
+                rowDiv.style.width = '100%';
+
+
+                // Create and append rectangle div
+                var rectangleDiv = document.createElement('div');
+                rectangleDiv.className = 'rectangle';
+                rectangleDiv.style.position = 'relative';
+                rectangleDiv.style.width = '228px';  // Set width
+                rectangleDiv.style.height = '128px';
+                // rectangleDiv.style.top = '1rem';
+                rectangleDiv.style.backgroundImage = "url('CursoImage.jpg')";
+                rectangleDiv.style.backgroundSize = 'cover';
+
+                rectangleDiv.style.backgroundRepeat = 'no-repeat';
+
+                rowDiv.appendChild(rectangleDiv);
+
+                // Create and append text_and_button div
+                var textAndButtonDiv = document.createElement('div');
+                textAndButtonDiv.className = 'text_and_button';
+                textAndButtonDiv.style.height = '60%';
+
+                // textAndButtonDiv.style.width = '100%';
+
+                // Create and append elements for nombre, idioma, descripcion, categoria, objetivos
+                var nombreDiv = document.createElement('div');
+                nombreDiv.textContent = curso.nombre;
+                nombreDiv.style.position = 'relative';
+                nombreDiv.style.top = '-88%';
+                nombreDiv.style.width = '50%';
+                nombreDiv.style.left = '30%';
+                rowDiv.appendChild(nombreDiv);
+
+                var idiomaDiv = document.createElement('div');
+                idiomaDiv.textContent = curso.idioma;
+                idiomaDiv.style.position = 'relative';
+                idiomaDiv.style.top = '-2rem';
+                idiomaDiv.style.left = '40%';
+                idiomaDiv.style.width = '20%';
+                rowDiv.appendChild(idiomaDiv);
+
+                var descripcionDiv = document.createElement('div');
+                descripcionDiv.textContent = curso.descripcion;
+                descripcionDiv.style.position = 'relative';
+                descripcionDiv.style.top = '-80%';
+                descripcionDiv.style.left = '30%';
+                descripcionDiv.style.width = '50%';
+                rowDiv.appendChild(descripcionDiv);
+
+                var categoriaDiv = document.createElement('div');
+                categoriaDiv.textContent = curso.categoria;
+                categoriaDiv.style.position = 'relative';
+                categoriaDiv.style.top = '-69%';
+                categoriaDiv.style.left = '38%';
+                categoriaDiv.style.width = '50%';
+                rowDiv.appendChild(categoriaDiv);
+
+                // Create and append subirContenido button
+                var subirContenidoButton = document.createElement('button');
+                subirContenidoButton.className = 'subirContenido';
+                subirContenidoButton.textContent = 'Subir';
+                subirContenidoButton.style.position = 'relative';
+                subirContenidoButton.style.top = '-109%';
+                subirContenidoButton.style.left = '34%';
+                textAndButtonDiv.appendChild(subirContenidoButton);
+
+                // Append text_and_button div to row div
+                rowDiv.appendChild(textAndButtonDiv);
+
+                // Create and append gestionarContenido button
+                var gestionarContenidoButton = document.createElement('button');
+                gestionarContenidoButton.className = 'gestionarContenido';
+                gestionarContenidoButton.textContent = 'Gestionar';
+                // gestionarContenidoButton.onclick = function () {
+                //     var courseName = curso.nombre; // replace this with the actual course name
+                //     window.location.href = `http://localhost:3000/create_course_page/${courseName}`;
+                //     window.open(`http://localhost:3000/create_course_page/${courseName}`);
+
+                // };
+                (function (courseName) {
+                    gestionarContenidoButton.onclick = function () {
+                        window.location.href = `http://localhost:3000/create_course_page/${courseName}`;
+                        window.open(`http://localhost:3000/create_course_page/${courseName}`);
+                        window.location.href = `http://localhost:8000/Lanzar.html`;
+                    };
+                })(curso.nombre);
+
+                gestionarContenidoButton.style.position = 'relative';
+                gestionarContenidoButton.style.left = '80%';
+                gestionarContenidoButton.style.top = '-160%';
+
+                rowDiv.appendChild(gestionarContenidoButton);
+                gestionarContenidoButton.style.position = 'relative';
+                gestionarContenidoButton.style.left = '80%';
+                gestionarContenidoButton.style.top = '-160%';
+
+                rowDiv.appendChild(gestionarContenidoButton);
+
+
+                // Create and append delete button
+                var deleteButton = document.createElement('button');
+                deleteButton.className = 'delete';
+
+                // Add styles to the button
+                deleteButton.style.border = 'none';  // Remove border
+                deleteButton.style.background = 'none';  // Remove background
+                deleteButton.style.position = 'relative';
+                deleteButton.style.top = '-128%';
+                deleteButton.style.left = '75%';
+                // Create an i element for the icon
+                var icon = document.createElement('i');
+                icon.className = 'fa fa-trash'; // This is the class for the trash icon in Font Awesome
+
+                // Append the icon to the button
+                deleteButton.appendChild(icon);
+
+                deleteButton.onclick = (function (index) {
+                    return function () {
+                        // Remove the div from the document
+                        this.parentNode.parentNode.removeChild(this.parentNode);
+
+                        // Remove the corresponding curso from the cursos array
+                        cursos.splice(index, 1);
+
+                        // Update the localStorage
+                        localStorage.setItem('cursos', JSON.stringify(cursos));
+                    };
+                })(i);
+                rowDiv.appendChild(deleteButton);
+                // Append row div to body
+                document.body.appendChild(rowDiv);
+                console.log("hola9");
+            }
+
+            console.log("hola2");
+        }
+    </script>
+
+</body>
