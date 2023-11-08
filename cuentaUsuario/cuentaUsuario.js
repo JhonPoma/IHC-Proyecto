@@ -24,3 +24,11 @@ const cerrarSesion = document.querySelector(".btn-salir2");
 cerrarSesion.addEventListener("click", e=>{
   window.location.href = "../vistaPrincipal/principal.html";
 });
+
+
+const $derechaMisCursos = document.getElementById("derechaMisCursos");
+$derechaMisCursos.addEventListener("click",e=>{
+  window.location.href = "../misCursos/misCursos.html";
+});
+
+

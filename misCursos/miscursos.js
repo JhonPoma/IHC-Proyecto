@@ -46,6 +46,10 @@ navRetirarse.addEventListener("click", function (event) {
   navTerminado.classList.remove("enlace-clicked");
 });
 
+const $derechaPerfil = document.getElementById("derechaPerfil");
+$derechaPerfil.addEventListener("click",e=>{
+  window.location.href = "../cuentaUsuario/perfil.html";
+});
 
 
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MisCursos</title>
-    <link rel="stylesheet" href="misCursos.css">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../misCursos/misCursos.css">
     <link rel="stylesheet" href="../vistaPrincipal/principal.css">
     <link rel="stylesheet" href="../cuentaUsuario/cuentaUsuario.css">
 </head>
@@ -29,7 +29,7 @@
 <!--==========================================-->
 <!-- Agrega el menú de opciones con un estilo oculto al principio -->
 <div id="menuOpciones" class="menu-oculto">
-  <div class="opc-usr2">   <a href="#">Mis cursos</a>         </div>
+  <div class="opc-usr2">   <a href="../misCursos/misCursos.html">Mis cursos</a>         </div>
   <div class="opc-usr2">   <a href="../cuentaUsuario/perfil.html">Perfil</a>      </div>
   <button class="btn-salir2" style="width: 295px;">    CERRAR SESION    </button>
 </div>
@@ -40,27 +40,57 @@
   <div id="contenedor-opciones">
     <div class="contenedor-opc">
       <ion-icon id="icono" name="person-circle-outline" class="icono-usuario2" style="color: blue;"></ion-icon>
-      <label class="navDerecha enlace-clicked">Mis Cursos</label>
-      <label id="derechaPerfil" class="navDerecha">Informacion personal</label>
+      <label id="derechaMisCursos" class="navDerecha ">Mis Cursos</label>
+      <label class="navDerecha enlace-clicked">Informacion personal</label>
     </div>
   </div>
 
 
-<div id="navegar-curso">
-  <nav id="nav-menu">
-    <a id="nav-curso" href="./navCurso.html" class="enlace-clicked">En curso</a>
-    <a id="nav-terminado" href="./navTerminado.html" style="color: #551a8b;"  >Terminado</a>
-    <a id="nav-retirarse" href="#">Retirarse de un curso</a>
-  </nav>
+<div id="editarPerfil" style="border: red solid;">
+  <div>
+    EDITAR PERFIL
+  </div>
+  <div class="boxEditando">
+    <div>
+      Nombre
+      <input type="text" name="" id="">
+    </div>
+    <div>
+      Apellido
+      <input type="text" name="" id="">
+    </div>
+    <div>
+      Formacion
+      <input type="text" name="" id="">
+    </div>
+  </div>
+  <div class="boxEditando">
+    <div>
+      Pais
+      <input type="text" name="" id="">
+    </div>
+    <div>
+      Celular
+      <input type="text" name="" id="">
+    </div>
+    <div>
+      Genero
+      <input type="text" name="" id="">
+    </div>
+  </div>
 </div>
 
 
-<div id="contenedor-curso">
+<div id="preferencias" style="border: green solid;">
 
 </div>
+
+
+
+
 
   <script src="../cuentaUsuario/cuentaUsuario.js"></script>
-  <script src="./miscursos.js"></script>
+  <script src="../misCursos/miscursos.js"></script>
 
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

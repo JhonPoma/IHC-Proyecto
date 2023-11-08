@@ -280,4 +280,35 @@ footer{
 
 
 
+/*====== ESTILOS PARA EL PERFIL ============================================*/
+#editarPerfil{
+    position: absolute;
+    width: 700px;
+    height: 200px;
+    left: 400px;
+    top: 110px;
+}
+
+#preferencias{
+    position: absolute;
+    width: 700px;
+    height: 200px;
+    left: 400px;
+    top: 320px;
+}
+
+.boxEditando{
+    border: blue solid;
+    display: flex;
+    
+}
+
+
+
+
+
+
+
+
+
 
