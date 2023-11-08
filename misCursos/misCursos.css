@@ -175,7 +175,7 @@ label:hover{
 
 
 /*Menu "mis cursos - cursos*/
-#misCurso1{
+.misCurso1{
   /* border: blue solid;  */
   width: 600px;
   height: 135px;
@@ -190,7 +190,35 @@ label:hover{
   padding-left: 5px;
 }
 
-#misCurso1 button{
+.misCurso1 button{
+  border-radius: 5px;
+  background-color: #BAFBFF;
+  border: var(--clr-primario) solid 1px;
+  color: var(--clr-primario);
+  width: 80px;
+  position: absolute;
+  left: 480px;
+}
+
+
+
+/*Menu "mis cursos - cursos*/
+.misCurso2{
+  /* border: blue solid;  */
+  width: 600px;
+  height: 135px;
+  position: relative;
+  top: 180px;
+  display: flex;
+}
+.imgCurso2 img{
+  width: 250px;
+  height: 114px;
+}
+.infoCurso2{
+  padding-left: 5px;
+}
+.misCurso2 button{
   border-radius: 5px;
   background-color: #BAFBFF;
   border: var(--clr-primario) solid 1px;

@@ -47,3 +47,13 @@ navRetirarse.addEventListener("click", function (event) {
 });
 
 
+
+
+
+
+
+
+
+
+
+

@@ -92,6 +92,7 @@ button a{
     text-decoration: none;
 }
 
+/*======================================================*/
 /* CARRUSEL*/
 #carrusel{
     position: relative;
@@ -269,7 +270,7 @@ footer{
 #btnEnviarCodigo{
     position: absolute;
     left: 540px;
-    top: 440px;
+    top: 410px;
     background-color: var(--clr-rojo);
     border: var(--clr-rojo) 1px solid;
     border-radius: 5px;
