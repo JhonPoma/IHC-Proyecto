@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="../vistaPrincipal/principal.css">
 </head>
 <body>
+
+    
     <header>
         <div class="contenedor-header">
             <div class="panel-izquierdo">
-                <a href="../vistaPrincipal/principal.html" class="logo">UNI STUDY HUB</a>               
+                <a href="../vistaPrincipal/principal.html">
+                    <a href="../vistaPrincipal/principal.html" class="logo">UNI STUDY HUB</a>  
+                </a>
+                
                 <nav>
                     <ul class="lista1">
                         <li> <a href="#">Inicio</a> </li> 
@@ -22,28 +27,36 @@
             <div class="panel-derecho">
                 <input type="text" placeholder="Buscar" >
                 <button>  <a href="../vistaLogin/login.html">Iniciar Sesion</a>  </button>
-                <button>  <a href="./registro.html">Registrarse</a>  </button>
-               
+                <button> <a href="../vistaRegistro/registro.html">Registrarse</a></button>
             </div>
         </div>
     </header>
 
 
 
+
     <div class="divLoginRegistro">
-        <h2> Registrate en UniStudyHub </h2>
+     
+        <h2> Revisa tu correo <br>y sigue los pasos</h2>
         <form>
-            <input type="text" placeholder="Usuario">
-            <input type="text" placeholder="Correo">
-            <input type="password" placeholder="Contraseña">
+            <input id="correo" type="text" placeholder="Tu Correo" >
         </form>
         <div >
-            <button id="btnRegistrarse" type="submit">Registrarse </button>
-            <div> Ya tienes cuenta? <a href="../vistaLogin/login.html">Iniciar Sesion</a> </div>
+            <button id="btnValidaSesion" type="submit" class="btnpass" >Cambiar Contraseña</button>
+            <div id="msj">
+
+            </div>
+            <div id="contador">
+
+            </div>
+            <button id="btnEnviarCodigo" style="display: none;">Enviar Código de Nuevo</button>
             
+            <div style="position: relative; top: 30px;"> <a href="../vistaLogin/login.html"> o Inicia Sesion</a></div>
         </div>
 
     </div>
+
+
 
 
 
@@ -59,6 +72,7 @@
             </div>
     </footer>
 
-    <script src="registro.js"></script>
+    <script src="login.js"></script>
+
 </body>
 </html>
