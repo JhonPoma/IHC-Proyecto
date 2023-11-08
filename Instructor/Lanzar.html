@@ -4,40 +4,8 @@
 </head>
 
 <body>
-
-    <!-- <div class="row">
-    <div class="rectangle"></div>
-    <div class="text_and_button">
-        <button class="subirContenido">Subir</button>
-    </div>
-    <button class="gestionarContenido" onclick="window.top.location.href='GestionarCurso.html'">Gestionar</button>
-</div> -->
     <script>
-        // console.log("hola");
-        // // Get course object from local storage
-        // var curso = JSON.parse(localStorage.getItem('curso'));
-
-        // // Create a div element
-        // var div = document.createElement('div');
-
-        // // Create and append text nodes for each course property
-        // div.appendChild(document.createTextNode('Nombre: ' + curso.nombre));
-        // div.appendChild(document.createElement('br'));
-        // div.appendChild(document.createTextNode('Idioma: ' + curso.idioma));
-        // div.appendChild(document.createElement('br'));
-        // div.appendChild(document.createTextNode('Descripcion: ' + curso.descripcion));
-        // div.appendChild(document.createElement('br'));
-        // div.appendChild(document.createTextNode('Categoria: ' + curso.categoria));
-        // div.appendChild(document.createElement('br'));
-        // div.appendChild(document.createTextNode('Objetivos: ' + curso.objetivos));
-
-        // console.log("hola2");
-
-        // // Get the div with the class 'text-and-button'
-        // var textAndButtonDiv = document.querySelector('.text_and_button');
-
-        // // Append the created div to the 'text-and-button' div
-        // textAndButtonDiv.appendChild(div);
+ 
         window.onload = function () {
 
             console.log("hola");
@@ -54,8 +22,9 @@
                 // Create a new row div
                 var rowDiv = document.createElement('div');
                 rowDiv.className = 'row';
+
                 // rowDiv.style.margin = '10px'; // Add margin
-                rowDiv.style.height = '20%';
+                rowDiv.style.height = '26%';
                 rowDiv.style.width = '100%';
 
 
@@ -65,6 +34,7 @@
                 rectangleDiv.style.position = 'relative';
                 rectangleDiv.style.width = '228px';  // Set width
                 rectangleDiv.style.height = '128px';
+                // rectangleDiv.style.top = '1rem';
                 rectangleDiv.style.backgroundImage = "url('CursoImage.jpg')";
                 rectangleDiv.style.backgroundSize = 'cover';
 
@@ -83,7 +53,7 @@
                 var nombreDiv = document.createElement('div');
                 nombreDiv.textContent = curso.nombre;
                 nombreDiv.style.position = 'relative';
-                nombreDiv.style.top = '-80%';
+                nombreDiv.style.top = '-88%';
                 nombreDiv.style.width = '50%';
                 nombreDiv.style.left = '30%';
                 rowDiv.appendChild(nombreDiv);
@@ -91,9 +61,9 @@
                 var idiomaDiv = document.createElement('div');
                 idiomaDiv.textContent = curso.idioma;
                 idiomaDiv.style.position = 'relative';
-                idiomaDiv.style.top = '-45%';
-                idiomaDiv.style.left = '30%';
-                idiomaDiv.style.width = '50%';
+                idiomaDiv.style.top = '-2rem';
+                idiomaDiv.style.left = '40%';
+                idiomaDiv.style.width = '20%';
                 rowDiv.appendChild(idiomaDiv);
 
                 var descripcionDiv = document.createElement('div');
@@ -138,6 +108,7 @@
                     gestionarContenidoButton.onclick = function () {
                         window.location.href = `http://localhost:3000/create_course_page/${courseName}`;
                         window.open(`http://localhost:3000/create_course_page/${courseName}`);
+                        window.location.href = `http://localhost:8000/Lanzar.html`;
                     };
                 })(curso.nombre);
 
