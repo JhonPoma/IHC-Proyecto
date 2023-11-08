@@ -72,6 +72,7 @@ a {
 
 .activo {
   font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .secciones {
@@ -136,7 +137,6 @@ a:hover {
 .btn-salir {
   border: var(--clr-gris-claro) 3px solid;
   border-radius: 0.5rem;
-  color: var(--clr-rojo);
   font-weight: 700;
   padding: 0.5rem;
   font-size: 1.1rem;
@@ -145,8 +145,15 @@ a:hover {
 
 .btn-salir:hover {
   background-color: var(--color-naranja);
-  color: var(--clr-fuente-clar);
   cursor: pointer;
+}
+
+.btn-salir a {
+  color: var(--clr-rojo);
+}
+
+.btn-salir:hover a {
+  color: var(--clr-fuente-clar);
 }
 
 .opc-usr a {
