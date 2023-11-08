@@ -46,42 +46,90 @@
   </div>
 
 
-<div id="editarPerfil" style="border: red solid;">
-  <div>
+
+<!-- ==================== PERFIL ==================-->
+<div id="editarPerfil">
+  <div class="titulo">
     EDITAR PERFIL
   </div>
+
   <div class="boxEditando">
     <div>
       Nombre
-      <input type="text" name="" id="">
+      <input type="text" name="" id="" >
     </div>
     <div>
       Apellido
-      <input type="text" name="" id="">
+      <input type="text" name="" id="" >
     </div>
     <div>
       Formacion
       <input type="text" name="" id="">
     </div>
   </div>
-  <div class="boxEditando">
+
+  <div class="boxEditando2">
     <div>
-      Pais
-      <input type="text" name="" id="">
+      Pais<br>
+      <input type="text" name="" id="" >
     </div>
     <div>
-      Celular
-      <input type="text" name="" id="">
+      Celular<br>
+      <input type="text" name="" id="" style="position: relative;right: 8px;">
     </div>
     <div>
-      Genero
-      <input type="text" name="" id="">
+      Genero<br>
+      <input type="text" name="" id="" style="position: relative;right: 12px;">
     </div>
   </div>
+
+  <div class="btnGuardar" style="position: relative; left: 545px; top: 30px;">
+    <button id="guarda1"> Guardar Cambios</button>
+  </div>
+
 </div>
 
 
-<div id="preferencias" style="border: green solid;">
+<div id="preferencias">
+  <div class="titulo">
+    PREFERENCIAS
+  </div>
+  
+  <div id="selectTema" class="selectTema1">
+    <label for="tema">Tema del sitio:</label>
+    <select id="tema">
+      <option value="claro">Tema claro</option>
+      <option value="oscuro">Tema oscuro</option>
+    </select>
+  </div>
+  
+  <div id="selecNotificacion" class="selectTema1">
+    <label for="notificaciones">Preferencias de notificaciones:</label>
+    <div id="notificaciones">
+      <input type="checkbox" id="notificaciones-cursos" name="notificaciones" value="cursos">
+      <label for="notificaciones-cursos">Notificaciones de nuevos cursos</label>
+      
+    </div>
+  </div>
+
+  <div id="selectNivel" class="selectTema1">
+    <label for="niveles">Niveles de curso:</label>
+    <div id="niveles">
+      <input type="checkbox" id="niveles-principiante" name="niveles" value="principiante">
+      <label for="niveles-principiante">Principiante</label>
+      <input type="checkbox" id="niveles-intermedio" name="niveles" value="intermedio">
+      <label for="niveles-intermedio">Intermedio</label>
+      <input type="checkbox" id="niveles-avanzado" name="niveles" value="avanzado">
+      <label for="niveles-avanzado">Avanzado</label>
+    </div>
+  </div>
+
+  <div class="btnGuardar" style="position: relative; left: 545px; bottom: 6px;">
+    <button id=guarda2> Guardar Cambios</button>
+  </div>
+
+
+
 
 </div>
 

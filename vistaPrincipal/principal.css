@@ -144,7 +144,7 @@ button a{
 /*  CURSOS  */
 .cursos{
     position: relative;
-    background-color:var(--clr-fondo);
+    /* background-color:var(--clr-fondo); */
     display: flex;
     justify-content: space-around;
 }
@@ -282,11 +282,14 @@ footer{
 
 /*====== ESTILOS PARA EL PERFIL ============================================*/
 #editarPerfil{
+    
     position: absolute;
     width: 700px;
     height: 200px;
     left: 400px;
     top: 110px;
+    border: var(--clr-gris-claro) 1px solid;
+    box-shadow: var(--dark-shadow);
 }
 
 #preferencias{
@@ -295,17 +298,51 @@ footer{
     height: 200px;
     left: 400px;
     top: 320px;
-}
-
-.boxEditando{
-    border: blue solid;
+    border: var(--clr-gris-claro) 1px solid;
+    box-shadow: var(--dark-shadow);
     display: flex;
-    
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.titulo{
+    color: black;
+    font-weight: bold;
+
+}
+.boxEditando{
+    /* border: blue solid; */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 15px;
+    left: 32px;
 }
 
 
+.boxEditando2{
+    margin-top: 15px;
+    /* border: green solid; */
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 10px;
+}
 
+.btnGuardar button{
+    background-color: var(--clr-primario);
+    color: var(--clr-fondo);
+    border: var(--clr-primario) 2px solid;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 1px;
+}
 
+.selectTema1{
+    /* border: red solid; */
+    position: relative;
+    left: 30px;
+}
 
 
 
