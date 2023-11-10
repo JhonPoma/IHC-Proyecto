@@ -1,6 +1,18 @@
+<html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <style>
+        .row {
+            width: 95%; /* Adjust the width as needed */
+            height: 25%; /* Adjust the height as needed */
+            margin: 10px; /* Adjust the margin as needed */
+            display: inline-block; /* Display the containers inline */
+            border: 1px solid #ccc; /* Add a border for a box-like appearance */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+            background-color: #f9f9f9; /* Set a background color */
+            padding: 10px; /* Add padding inside the container */
+        }
+    </style>
 </head>
 
 <body>
@@ -24,8 +36,8 @@
                 rowDiv.className = 'row';
 
                 // rowDiv.style.margin = '10px'; // Add margin
-                rowDiv.style.height = '26%';
-                rowDiv.style.width = '100%';
+                // rowDiv.style.height = '26%';
+                // rowDiv.style.width = '100%';
 
 
                 // Create and append rectangle div
@@ -61,8 +73,8 @@
                 var idiomaDiv = document.createElement('div');
                 idiomaDiv.textContent = curso.idioma;
                 idiomaDiv.style.position = 'relative';
-                idiomaDiv.style.top = '-2rem';
-                idiomaDiv.style.left = '40%';
+                idiomaDiv.style.top = '-44%';
+                idiomaDiv.style.left = '30%';
                 idiomaDiv.style.width = '20%';
                 rowDiv.appendChild(idiomaDiv);
 
@@ -164,3 +176,4 @@
     </script>
 
 </body>
+</html>

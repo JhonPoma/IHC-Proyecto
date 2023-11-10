@@ -185,6 +185,7 @@
             height: 610px;
             padding: 20px;
             box-shadow: var(--dark-shadow);
+            background-color: #f5f5f5;
         }
 
         .box ul {
@@ -206,7 +207,7 @@
             font-size: 16px;
             cursor: pointer;
             /* border-radius: 50%; */
-            background-color: white;
+            background-color: #f5f5f5;
 
 
             /* background-color: #4CAF50; */
@@ -226,7 +227,7 @@
             font-size: 16px;
             cursor: pointer;
             /* border-radius: 50%; */
-            background-color: white;
+            background-color: #f5f5f5;
             right: -20%;
 
             /* background-color: #4CAF50; */
@@ -236,11 +237,15 @@
 
         .content {
             position: absolute;
-            margin-left: 20px;
-            top: 110px;
-            left: 390px;
-            width: 900px;
-            height: 1000px;
+            /* margin: 20px; */
+            /* padding: 20px; */
+            /* top: 0%; */
+            left: 30%;
+            width: 65%;
+
+            /* height: 1000px; */
+            /* box-shadow: var(--dark-shadow); */
+            background-color: #f5f5f5;
             /* add some space between the box and the content */
         }
 
@@ -252,13 +257,39 @@
             /* This will remove the bullet point */
         }
 
-        #moduleList li::before {
+        /* #moduleList li::before {
             content: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="15" height="15" viewBox="0 0 512 512"%3E%3Cg transform="rotate(180 256 256)"%3E%3Cpath fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m112 328l144-144l144 144"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 
-            /* Replace 'icon_url' with the url of your icon */
             padding-right: 7%;
-            /* padding-top: 4%; */
-            /* This adds some space between the icon and the text */
+        
+        } */
+
+        .button_arrow {
+            position: relative;
+            margin-right: 5%;
+        }
+
+        .button_arrow_lesson {
+            position: relative;
+            /* display: flex; */
+            margin-right: 5%;
+        }
+
+        .editable::before {
+            content: attr(data-placeholder);
+            color: gray;
+            display: inline-block;
+            pointer-events: none;
+            position: absolute;
+            /* content: 'test'; */
+        }
+
+        .editable:focus {
+            outline: none;
+        }
+
+        .editable:focus::before {
+            content: '';
         }
     </style>
 </head>
@@ -285,7 +316,6 @@
         </div>
         <div id="conten" class="content">
             <!-- Content will be inserted here -->
-            <h1>lobitoARCANAI</h1>
         </div>
     </div>
     <script>
@@ -296,9 +326,15 @@
             let moduleList = document.getElementById('moduleList');
             let newModule = document.createElement('li');
 
+            let buttonArrow = document.createElement('button');
+            buttonArrow.className = "button_arrow";
+            buttonArrow.innerHTML = 'v';
+            newModule.appendChild(buttonArrow);
+
             let moduleName = document.createElement('span');
             moduleName.innerHTML = 'Module ' + moduleCount;
             newModule.appendChild(moduleName);
+
 
             let addButton = document.createElement('button');
             addButton.className = "plus_button2";
@@ -307,13 +343,13 @@
             newModule.appendChild(addButton);
 
             let lessonList = document.createElement('ul');
-            lessonList.style.display = 'none'; // Hide the lesson list by default
+            lessonList.style.display = 'true'; // Hide the lesson list by default
             newModule.appendChild(lessonList);
 
             moduleList.appendChild(newModule);
 
             // Add click event listener to the new module
-            newModule.addEventListener('click', function (event) {
+            buttonArrow.addEventListener('click', function (event) {
                 // Prevent the event from bubbling up to the 'li' element
                 event.stopPropagation();
 
@@ -356,13 +392,35 @@
             });
         }
 
-
-
-
         function addLesson(buttonElement) {
             let lessonList = buttonElement.nextSibling;
             let newLesson = document.createElement('li');
-            newLesson.textContent = 'Lesson ' + (lessonList.childElementCount + 1);
+
+            let container = document.createElement('div');
+            container.style.display = 'flex';
+            container.style.alignItems = 'center';
+
+            let buttonArrow2 = document.createElement('button');
+            buttonArrow2.className = "button_arrow_lesson";
+            buttonArrow2.innerHTML = 'v';
+            container.appendChild(buttonArrow2);
+
+            let textNode = document.createTextNode('Lesson ' + (lessonList.childElementCount + 1));
+            container.appendChild(textNode);
+
+            let addButton = document.createElement('button');
+            addButton.className = "plus_button2";
+            addButton.onclick = function () { addSubject(this.parentNode.nextSibling); };
+            addButton.innerHTML = '+';
+            container.appendChild(addButton);
+
+            newLesson.appendChild(container);
+
+            let subjectList = document.createElement('ul');
+            lessonList.style.display = 'true'; // Hide the lesson list by default
+
+            newLesson.appendChild(subjectList);
+
             lessonList.appendChild(newLesson);
 
             // Select the div with class 'content'
@@ -371,7 +429,143 @@
             // Update the content of the div
             contentDiv.innerHTML = '<h1>Module</h1>' + moduleCount;
 
+            // Add click event listener to the new module
+            buttonArrow2.addEventListener('click', function (event) {
+                // Prevent the event from bubbling up to the 'li' element
+                event.stopPropagation();
+
+                // Toggle the display of the lesson list
+                if (subjectList.style.display === 'none') {
+                    subjectList.style.display = 'block';
+                } else {
+                    subjectList.style.display = 'none';
+                }
+
+                // Select the div with class 'content'
+                let contentDiv = document.querySelector('.content');
+
+                // Update the content of the div
+                contentDiv.innerHTML = newLesson.textContent;
+            });
         }
+
+
+        function addSubject(subjectList) {
+            let newSubject = document.createElement('li');
+            newSubject.innerHTML = 'Subject ' + (subjectList.childElementCount + 1);
+            // newSubject.setAttribute('contenteditable', 'true'); // Make the subject editable
+            subjectList.appendChild(newSubject);
+
+            // Add click event listener to the new subject
+            newSubject.addEventListener('click', function () {
+                // Select the div with class 'content'
+                let contentDiv = document.querySelector('.content');
+                contentDiv.style.padding = '1%';
+
+                // Update the content of the div
+                contentDiv.innerHTML = '<h1>   ' + newSubject.textContent + '</h1>';
+
+                let bulletPoint = createEditableElement('p');
+
+                contentDiv.appendChild(bulletPoint);
+            });
+        }
+
+        function createEditableElement(tag, text) {
+            // Add this at the beginning of your function
+            let style = document.createElement('style');
+            style.innerHTML = `
+  button {
+    font-size: 1.2rem;
+    border: none;
+    background: none;
+    color: transparent;
+    font-weight: bold;
+  }
+  button:hover {
+    color: #2f83ec;
+  }
+`;
+            document.head.appendChild(style);
+
+            let container = document.createElement('div');
+
+            let addButton = document.createElement('button');
+            addButton.textContent = '+';
+            container.appendChild(addButton);
+
+            let element = document.createElement(tag);
+            element.setAttribute('contenteditable', 'true');
+            element.textContent = text;
+            element.style.display = 'inline-block';
+            element.style.marginLeft = '2%';
+            element.style.width = '96%';
+            element.classList.add('editable'); // Add a class to the editable element
+
+            element.setAttribute('data-placeholder', 'presiona + para ver opciones');
+
+            container.appendChild(element);
+
+            let select = document.createElement('select');
+            select.style.display = 'none';
+            select.innerHTML = '<option value="h2">h2</option><option value="h3">h3</option><option value="p">Bullet point</option>';
+
+            select.addEventListener('change', function () {
+                let newElement = document.createElement(this.value);
+                newElement.setAttribute('contenteditable', 'true');
+                newElement.textContent = element.textContent;
+                newElement.style.display = 'inline-block';
+                newElement.style.width = '90%';
+                newElement.style.marginLeft = '2%';
+                container.replaceChild(newElement, element);
+                element = newElement;
+                this.style.display = 'none'; // Hide the select options once an option is selected
+            });
+
+            container.appendChild(select);
+
+            addButton.addEventListener('click', function () {
+                select.style.display = 'block'; // Show the select options when '+' button is clicked
+                select.size = select.length; // Display all the options instantly
+            });
+
+            element.addEventListener('keydown', function (event) {
+    if ((event.key === 'Delete' || event.key === 'Backspace') && this.textContent.trim() === '') {
+        event.preventDefault(); // Prevent the default action to stop deleting
+        container.remove(); // Remove the container
+    } else if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent the default action to stop adding a new line
+        let newBlock = createEditableElement('p', ''); // Create a new block
+        container.parentNode.insertBefore(newBlock, container.nextSibling); // Insert the new block after the current container
+        newBlock.children[1].focus(); // Focus the new block
+    }
+});
+
+
+            element.addEventListener('input', function () {
+                if (this.textContent.trim() !== '') {
+                    this.classList.remove('placeholder');
+                    this.setAttribute('data-placeholder', ''); // Remove the placeholder text
+                } else {
+                    this.classList.add('placeholder');
+                    this.setAttribute('data-placeholder', 'presiona + para ver opciones'); // Add the placeholder text back
+                }
+            });
+
+
+            // Add click event listener to the document to hide the select options when clicked outside
+            document.addEventListener('click', function (event) {
+                if (event.target !== select && event.target !== addButton) {
+                    select.style.display = 'none'; // Hide the select options when clicked outside
+                }
+            });
+
+            return container;
+        }
+
+
+
+
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
