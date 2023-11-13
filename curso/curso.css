@@ -371,6 +371,11 @@ input[type="radio"] {
   font-size: 1.2rem;
 }
 
+/* Audio */
+.audio {
+  font-size: 3rem;
+}
+
 /* Progreso */
 
 .contenedor-centrado {
