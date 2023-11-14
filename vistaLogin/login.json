@@ -1,0 +1,18 @@
+{
+    "user":[
+        {
+            "username" : "admin@gmail.com",
+            "pass" : "admin"
+        },
+        {
+            "username" : "jhonatan@gmail.com",
+            "pass" : "jhonatan"
+        },
+        {
+            "username" : "poma@gmail.com",
+            "pass" : "poma"
+        }
+    ]
+}
+
+
