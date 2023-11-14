@@ -258,7 +258,24 @@ footer{
     left: 4px;
 }
 
-/*=========*/
+#mensajeRegistroExito{
+    display: none; /*aparece al comienzo oculto*/
+    color: black;
+    background-color: chartreuse;
+    border-radius: 10px;
+}
+#mensajeRegistroError{
+    display: none; /* Al comienzo aparece oculto*/
+    color: black;
+    background-color: #FF5555;
+    border-radius: 10px;
+}
+
+
+
+
+
+/*===========================================================*/
 /*Pagina principal Instructor*/
 #selloInstructor{
     position: relative;
@@ -266,7 +283,7 @@ footer{
 }
 
 
-/*RECUPERAR CONTRASEÑA*/
+/*================ RECUPERAR CONTRASEÑA ======================*/
 #btnEnviarCodigo{
     position: absolute;
     left: 540px;
