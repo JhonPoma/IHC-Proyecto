@@ -25,6 +25,7 @@ client.connect();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// inicio Sesion.
 app.post('/validar', async (req, res) => {
     console.log("holaaaMeEstanLLamando");
     const { correo, pass } = req.body;
@@ -44,6 +45,29 @@ app.post('/validar', async (req, res) => {
     }
 });
 
+// Registro un usuario.
+app.post('/registrar', async(req,res)=>{
+    console.log("registrandoNode-PSQL");
+    const{correo, pass} = req.body;
+    try{
+        console.log("flag1");
+        const existeUsuario = await client.query('SELECT * FROM login WHERE usuario=$1',[correo]);
+        console.log("flag2");
+        
+        if(existeUsuario.rows.length > 0){
+            res.status(400).send("El correo ya esta registrado");
+        }
+        else{
+            //INSERTAMOS el nuevo correo
+            const query = 'INSERT INTO login (usuario, contrasena) VALUES ($1,$2) RETURNING *';
+            const nuevoUsuario = await client.query(query,[correo,pass]);
+            res.status(201).json({message:'Usuario registrado con exito', usuario: nuevoUsuario.rows[0]});
+        }
+    }catch(error){
+        console.error(error);
+        res.status(500).send("erroe en el servidor");
+    }
+})
 app.listen(PORT, () => {
     console.log(`Servidor en ejecución en el puerto ${PORT}`);
 });
