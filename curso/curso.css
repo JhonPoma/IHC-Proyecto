@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 :root {
   /* dark shades of primary color*/
@@ -10,7 +10,7 @@
   --clr-fuente-selec: #dddddd;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --fuente: 'Roboto', 'sans-serif';
+  --fuente: "Roboto", "sans-serif";
   --clr-rojo: #e03131;
   --color-naranja: #f59f00;
   --clr-verde: #099268;
@@ -323,6 +323,20 @@ p {
 
 /* Test */
 
+.temporizador {
+  font-size: 1.8rem;
+  border: solid 4px var(--clr-primario);
+  display: grid;
+  place-content: center;
+  position: fixed;
+  right: 2rem;
+  top: 6rem;
+  border-radius: 4rem;
+  width: 8rem;
+  height: 8rem;
+  font-weight: 700;
+}
+
 .pregunta {
   font-size: 24px;
   margin-top: 1rem;
@@ -330,11 +344,11 @@ p {
   font-weight: 700;
 }
 
-input[type='radio'] {
+input[type="radio"] {
   margin-bottom: 1rem;
 }
 
-.btn-enviar,
+.btn-enviar-prueba,
 .btn-iniciar-prueba,
 .lectura-completada {
   font-size: 1.5rem;
@@ -346,7 +360,7 @@ input[type='radio'] {
   margin-top: 1rem;
 }
 
-.btn-enviar:hover,
+.btn-enviar-prueba:hover,
 .btn-iniciar-prueba:hover,
 .lectura-completada:hover {
   background-color: var(--clr-primario-selec);
@@ -355,6 +369,11 @@ input[type='radio'] {
 
 .lectura-completada {
   font-size: 1.2rem;
+}
+
+/* Audio */
+.audio {
+  font-size: 3rem;
 }
 
 /* Progreso */
