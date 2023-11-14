@@ -24,11 +24,11 @@ $validaSesion.addEventListener("click", async(e)=>{
       },
       body: JSON.stringify({correo,pass}),
     });
-    alert("jhonFronted");
+    //alert("jhonFronted");
     if(response.ok){
       window.location.href="../cuentaUsuario/cuentaUsuario.html";
     }else{
-      alert("credenciales incorrectAss-FRONTED");
+      //alert("credenciales incorrectAss-FRONTED");
       $textCorreo.value = "";
       $textPass.value = "";
     }

@@ -1,13 +1,10 @@
 const express = require('express');
-const cors = require('cors'); //para poder comunicar distintos dominios
+const cors = require('cors'); 
 const { Client } = require('pg');
-
-
 
 const app = express();
 const PORT =5500;
 
-// Configuración de CORS
 app.use(cors());
 const corsOptions = {
     origin: 'http://127.0.0.1:5500',
@@ -15,30 +12,24 @@ const corsOptions = {
   };  
 app.use(cors(corsOptions));
   
-
-
-// Configura la conexión a tu base de datos
 const client = new Client({
   user: 'postgres',
   host: 'localhost',
   database: 'loginIHC',
   password: 'pomita123',
-  port: 5432, // Puerto de PostgreSQL
+  port: 5432, 
 });
-console.log("jhonnnnnnnnnn");
-// Conecta a la base de datos
+//console.log("jhonnnnnnnnnn");
 client.connect();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Ruta para validar las credenciales
 app.post('/validar', async (req, res) => {
     console.log("holaaaMeEstanLLamando");
     const { correo, pass } = req.body;
 
     try {
-        // Realiza una consulta a la base de datos para verificar las credenciales
         const query = 'SELECT * FROM login WHERE usuario = $1 AND contrasena = $2';
         const result = await client.query(query, [correo, pass]);
 
