@@ -12,23 +12,21 @@
         <div class="infoCurso1">
             <h3>Fundamentos de Programacion en C</h3>
             <a href="../curso/curso.html"> <button> Ir a curso</button>  </a>   
-            <a href="#"> <button class="btnRetirarse"> Retirarse</button>  </a>   
-
+            <a href="#"> <button class="btnRetirarse"> Retirarse</button>  </a>  
         </div>
     </div>
 
 
 
 
-    <div id="cursoComprado2" class="misCurso2" style="display: none;">
+    <div id="cursoCompradoPOO" class="misCurso2" style="display: none;">
         <div class="imgCurso1">
             <img src="../CursoRecomendados/img/poo.png" alt="Programacion Orientada a Objetos">
         </div>
         <div class="infoCurso2">
             <h3>Programacion Orientada a Objetos</h3>
-            <a href="#"> <button> Ir a curso</button>  </a>  
-            <a href="#"> <button  class="btnRetirarse"> Retirarse</button>  </a>   
-
+            <a href="#"> <button> Ir a curso</button>  </a>   
+            <a  href="#"> <button id="btnRetirarsePOO" class="btnRetirarse"> Retirarse</button>  </a>  
         </div>
     </div>
 
@@ -40,20 +38,20 @@
         </div>
         <div class="infoCurso3">
             <h3>Inteligencia Artificial</h3>
-            <a href="#"> <button> Ir a curso</button>  </a> 
-            <a href="#"> <button class="btnRetirarse"> Retirarse</button>  </a>   
+            <a href="#"> <button> Ir a curso</button>  </a>   
+            <a id="btnRetirarseIA" href="#"> <button class="btnRetirarse"> Retirarse</button>  </a>  
         </div>
     </div>
 
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        const cursoComprado2 = localStorage.getItem('cursoComprado-2');
-        const curso2 = document.getElementById("cursoComprado2");
-        if (cursoComprado-2 == 'true') {
+        const cursoCompradoPOO = localStorage.getItem('cursoCompradoPOO-localStorage');
+        const cursoPOO = document.getElementById("cursoCompradoPOO");
+        if (cursoCompradoPOO-localStorage == 'true') {
             // document.getElementById('cursoComprado3').style.display = 'block';
-            if(curso2.style.display=='none' || curso2.style.display==""){
-                curso2.style.display='block';
+            if(cursoPOO.style.display=='none' || cursoPOO.style.display==""){
+                cursoPOO.style.display='block';
                 }
             }
         });
@@ -71,6 +69,15 @@
             }
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const clickBtnRetirarseIA = document.getElementById("btnRetirarseIA");
+            clickBtnRetirarseIA.addEventListener("click", () => {
+                alert("holaa");
+                console.log("aaa");
+            });
+        });
+
     </script>
 
 </body>

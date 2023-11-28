@@ -31,22 +31,39 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(function (data) {
         contenido.innerHTML = data;
+
+        //LOGICA MATRICULARSE CURSO DINAMICO
         const cursoComprado = localStorage.getItem('cursoCompradoo');
         const curso3 = document.getElementById("cursoComprado3");
-        const cursoComprado2 = localStorage.getItem('cursoComprado-2');
-        const curso2 = document.getElementById("cursoComprado2");
+        const cursoCompradoPOO = localStorage.getItem('cursoCompradoPOO-localStorage');
+        const cursoPOO = document.getElementById("cursoCompradoPOO");
         if (cursoComprado == 'true') {
           curso3.style.display = 'block';
         }else {
           curso3.style.display = 'none';
         }
 
-        if(cursoComprado2 =='true'){
-          curso2.style.display = 'block';
+        if(cursoCompradoPOO =='true'){
+          cursoPOO.style.display = 'block';
         }else {
-          curso2.style.display = 'none';
+          cursoPOO.style.display = 'none';
         }
         
+
+      // LOGICA PARA RETIRARSE DE UN CURSO
+        const clickBtnRetirarseIA = document.getElementById("btnRetirarseIA");
+        clickBtnRetirarseIA.addEventListener("click", () => {
+            //alert("Retirandome de IA");
+            localStorage.removeItem("cursoCompradoo");
+            curso3.style.display = 'none';
+        });
+        
+        const clickBtnRetirarsePOO = document.getElementById("btnRetirarsePOO");
+        clickBtnRetirarsePOO.addEventListener("click", () => {
+            //alert("holaa");
+            localStorage.removeItem("cursoCompradoPOO-localStorage");
+            cursoPOO.style.display = 'none';
+        });
     
       })
       .catch(function (error) {
