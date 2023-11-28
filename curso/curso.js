@@ -15,6 +15,7 @@ const minuto = document.querySelector(".minuto");
 const segundo = document.querySelector(".segundo");
 const btnsEnviarPrueba = document.querySelectorAll(".btn-enviar-prueba");
 const respuestas = document.querySelectorAll('input[type="radio"]');
+const videoCompletado = document.querySelector(".video-completado");
 
 btnLLMMostrar.addEventListener("click", () => {
   contenedorLLM.classList.toggle("oculto");
@@ -134,7 +135,32 @@ btnsMarcarCompleto.forEach((btnMarcarCompleto) => {
   btnMarcarCompleto.addEventListener("click", () => {
     btnMarcarCompleto.style.backgroundColor = "#099268";
     btnMarcarCompleto.textContent = "Completado";
+    let prog = localStorage.getItem("progreso");
+    if (prog === null) {
+      localStorage.setItem("progreso", 7.14);
+    } else {
+      localStorage.setItem("progreso", parseFloat(prog) + 7.14);
+    }
+
+    let porcLec = localStorage.getItem("porcentajeLecturas");
+    if (porcLec !== null) {
+      localStorage.setItem("porcentajeLecturas", parseFloat(porcLec) + 16.67);
+    } else {
+      localStorage.setItem("porcentajeLecturas", 16.67);
+    }
   });
+});
+
+videoCompletado.addEventListener("click", () => {
+  videoCompletado.style.backgroundColor = "#099268";
+  videoCompletado.textContent = "Completado";
+  let prog = localStorage.getItem("progreso");
+  if (prog === null) {
+    localStorage.setItem("progreso", 7.14);
+  } else {
+    localStorage.setItem("progreso", parseFloat(prog) + 7.14);
+  }
+  localStorage.setItem("porcentajeVideos", 100);
 });
 
 btnsEnviarPrueba.forEach((btnEnviarPrueba) => {
@@ -160,16 +186,29 @@ btnsEnviarPrueba.forEach((btnEnviarPrueba) => {
         }
       }
       respuesta.disabled = true;
-
-      btnEnviarPrueba.disabled = true;
-      btnEnviarPrueba.classList.add("desabilitado");
-
-      btnLLMMostrar.classList.remove("oculto");
-
-      resultadoPrueba.classList.remove("oculto");
-      resultadoPrueba.textContent = `Respuestas correctas: ${respuestasCorrectas} / 10`;
-
-      localStorage.setItem("nota1-1", respuestasCorrectas);
     });
+
+    btnEnviarPrueba.disabled = true;
+    btnEnviarPrueba.classList.add("desabilitado");
+
+    btnLLMMostrar.classList.remove("oculto");
+
+    resultadoPrueba.classList.remove("oculto");
+    resultadoPrueba.textContent = `Respuestas correctas: ${respuestasCorrectas} / 10`;
+
+    localStorage.setItem("nota1-1", respuestasCorrectas);
+
+    let progres = localStorage.getItem("progreso");
+
+    if (progres !== null) {
+      localStorage.setItem(
+        "progreso",
+        parseInt(progres) + respuestasCorrectas * 5
+      );
+    } else {
+      localStorage.setItem("progreso", respuestasCorrectas * 5);
+    }
+
+    localStorage.setItem("porcentajePruebas", 100);
   });
 });
