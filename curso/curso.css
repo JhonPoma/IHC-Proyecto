@@ -166,7 +166,7 @@ a:hover {
 .contenedor2 {
   padding: 7vh 5vw;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1.5fr 3fr;
   gap: 5vw;
 }
 
@@ -351,7 +351,8 @@ input[type="radio"] {
 
 .btn-enviar-prueba,
 .btn-iniciar-prueba,
-.lectura-completada {
+.lectura-completada,
+.video-completado {
   font-size: 1.5rem;
   padding: 0.5rem 3rem;
   background-color: var(--clr-primario);
@@ -363,7 +364,8 @@ input[type="radio"] {
 
 .btn-enviar-prueba:hover,
 .btn-iniciar-prueba:hover,
-.lectura-completada:hover {
+.lectura-completada:hover,
+.video-completado:hover {
   background-color: var(--clr-primario-selec);
   cursor: pointer;
 }
@@ -377,7 +379,8 @@ input[type="radio"] {
   cursor: auto;
 }
 
-.lectura-completada {
+.lectura-completada,
+.video-completado {
   font-size: 1.2rem;
 }
 
