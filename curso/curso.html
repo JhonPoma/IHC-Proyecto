@@ -715,19 +715,26 @@
     ></ion-icon>
 
     <div class="contenedor-llm oculto">
-      <div class="llm-cabecera">
+      <form id="llm-cabecera">
         <input
+          id="pregunta"
           type="text"
           placeholder="Escriba su pregunta"
           class="consulta-llm"
+          name="pregunta"
+          autocomplete="off"
         />
-        <ion-icon name="send" class="enviar-llm"></ion-icon>
-        <ion-icon name="mic" class="hablar-llm"></ion-icon>
-      </div>
+        <button type="submit">
+          <ion-icon name="send" class="enviar-llm"></ion-icon>
+        </button>
 
-      <p class="llm-respuesta"></p>
+        <ion-icon name="mic" class="hablar-llm"></ion-icon>
+      </form>
+
+      <p id="llm-respuesta"></p>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="module" src="curso.js"></script>
 
     <script
