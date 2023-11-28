@@ -212,3 +212,27 @@ btnsEnviarPrueba.forEach((btnEnviarPrueba) => {
     localStorage.setItem("porcentajePruebas", 100);
   });
 });
+
+$(document).ready(function () {
+  // Manejar el envío del formulario
+  $("#llm-cabecera").submit(function (event) {
+    event.preventDefault(); // Evitar el envío predeterminado del formulario
+
+    // Obtener la pregunta del campo de entrada
+    const pregunta = $("#pregunta").val();
+
+    // Realizar una solicitud al servidor
+    $.ajax({
+      type: "POST",
+      url: "/procesar-pregunta", // Puedes ajustar la ruta del servidor
+      data: { pregunta: pregunta },
+      success: function (respuesta) {
+        // Mostrar la respuesta en el párrafo
+        $("#llm-respuesta").text(respuesta);
+      },
+      error: function () {
+        console.error("Error al procesar la pregunta");
+      },
+    });
+  });
+});
