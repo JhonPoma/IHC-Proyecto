@@ -260,4 +260,10 @@ label:hover{
   right: 255px;
 }
 
-
+a .btnRetirarse{
+  background-color: #FF6262;
+  color: black;
+  position: relative;
+  bottom: 4px;
+  left: 550px;
+}
