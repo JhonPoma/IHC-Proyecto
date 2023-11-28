@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CursoRecomendado2-Login</title>
+    <title>CursoRecomendado3-Login</title>
     <link rel="stylesheet" href="../vistaPrincipal/principal.css">
     <link rel="stylesheet" href="cursoRecomendado.css">
  
@@ -50,19 +50,19 @@
 
     <div id="cursoRecomendado">
         <div id="curso">
-            <h2>PROGRAMACION ORIENTADA A OBJETOS</h2>
+            <h2>INTELIGENCIA ARTIFICIAL</h2>
             <div class="contenidoCurso">
-                Aprende Programacion Orientada a objeto (POO) con JAVA desde lo basico hasta lo <br>
-                avanzado de forma sencilla y con ayudas
+                Aprende la Inteligencia Artificial con Python desde lo basico hasta lo <br>
+                avanzado de forma sencilla.
             </div>
             <div class="ranking">
-                <span> 7.5 
+                <span> 8.5 
                     <ion-icon name="star-half-outline"></ion-icon>
                 </span>
-                3574 estudiantes 
+                1524 estudiantes 
             </div>
             <div class="contenidoCurso">
-                Creado por Carlos Bazan
+                Creado por Marcos Alania
             </div>
         </div>
     </div>
@@ -70,11 +70,11 @@
 
     <div id="infoCurso" > 
         <div id="logoCurso">
-            <img src="./img/poo.png" alt="poo" width="280px" height="140px">
+            <img src="./img/ia.png" alt="poo" width="280px" height="140px">
         </div>
 
         <div>
-            <h1> S/60.00  <h3 style="text-decoration: line-through;"> S/199.99</h3></h1>
+            <h1 style="color: black;"> S/60.00  <h3 style="text-decoration: line-through;"> S/199.99</h3></h1>
             70 % de descuento
             <div>
                 <ion-icon name="alarm-outline"></ion-icon>
@@ -82,8 +82,10 @@
             </div>
 
             <div id="opcionesCurso">
-                <button id="comprarAhoraBtn2"> <a class="comprarAhora" href="../misCursos/misCursos.html" "> Comprar Ahora </a>   </button>
-                <!-- <button id="comprarAhoraBtn"> <a class="comprarAhora" href="#" "> Comprar Ahora </a>   </button> -->
+                <!-- <button id="comprarAhoraBtn"> <a class="comprarAhora" href="../misCursos/misCursos.html" "> Comprar Ahora </a>   </button> -->
+                <!-- <button id="comprarAhoraBtn"> <a class="comprarAhora" href="../misCursos/navCurso.html" "> Comprar Ahora </a>   </button> -->
+                <button id="comprarAhoraBtn"> <a class="comprarAhora" href="#" "> Comprar Ahora </a>   </button>
+                
             </div>
             
             <div>
@@ -108,14 +110,14 @@
             
             <div>
                 <h2> Lo que aprenderas</h2>
-                <ion-icon name="checkmark-outline"></ion-icon> Como crear objetos (Abstraccion) <br>
-                <ion-icon name="checkmark-outline"></ion-icon> Encapsulamiento (public,private, protected) <br>
-                <ion-icon name="checkmark-outline"></ion-icon> Herencia Simple y Herencia Mulriple <br>
+                <ion-icon name="checkmark-outline"></ion-icon> EDA<br>
+                <ion-icon name="checkmark-outline"></ion-icon> PCA<br>
+                <ion-icon name="checkmark-outline"></ion-icon> REGRESION LINEAL , LOGISTICA<br>
             </div>
             <div id="info">
-                <ion-icon name="checkmark-outline"></ion-icon> Diferentes tipos de constructores y como manejar la memoria con los destructores <br>
-                <ion-icon name="checkmark-outline"></ion-icon> Implementacion de seguridad en el codigo<br>
-                <ion-icon name="checkmark-outline"></ion-icon> Sobrecarga<br>
+                <ion-icon name="checkmark-outline"></ion-icon> REGULARIZACION <br>
+                <ion-icon name="checkmark-outline"></ion-icon> REDES NEURONALES<br>
+                <ion-icon name="checkmark-outline"></ion-icon> MULTICAPA<br>
             </div>
         </div>
     </div>
@@ -130,14 +132,14 @@
         </div>
 
         <div class="menuContenido">
-            <h3>Objeto</h3>
+            <h3>EDA</h3>
             <div class="contenido">
                 <p>Contenido de la Unidad 2...</p>
             </div>
         </div>
 
         <div class="menuContenido">
-            <h3>Herencia</h3>
+            <h3>PCA</h3>
             <div class="contenido">
                 <p>Contenido de la Unidad 3...</p>
             </div>
@@ -177,20 +179,7 @@
     <script src="../CursoRecomendados/cursoRecomendado.js"></script>
     <script src="../cuentaUsuario/cuentaUsuario.js"></script>
     <script src="../vistaPrincipal/principal.js"></script>
-    <script>
-        /* ======================== COMPRAR UN CURSO =================================== */
-        document.getElementById('comprarAhoraBtn2').addEventListener('click', function() {
-            alert("estamos comprando");
-            // Almacenar el estado de compra en el almacenamiento local
-            localStorage.setItem('cursoCompradoPOO-localStorage', 'true');
-            // Redirigir a la página navCurso.html
-            //window.location.href = '../cuentaUsuario/misCursos.html';
-            
-            //window.location.href = '../misCursos/misCursos.html';
-            //window.location.href = '../misCursos/navCurso.html';
 
-        });
-    </script>
 
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
