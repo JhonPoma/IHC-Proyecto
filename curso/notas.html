@@ -1,134 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="curso.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="curso.css">
-</head>
+  <body>
+    <nav class="nav">
+      <a href="../cuentaUsuario/cuentaUsuario.html" class="logo"
+        >UNI STUDY HUB</a
+      >
+      <a href="#" class="nombre-curso">Fundamentos de programación en C</a>
+      <span class="secciones">
+        <a href="curso.html" class="seccion">Curso</a>
+        <a href="progreso.html" class="seccion">Progreso</a>
+        <a href="#" class="seccion activo">Notas</a>
+        <a href="recursos.html" class="seccion">Recursos</a>
+      </span>
+      <ion-icon name="person-circle-outline" class="icono-usuario"></ion-icon>
+      <div class="menu-usuario oculto">
+        <div class="opc-usr">
+          <a href="../misCursos/misCursos.html">Mis cursos</a>
+        </div>
+        <div class="opc-usr">
+          <a href="../cuentaUsuario/perfil.html">Perfil</a>
+        </div>
+        <button class="btn-salir">
+          <a href="../vistaPrincipal/principal.html">CERRAR SESION</a>
+        </button>
+      </div>
+    </nav>
 
-<body>
+    <div class="contenedor-centrado">
+      <div class="contedor-notas">
+        <table class="tabla-progesos">
+          <tbody>
+            <tr>
+              <th colspan="3">Modulo 1</th>
+            </tr>
+            <tr>
+              <td>Lección 1</td>
+              <td>Nota:</td>
+              <td class="nota1-1"></td>
+            </tr>
 
-  <nav class="nav">
-    <a href="../cuentaUsuario/cuentaUsuario.html" class="logo">UNI STUDY HUB</a>
-    <a href="#" class="nombre-curso">Fundamentos de programación en C</a>
-    <span class="secciones">
-      <a href="curso.html" class="seccion">Curso</a>
-      <a href="progreso.html" class="seccion">Progreso</a>
-      <a href="#" class="seccion activo">Notas</a>
-      <a href="recursos.html" class="seccion">Recursos</a>
-    </span>
-    <ion-icon name="person-circle-outline" class="icono-usuario"></ion-icon>
-    <div class="menu-usuario oculto">
-      <div class="opc-usr"><a href="../misCursos/misCursos.html">Mis cursos</a></div>
-      <div class="opc-usr"><a href="../cuentaUsuario/perfil.html">Perfil</a></div>
-      <button class="btn-salir"><a href="../vistaPrincipal/principal.html">CERRAR SESION</a></button>
+            <tr>
+              <td>Lección 2</td>
+              <td>Nota:</td>
+              <td class="nota modulo1 nota1"></td>
+            </tr>
+            <tr>
+              <td>Lección 3</td>
+              <td>Nota:</td>
+              <td class="nota modulo1 nota2"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="tabla-progesos">
+          <tbody>
+            <tr>
+              <th colspan="3">Modulo 2</th>
+            </tr>
+            <tr>
+              <td>Lección 1</td>
+              <td>Nota:</td>
+              <td class="nota modulo2 nota0"></td>
+            </tr>
+
+            <tr>
+              <td>Lección 2</td>
+              <td>Nota:</td>
+              <td class="nota modulo2 nota1"></td>
+            </tr>
+            <tr>
+              <td>Lección 3</td>
+              <td>Nota:</td>
+              <td class="nota modulo2 nota2"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="tabla-progesos">
+          <tbody>
+            <tr>
+              <th colspan="3">Modulo 3</th>
+            </tr>
+            <tr>
+              <td>Lección 1</td>
+              <td>Nota:</td>
+              <td class="nota modulo3 nota0"></td>
+            </tr>
+
+            <tr>
+              <td>Lección 2</td>
+              <td>Nota:</td>
+              <td class="nota modulo3 nota1"></td>
+            </tr>
+            <tr>
+              <td>Lección 3</td>
+              <td>Nota:</td>
+              <td class="nota modulo3 nota2"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="tabla-progesos">
+          <tbody>
+            <tr>
+              <th colspan="3">Modulo 4</th>
+            </tr>
+            <tr>
+              <td>Lección 1</td>
+              <td>Nota:</td>
+              <td class="nota modulo4 nota0"></td>
+            </tr>
+
+            <tr>
+              <td>Lección 2</td>
+              <td>Nota:</td>
+              <td class="nota modulo4 nota1"></td>
+            </tr>
+            <tr>
+              <td>Lección 3</td>
+              <td>Nota:</td>
+              <td class="nota modulo4 nota2"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </nav>
 
-  <div class="contenedor-centrado">
-    <div class="contedor-notas">
-      <table class="tabla-progesos">
-        <tbody>
-          <tr>
-            <th colspan="3">Modulo 1</th>
-          </tr>
-          <tr>
-            <td>Lección 1.1</td>
-            <td>Nota:</td>
-            <td>15</td>
-          </tr>
+    <script type="module" src="notas.js"></script>
 
-          <tr>
-            <td>Lección 1.2</td>
-            <td>Nota:</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>Lección 1.3</td>
-            <td>Nota:</td>
-            <td>17</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="tabla-progesos">
-        <tbody>
-          <tr>
-            <th colspan="3">Modulo 2</th>
-          </tr>
-          <tr>
-            <td>Lección 2.1</td>
-            <td>Nota:</td>
-            <td>13</td>
-          </tr>
-
-          <tr>
-            <td>Lección 2.2</td>
-            <td>Nota:</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>Lección 2.3</td>
-            <td>Nota:</td>
-            <td>11</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="tabla-progesos">
-        <tbody>
-          <tr>
-            <th colspan="3">Modulo 3</th>
-          </tr>
-          <tr>
-            <td>Lección 3.1</td>
-            <td>Nota:</td>
-            <td>14</td>
-          </tr>
-
-          <tr>
-            <td>Lección 3.2</td>
-            <td>Nota:</td>
-            <td>16</td>
-          </tr>
-          <tr>
-            <td>Lección 3.3</td>
-            <td>Nota:</td>
-            <td>19</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="tabla-progesos">
-        <tbody>
-          <tr>
-            <th colspan="3">Modulo 4</th>
-          </tr>
-          <tr>
-            <td>Lección 4.1</td>
-            <td>Nota:</td>
-            <td>15</td>
-          </tr>
-
-          <tr>
-            <td>Lección 4.2</td>
-            <td>Nota:</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>Lección 4.3</td>
-            <td>Nota:</td>
-            <td>17</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-
-  <script src="notas.js"></script>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

@@ -59,14 +59,14 @@
                     class="btn-mostrar-ocultar-materiales"
                     name="chevron-down-outline"
                   ></ion-icon
-                  >Lección 1.1</span
+                  >Lección 1</span
                 >
                 <span class="expandido oculto"
                   ><ion-icon
                     class="btn-mostrar-ocultar-materiales"
                     name="chevron-up-outline"
                   ></ion-icon
-                  >Lección 1.1</span
+                  >Lección 1</span
                 >
                 <ol class="materiales oculto">
                   <li class="material" id="1-1-1">
@@ -113,7 +113,7 @@
                       class="btn-material"
                       name="pencil-outline"
                     ></ion-icon
-                    >Prueba 1.1
+                    >Prueba 1
                   </li>
                 </ol>
               </li>
@@ -277,127 +277,430 @@
               tiene una duración de 15 minutos.
             </p>
             <button class="btn-iniciar-prueba">Iniciar Prueba</button>
-            <form action="#" class="formulario-prueba oculto">
+            <div class="formulario-prueba oculto">
               <div class="temporizador">
                 <div>
                   <span class="minuto">15</span>:<span class="segundo">00</span>
                 </div>
               </div>
+
               <p class="pregunta">Qué es el lenguaje C?</p>
-              <input type="radio" name="preg1" />
-              <label
-                >Es un lenguaje de programación estructurado de propósito
-                general</label
-              ><br />
-              <input type="radio" name="preg1" />
-              <label
-                >Es un programa destinado a la construcción de otros programas
-                informáticos</label
-              ><br />
-              <input type="radio" name="preg1" />
-              <label
-                >Sistema de signos que utiliza una comunidad para comunicarse
-                oralmente o por escrito</label
-              ><br />
+              <div>
+                <input type="radio" id="p1-a" name="p1" value="a" class="rc" />
+                <label for="p1-a"
+                  >Es un lenguaje de programación estructurado de propósito
+                  general</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" id="p1-b" name="p1" value="b" />
+                <label for="p1-b"
+                  >Es un programa destinado a la construcción de otros programas
+                  informáticos</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" id="p1-c" name="p1" value="c" />
+                <label for="p1-c"
+                  >Sistema de signos que utiliza una comunidad para comunicarse
+                  oralmente o por escrito</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
               <p class="pregunta">Quién lo desarrolló?</p>
-              <input type="radio" name="preg2" />
-              <label>Dennis Ritchie</label><br />
-              <input type="radio" name="preg2" />
-              <label>George Dantzig</label><br />
-              <input type="radio" name="preg2" />
-              <label>Leonid Kantoróvich</label><br />
+              <div>
+                <input type="radio" name="p2" id="p2-a" value="a" class="rc" />
+                <label for="p2-a">Dennis Ritchie</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p2" id="p2-b" value="b" />
+                <label for="p2-b">George Dantzig</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p2" id="p2-c" value="c" />
+                <label for="p2-c">Leonid Kantoróvich</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
               <p class="pregunta">¿Los comentarios para qué son útiles?</p>
-              <input type="radio" name="preg3" />
-              <label
-                >Para identificar los elementos principales de un
-                programa</label
-              ><br />
-              <input type="radio" name="preg3" />
-              <label>Para separar un programa de otro</label><br />
-              <input type="radio" name="preg3" />
-              <label>Para ocultar información</label><br />
+              <div>
+                <input type="radio" name="p3" id="p3-a" value="a" class="rc" />
+                <label for="p3-a"
+                  >Para identificar los elementos principales de un
+                  programa</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p3" id="p3-b" value="b" />
+                <label for="p3-b">Para separar un programa de otro</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p3" id="p3-c" value="c" />
+                <label for="p3-c">Para ocultar información</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
               <p class="pregunta">¿Para qué es el tipo "int"?</p>
-              <input type="radio" name="preg4" />
-              <label>Para variables</label><br />
-              <input type="radio" name="preg4" />
-              <label>Para números enteros</label><br />
-              <input type="radio" name="preg4" />
-              <label>Para números decimales</label><br />
+              <div>
+                <input type="radio" name="p4" id="p4-a" value="a" />
+                <label for="p4-a">Para variables</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p4" id="p4-b" value="b" class="rc" />
+                <label for="p4-a">Para números enteros</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p4" id="p4-c" value="c" />
+                <label for="p4-a">Para números decimales</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-              <p class="pregunta">Qué es el lenguaje C?</p>
-              <input type="radio" name="preg1" />
-              <label
-                >Es un lenguaje de programación estructurado de propósito
-                general</label
-              ><br />
-              <input type="radio" name="preg1" />
-              <label
-                >Es un programa destinado a la construcción de otros programas
-                informáticos</label
-              ><br />
-              <input type="radio" name="preg1" />
-              <label
-                >Sistema de signos que utiliza una comunidad para comunicarse
-                oralmente o por escrito</label
-              ><br />
+              <p class="pregunta">
+                Qué palabra se puede emplear para declarar un carácter?
+              </p>
+              <div>
+                <input type="radio" name="p5" id="p5-a" value="a" />
+                <label for="p5-a">int</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p5" id="p5-b" value="b" />
+                <label for="p5-b">float</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p5" id="p5-c" value="c" class="rc" />
+                <label for="p5-c">char</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-              <p class="pregunta">Quién lo desarrolló?</p>
-              <input type="radio" name="preg2" />
-              <label>Dennis Ritchie</label><br />
-              <input type="radio" name="preg2" />
-              <label>George Dantzig</label><br />
-              <input type="radio" name="preg2" />
-              <label>Leonid Kantoróvich</label><br />
+              <p class="pregunta">que significa el operador "||" ?</p>
+              <div>
+                <input type="radio" name="p6" id="p6-a" value="a" />
+                <label for="p6-a">AND</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p6" id="p6-b" value="b" class="rc" />
+                <label for="p6-b">OR</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p6" id="p6-c" value="c" />
+                <label for="p6-c">XOR</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-              <p class="pregunta">¿Los comentarios para qué son útiles?</p>
-              <input type="radio" name="preg3" />
-              <label
-                >Para identificar los elementos principales de un
-                programa</label
-              ><br />
-              <input type="radio" name="preg3" />
-              <label>Para separar un programa de otro</label><br />
-              <input type="radio" name="preg3" />
-              <label>Para ocultar información</label><br />
+              <p class="pregunta">como es la sintaxis de for</p>
+              <div>
+                <input type="radio" name="p7" id="p7-a" value="a" class="rc" />
+                <label for="p7-a"
+                  >for(inicialización; expresión; progresión)
+                  proposición;</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p7" id="p7-b" value="b" />
+                <label for="p7-b"
+                  >for(inicialización; proposición; expresión)
+                  inicialización;</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p7" id="p7-c" value="c" />
+                <label for="p7-c"
+                  >for(expresión; inicialización; progresión)
+                </label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-              <p class="pregunta">¿Para qué es el tipo "int"?</p>
-              <input type="radio" name="preg4" />
-              <label>Para variables</label><br />
-              <input type="radio" name="preg4" />
-              <label>Para números enteros</label><br />
-              <input type="radio" name="preg4" />
-              <label>Para números decimales</label><br />
+              <p class="pregunta">Para qué se emplea el término return?</p>
+              <div>
+                <input type="radio" name="p8" id="p8-a" value="a" />
+                <label for="p8-a">Para finalizar un bucle</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p8" id="p8-b" value="b" />
+                <label for="p8-b">Para finalizar el programa</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p8" id="p8-c" value="c" class="rc" />
+                <label for="p8-c"
+                  >Para devolver un valor o una dirección al finalizar la
+                  ejecución de la función en la que se encuentra</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-              <p class="pregunta">Qué es el lenguaje C?</p>
-              <input type="radio" name="preg1" />
-              <label
-                >Es un lenguaje de programación estructurado de propósito
-                general</label
-              ><br />
-              <input type="radio" name="preg1" />
-              <label
-                >Es un programa destinado a la construcción de otros programas
-                informáticos</label
-              ><br />
-              <input type="radio" name="preg1" />
-              <label
-                >Sistema de signos que utiliza una comunidad para comunicarse
-                oralmente o por escrito</label
-              ><br />
+              <p class="pregunta">¿Qué significa declarar una variable?</p>
+              <div>
+                <input type="radio" name="p9" id="p9-a" value="a" />
+                <label for="p9-a">significa Describir una variable</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p9" id="p9-b" value="b" class="rc" />
+                <label for="p9-b"
+                  >Significa reservar en memoria espacio para almacenar el valor
+                  de dicha variable y asignarle un nombre</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p9" id="p9-c" value="c" />
+                <label for="p9-c">significa guardar información</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-              <p class="pregunta">Quién lo desarrolló?</p>
-              <input type="radio" name="preg2" />
-              <label>Dennis Ritchie</label><br />
-              <input type="radio" name="preg2" />
-              <label>George Dantzig</label><br />
-              <input type="radio" name="preg2" />
-              <label>Leonid Kantoróvich</label><br />
+              <p class="pregunta">En que año fue creado el lenguaje c?</p>
+              <div>
+                <input type="radio" name="p10" id="p10-a" value="a" />
+                <label for="p10-a">1962</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="p10"
+                  id="p10-b"
+                  value="b"
+                  class="rc"
+                />
+                <label for="p10-b">1972</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p10" id="p10-c" value="c" />
+                <label for="p10-c">1982</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
               <input type="submit" value="Enviar" class="btn-enviar-prueba" />
-            </form>
+            </div>
+            <p class="resultado-prueba oculto"></p>
           </div>
         </div>
       </div>
@@ -423,7 +726,7 @@
       <p class="llm-respuesta"></p>
     </div>
 
-    <script src="curso.js"></script>
+    <script type="module" src="curso.js"></script>
 
     <script
       type="module"

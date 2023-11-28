@@ -14,6 +14,7 @@ const btnsMarcarCompleto = document.querySelectorAll(".lectura-completada");
 const minuto = document.querySelector(".minuto");
 const segundo = document.querySelector(".segundo");
 const btnsEnviarPrueba = document.querySelectorAll(".btn-enviar-prueba");
+const respuestas = document.querySelectorAll('input[type="radio"]');
 
 btnLLMMostrar.addEventListener("click", () => {
   contenedorLLM.classList.toggle("oculto");
@@ -78,8 +79,16 @@ document.addEventListener("click", (evt) => {
   }
 });
 
+let intervalID = 0;
+
+let respuestasCorrectas = 0;
+
 btnsIniciarPrueba.forEach((btnIniciarPrueba) => {
+  respuestasCorrectas = 0;
+
   btnIniciarPrueba.addEventListener("click", (evt) => {
+    btnLLMMostrar.classList.add("oculto");
+
     const formularioPrueba =
       evt.target.parentElement.querySelector(".formulario-prueba");
     formularioPrueba.classList.remove("oculto");
@@ -90,7 +99,7 @@ btnsIniciarPrueba.forEach((btnIniciarPrueba) => {
 
     evt.target.classList.add("oculto");
 
-    const intervalID = setInterval(() => {
+    intervalID = setInterval(() => {
       let seg = parseInt(segundo.textContent);
       let min = parseInt(minuto.textContent);
       if (seg === 1 && min === 0) {
@@ -130,11 +139,37 @@ btnsMarcarCompleto.forEach((btnMarcarCompleto) => {
 
 btnsEnviarPrueba.forEach((btnEnviarPrueba) => {
   btnEnviarPrueba.addEventListener("click", (evt) => {
-    evt.target.parentElement.classList.add("oculto");
-    let mensajePrueba =
-      evt.target.parentElement.parentElement.querySelector(".mensaje-prueba");
+    let resultadoPrueba =
+      evt.target.parentElement.parentElement.querySelector(".resultado-prueba");
 
-    mensajePrueba.classList.remove("oculto");
-    mensajePrueba.textContent = "Prueba finalizada.";
+    clearInterval(intervalID);
+    minuto.textContent = "00";
+    segundo.textContent = "00";
+
+    respuestas.forEach((respuesta) => {
+      if (respuesta.checked) {
+        if (respuesta.classList.contains("rc")) {
+          respuesta.parentElement
+            .querySelector(".correcto")
+            .classList.remove("oculto");
+          respuestasCorrectas++;
+        } else {
+          respuesta.parentElement
+            .querySelector(".incorrecto")
+            .classList.remove("oculto");
+        }
+      }
+      respuesta.disabled = true;
+
+      btnEnviarPrueba.disabled = true;
+      btnEnviarPrueba.classList.add("desabilitado");
+
+      btnLLMMostrar.classList.remove("oculto");
+
+      resultadoPrueba.classList.remove("oculto");
+      resultadoPrueba.textContent = `Respuestas correctas: ${respuestasCorrectas} / 10`;
+
+      localStorage.setItem("nota1-1", respuestasCorrectas);
+    });
   });
 });

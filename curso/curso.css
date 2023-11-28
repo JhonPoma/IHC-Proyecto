@@ -16,6 +16,7 @@
   --clr-verde: #099268;
   --clr-verde-osc: #087f5b;
   --clr-gris-claro: #dee2e6;
+  --clr-gris-oscuro: #868e96;
 }
 
 *,
@@ -367,8 +368,35 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.desabilitado {
+  background-color: var(--clr-gris-oscuro);
+}
+
+.desabilitado:hover {
+  background-color: var(--clr-gris-oscuro);
+  cursor: auto;
+}
+
 .lectura-completada {
   font-size: 1.2rem;
+}
+
+.resultado-prueba {
+  margin-top: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.correcto {
+  font-size: 1.3rem;
+  color: var(--clr-verde);
+  margin-left: 0.5rem;
+}
+
+.incorrecto {
+  font-size: 1.3rem;
+  color: var(--clr-rojo);
+  margin-left: 0.5rem;
 }
 
 /* Audio */
