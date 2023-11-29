@@ -273,16 +273,51 @@
             </p>
             <button class="lectura-completada">Marcar como completo</button>
           </div>
+          <div class="contenido-leccion oculto 1-1-4">
+            <audio controls>
+              <source src="audio/tiposDeDatos.mp3" type="audio/mpeg" />
+            </audio>
+            <p>C ofrece tres tipos de datos básicos:</p>
+            <h2>Enteros</h2>
+            <p>
+              Se definen con “int” y admiten de forma opcional dos prefijos
+              modificadores: short” y “long”: Modifica el tamaño en bits del
+              entero. Existen por tanto tres tipos de enteros: “int”, “short
+              int” (que se puede abreviar como “short”), y “long int” (que se
+              puede abreviar como “long”). “unsigned”: define un número natural
+              (mayor o igual a cero).
+            </p>
+            <h2>Letras y cadenas</h2>
+            <p>
+              Las variables de tipo letra se declaran como “char”. Para
+              referirse a una letra se rodea de comillas simples: 'M'. Como las
+              letras se representan internamente como números, el lenguaje C
+              permite realizar operaciones aritméticas como 'M' + 25.
+            </p>
+            <h2>Números reales</h2>
+            <p>
+              Los números reales se definen con “float” o “double”. La
+              diferencia entre ambas es la precisión que ofrece su
+              representación interna. Hay un número infinito de reales, pero se
+              representan con un número finito de bits. A mayor número de bits,
+              mayor número de reales se representan, y por tanto, mayor
+              precisión. Los reales definidos con “double” tienen un tamaño
+              doble a los definidos con “float”. Al igual que en el caso de los
+              enteros, el tamaño de estas representaciones varía de una
+              plataforma a otra.
+            </p>
+            <button class="lectura-completada">Marcar como completo</button>
+          </div>
           <div class="contenido-leccion oculto 1-1-8">
             <p class="mensaje-prueba">
               La siguiente prueba es cronometrada, consta de 10 preguntas y
-              tiene una duración de 15 minutos.
+              tiene una duración de 5 minutos.
             </p>
             <button class="btn-iniciar-prueba">Iniciar Prueba</button>
             <div class="formulario-prueba oculto">
               <div class="temporizador">
                 <div>
-                  <span class="minuto">15</span>:<span class="segundo">00</span>
+                  <span class="minuto">5</span>:<span class="segundo">00</span>
                 </div>
               </div>
 
