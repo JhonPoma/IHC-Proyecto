@@ -296,10 +296,10 @@
 
 <body>
     <nav class="nav">
-        <a href="#" class="logo">UNI STUDY HUB</a>
+        <a href="http://localhost:8000/LoginInstructor/principalInstructor.html" class="logo">UNI STUDY HUB</a>
         <a href="#" class="nombre-curso">${courseName}</a>
 
-        <a href="#" class="seccion activo">Cursos</a>
+        <a href="http://localhost:8000/Instructor/pantalla_instructor.html" class="seccion activo">Cursos</a>
 
         <ion-icon name="person-circle-outline" class="icono-usuario"></ion-icon>
         <div class="menu-usuario oculto">
@@ -332,7 +332,7 @@
             newModule.appendChild(buttonArrow);
 
             let moduleName = document.createElement('span');
-            moduleName.innerHTML = 'Module ' + moduleCount;
+            moduleName.innerHTML = 'Módulo ' + moduleCount;
             newModule.appendChild(moduleName);
 
 
@@ -405,7 +405,7 @@
             buttonArrow2.innerHTML = 'v';
             container.appendChild(buttonArrow2);
 
-            let textNode = document.createTextNode('Lesson ' + (lessonList.childElementCount + 1));
+            let textNode = document.createTextNode('lección' + (lessonList.childElementCount + 1));
             container.appendChild(textNode);
 
             let addButton = document.createElement('button');
@@ -427,7 +427,7 @@
             let contentDiv = document.querySelector('.content');
 
             // Update the content of the div
-            contentDiv.innerHTML = '<h1>Module</h1>' + moduleCount;
+            contentDiv.innerHTML = '<h1>Módulo</h1>' + moduleCount;
 
             // Add click event listener to the new module
             buttonArrow2.addEventListener('click', function (event) {
@@ -452,7 +452,7 @@
 
         function addSubject(subjectList) {
             let newSubject = document.createElement('li');
-            newSubject.innerHTML = 'Subject ' + (subjectList.childElementCount + 1);
+            newSubject.innerHTML = 'Tema ' + (subjectList.childElementCount + 1);
             // newSubject.setAttribute('contenteditable', 'true'); // Make the subject editable
             subjectList.appendChild(newSubject);
 

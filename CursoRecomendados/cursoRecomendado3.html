@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CursoRecomendado3-Login</title>
+    <link rel="stylesheet" href="../vistaPrincipal/principal.css">
+    <link rel="stylesheet" href="cursoRecomendado.css">
+ 
+</head>
+<body>
+
+    <header>
+        <div class="contenedor-header">
+            <div class="panel-izquierdo">
+                <!-- <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px">  -->
+                <a href="../cuentaUsuario/cuentaUsuario.html" class="logo">UNI STUDY HUB</a>  
+                <nav>
+                    <ul class="lista1">
+                        <li> <a href="#">Inicio</a> </li> 
+                        <li> <a href="#">Curso</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="panel-derecho">
+                <input type="text" placeholder="Buscar" style="position: relative;
+                bottom: 15px;
+                right: 190px;">
+                <a href="#">
+                    <ion-icon id="iconUsuario" name="person-circle-outline" class="icono-usuario" style="color: white; 
+                    font-size: 55px;
+                    position: relative; 
+                    top: 5px;
+                    right: 50px;"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </header>
+
+<!--==========================================-->
+<!-- Agrega el menú de opciones con un estilo oculto al principio -->
+<div id="menuOpciones" class="menu-oculto" style="width: 320px;">
+    <div class="opc-usr2">   <a href="../misCursos/misCursos.html">Mis cursos</a>  </div>
+    <div class="opc-usr2">   <a href="../cuentaUsuario/perfil.html">Perfil</a>      </div>
+    <button class="btn-salir2" style="width: 300px;">      CERRAR SESION  </button>
+  </div>
+<!--==========================================-->
+
+
+    <div id="cursoRecomendado">
+        <div id="curso">
+            <h2>INTELIGENCIA ARTIFICIAL</h2>
+            <div class="contenidoCurso">
+                Aprende la Inteligencia Artificial con Python desde lo basico hasta lo <br>
+                avanzado de forma sencilla.
+            </div>
+            <div class="ranking">
+                <span> 8.5 
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </span>
+                1524 estudiantes 
+            </div>
+            <div class="contenidoCurso">
+                Creado por Marcos Alania
+            </div>
+        </div>
+    </div>
+
+
+    <div id="infoCurso" > 
+        <div id="logoCurso">
+            <img src="./img/ia.png" alt="poo" width="280px" height="140px">
+        </div>
+
+        <div>
+            <h1 style="color: black;"> S/60.00  <h3 style="text-decoration: line-through;"> S/199.99</h3></h1>
+            70 % de descuento
+            <div>
+                <ion-icon name="alarm-outline"></ion-icon>
+                !Esta oferta termina en 6 horas!
+            </div>
+
+            <div id="opcionesCurso">
+                <!-- <button id="comprarAhoraBtn"> <a class="comprarAhora" href="../misCursos/misCursos.html" "> Comprar Ahora </a>   </button> -->
+                <!-- <button id="comprarAhoraBtn"> <a class="comprarAhora" href="../misCursos/navCurso.html" "> Comprar Ahora </a>   </button> -->
+                <button id="comprarAhoraBtn"> <a class="comprarAhora" href="#" "> Comprar Ahora </a>   </button>
+                
+            </div>
+            
+            <div>
+                <h3>Este curso incluye:</h3>
+                <div class="cursoIncluye">
+                    <ion-icon name="videocam-outline"></ion-icon>
+                    40 horas de video
+                    <br>
+                    <ion-icon name="create-outline"></ion-icon>
+                    Tareas
+                    <br>
+                    <ion-icon name="trophy-outline"></ion-icon>
+                    Certificado de finalizacion
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="infoCurso2">
+        <div class="columnas">
+            
+            <div>
+                <h2> Lo que aprenderas</h2>
+                <ion-icon name="checkmark-outline"></ion-icon> EDA<br>
+                <ion-icon name="checkmark-outline"></ion-icon> PCA<br>
+                <ion-icon name="checkmark-outline"></ion-icon> REGRESION LINEAL , LOGISTICA<br>
+            </div>
+            <div id="info">
+                <ion-icon name="checkmark-outline"></ion-icon> REGULARIZACION <br>
+                <ion-icon name="checkmark-outline"></ion-icon> REDES NEURONALES<br>
+                <ion-icon name="checkmark-outline"></ion-icon> MULTICAPA<br>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenidoCurso2">
+        <h2>Contenido del curso</h2>
+        <div class="menuContenido">
+            <h3>Introduccion          2 clases-10min</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 1...</p>
+            </div>
+        </div>
+
+        <div class="menuContenido">
+            <h3>EDA</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 2...</p>
+            </div>
+        </div>
+
+        <div class="menuContenido">
+            <h3>PCA</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 3...</p>
+            </div>
+        </div>
+
+        <div class="menuContenido">
+            <h3>Polimorfismo y Herencia Multiple</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 4...</p>
+            </div>
+        </div>
+
+        <div class="menuContenido">
+            <h3>Polimorfismo y Herencia Multiple</h3>
+            <div class="contenido">
+                <p>Contenido de la Unidad 4...</p>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+    <footer>
+        <div class="contenedor-header">
+            <div class="panel-izquierdo">
+                <nav>
+                    <ul class="lista1">
+                        <li> <a href="#" style="color: white;">Sobre Nosotros</a> </li> 
+                        <li> <a href="#" style="color: white;">Contactenos</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </footer>
+
+
+    <script src="../CursoRecomendados/cursoRecomendado.js"></script>
+    <script src="../cuentaUsuario/cuentaUsuario.js"></script>
+    <script src="../vistaPrincipal/principal.js"></script>
+
+
+
+    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
+    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
+</body>
+
+   
+</html>

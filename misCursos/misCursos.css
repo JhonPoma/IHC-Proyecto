@@ -159,10 +159,10 @@ label:hover{
 
 /*=== Contenedor curso ===*/
 #contenedor-curso{
-  /* border: red solid; */
+   /* border: red solid;  */
   position: absolute;
   width: 800px;
-  height: 350px;
+  height: 500px;
   left: 400px;
   top: 160px;
 }
@@ -188,6 +188,7 @@ label:hover{
 }
 .infoCurso2{
   padding-left: 5px;
+
 }
 
 .misCurso1 button{
@@ -208,16 +209,16 @@ label:hover{
   width: 600px;
   height: 135px;
   position: relative;
-  top: 180px;
+  top: 140px;
   display: flex;
 }
 .imgCurso2 img{
   width: 250px;
   height: 114px;
 }
-.infoCurso2{
+/* .infoCurso2{
   padding-left: 5px;
-}
+} */
 .misCurso2 button{
   border-radius: 5px;
   background-color: #BAFBFF;
@@ -228,7 +229,41 @@ label:hover{
   left: 480px;
 }
 
+.infoCurso1{
+  position: relative;
+  top: 0px;
+  left: 8px;
+  bottom: 120px;
+}
+.infoCurso1 a{
+  position: relative;
+  right: 255px;
+}
 
+.infoCurso2{
+  position: relative;
+  left: 255px;
+  bottom: 120px;
+}
+.infoCurso2 a{
+  position: relative;
+  right: 255px;
+}
 
+.infoCurso3{
+  position: relative;
+  left: 260px;
+  bottom: 120px;
+}
+.infoCurso3 a{
+  position: relative;
+  right: 255px;
+}
 
-
+a .btnRetirarse{
+  background-color: #FF6262;
+  color: black;
+  position: relative;
+  bottom: 4px;
+  left: 550px;
+}

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,27 +5,68 @@
 </head>
 <body>
 
-<div class="misCurso1">
-    <div class="imgCurso1">
-        <img src="../Instructor/CursoImage.jpg" alt="Fundamentos Programacion">
+    <div class="misCurso1">
+        <div class="imgCurso1">
+            <img src="../Instructor/CursoImage.jpg" alt="Fundamentos Programacion">
+        </div>
+        <div class="infoCurso1">
+            <h3>Fundamentos de Programacion en C</h3>
+            <a href="http://localhost:3001"> <button> Ir a curso</button>  </a>   
+        </div>
     </div>
-    <div class="infoCurso2">
-        <h3>Fundamentos de Programacion en C</h3>
-        <a href="../curso/curso.html"> <button> Ir a curso</button>  </a>   
-     </div>
 
-</div>
 
-<div class="misCurso2">
-    <div class="imgCurso1">
-        <img src="../CursoRecomendados/img/poo.png" alt="Programacion Orientada a Objetos">
+
+
+    <div id="cursoCompradoPOO" class="misCurso2" style="display: none;">
+        <div class="imgCurso1">
+            <img src="../CursoRecomendados/img/poo.png" alt="Programacion Orientada a Objetos">
+        </div>
+        <div class="infoCurso2">
+            <h3>Programacion Orientada a Objetos</h3>
+            <a href="#"> <button> Ir a curso</button>  </a>   
+        </div>
     </div>
-    <div class="infoCurso2">
-        <h3>Programacion Orientada a Objetos</h3>
-        <a href="#"> <button> Ir a curso</button>  </a>   
-     </div>
-</div>
 
-<script src="./miscursos.js"></script>
+
+
+    <div id="cursoComprado3" class="misCurso2"  style="display: none;">
+        <div class="imgCurso1">
+            <img src="../CursoRecomendados/img/ia.png" alt="IA">
+        </div>
+        <div class="infoCurso3">
+            <h3>Inteligencia Artificial</h3>
+            <a href="#"> <button> Ir a curso</button>  </a>   
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const cursoCompradoPOO = localStorage.getItem('cursoCompradoPOO-localStorage');
+        const cursoPOO = document.getElementById("cursoCompradoPOO");
+        if (cursoCompradoPOO-localStorage == 'true') {
+            // document.getElementById('cursoComprado3').style.display = 'block';
+            if(cursoPOO.style.display=='none' || cursoPOO.style.display==""){
+                cursoPOO.style.display='block';
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        // alert("compreeeeeeeeee");
+        // console.log("holaa");
+        const cursoComprado = localStorage.getItem('cursoCompradoo');
+        const curso3 = document.getElementById("cursoComprado3");
+        if (cursoComprado == 'true') {
+
+            // document.getElementById('cursoComprado3').style.display = 'block';
+            if(curso3.style.display=='none' || curso3.style.display==""){
+            curso3.style.display='block';
+            }
+            }
+        });
+    </script>
+
 </body>
 </html>

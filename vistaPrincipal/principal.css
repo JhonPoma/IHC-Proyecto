@@ -258,7 +258,24 @@ footer{
     left: 4px;
 }
 
-/*=========*/
+#mensajeRegistroExito{
+    display: none; /*aparece al comienzo oculto*/
+    color: black;
+    background-color: chartreuse;
+    border-radius: 10px;
+}
+#mensajeRegistroError{
+    display: none; /* Al comienzo aparece oculto*/
+    color: black;
+    background-color: #FF5555;
+    border-radius: 10px;
+}
+
+
+
+
+
+/*===========================================================*/
 /*Pagina principal Instructor*/
 #selloInstructor{
     position: relative;
@@ -266,7 +283,7 @@ footer{
 }
 
 
-/*RECUPERAR CONTRASEÑA*/
+/*================ RECUPERAR CONTRASEÑA ======================*/
 #btnEnviarCodigo{
     position: absolute;
     left: 540px;
@@ -346,6 +363,31 @@ footer{
 
 
 
+/*======== CHAT BOT ==============*/
 
+#chatbot-contenedor {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    display: flex;
+    align-items: flex-end;
+}
+
+#chatbot-image {
+    width: 100px; 
+    height: auto; 
+    cursor: pointer;
+}
+
+#chatbot-llm {
+    display: none; /* Oculta el contenedor del LLM inicialmente */
+    border: #14519c solid;
+    border-radius: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 120px;
+    width: 210px;
+    height: 210px;
+}
 
 

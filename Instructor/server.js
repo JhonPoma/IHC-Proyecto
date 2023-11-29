@@ -26,6 +26,42 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get('/create_course_page/:courseName', (req, res) => {
+    let courseName = req.params.courseName;
+    courseName = courseName.replace(/ /g, '_');
+    const filePath = path.join(__dirname, `${courseName}.html`);
+
+    if (fs.existsSync(filePath)) {
+        res.sendFile(filePath);
+        return;
+    }
+
+    // Path to your HTML template
+    const templatePath = path.join(__dirname, 'template.html');
+    fs.readFile(templatePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('An error occurred while reading the template.');
+            return;
+        }
+
+        // Replace placeholder in template with course name
+        const newPageContent = data.replace(/\${courseName}/g, courseName);
+
+
+
+        fs.writeFile(filePath, newPageContent, err => {
+            if (err) {
+                console.error(err);
+                res.status(500).send('An error occurred while creating the page.');
+                return;
+            }
+
+            res.send(newPageContent);
+        });
+    });
+});
+
 app.post('/register', upload.single('certificate'), (req, res) => {
     const { name, career, description, email } = req.body;
     const certificatePath = req.file.path;
@@ -155,7 +191,7 @@ db.one('INSERT INTO instructors(account, password) VALUES($1, $2) RETURNING id',
 });
 
 // Use the session middleware
-app.use(session({ secret: 'your secret key', cookie: { maxAge: 60000 }}));
+// app.use(session({ secret: 'your secret key', cookie: { maxAge: 60000 }}));
 
 app.post('/login', async (req, res) => {
     const { correo, pass } = req.body;

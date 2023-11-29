@@ -1,6 +1,6 @@
 
 
-/* ================       PREFERENCIA  ====================*/
+/* ================       PREFERENCIA  ===========================================*/
 document.addEventListener("DOMContentLoaded", function() {
     const temaSelect = document.getElementById("tema");
     const guardaButton = document.getElementById("guarda2");
@@ -32,6 +32,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+
+
+/* ======================== COMPRAR UN CURSO =================================== */
+document.getElementById('comprarAhoraBtn').addEventListener('click', function() {
+  alert("estamos comprando");
+  // Almacenar el estado de compra en el almacenamiento local
+  localStorage.setItem('cursoCompradoo', 'true');
+  // Redirigir a la página navCurso.html
+  //window.location.href = '../cuentaUsuario/misCursos.html';
+  
+  //window.location.href = '../misCursos/misCursos.html';
+  //window.location.href = '../misCursos/navCurso.html';
+
+});
+
 
 
 

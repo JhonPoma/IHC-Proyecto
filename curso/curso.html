@@ -1,276 +1,784 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="curso.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="curso.css">
-</head>
-
-<body>
-
-  <nav class="nav">
-    <a href="../cuentaUsuario/cuentaUsuario.html" class="logo">UNI STUDY HUB</a>
-    <a href="#" class="nombre-curso">Fundamentos de programación en C</a>
-    <span class="secciones">
-      <a href="#" class="seccion activo">Curso</a>
-      <a href="progreso.html" class="seccion">Progreso</a>
-      <a href="notas.html" class="seccion">Notas</a>
-      <a href="recursos.html" class="seccion">Recursos</a>
-    </span>
-    <ion-icon name="person-circle-outline" class="icono-usuario"></ion-icon>
-    <div class="menu-usuario oculto">
-      <div class="opc-usr"><a href="../misCursos/misCursos.html">Mis cursos</a></div>
-      <div class="opc-usr"><a href="../cuentaUsuario/perfil.html">Perfil</a></div>
-      <button class="btn-salir"><a href="../vistaPrincipal/principal.html">CERRAR SESION</a></button>
-    </div>
-  </nav>
-
-  <div class="contenedor2">
-    <div class="contenidos">
-      <h2>Contenidos</h2>
-      <ol class="modulos">
-        <li class="modulo">
-          <span class="comprimido"><ion-icon class="btn-mostrar-ocultar-lecciones"
-              name="chevron-down-outline"></ion-icon>
-            Módulo 1</span>
-          <span class="expandido oculto"><ion-icon class="btn-mostrar-ocultar-lecciones"
-              name="chevron-up-outline"></ion-icon>
-            Módulo 1</span>
-          <ol class="lecciones oculto">
-            <li class="leccion">
-              <span class="comprimido"><ion-icon class="btn-mostrar-ocultar-materiales"
-                  name="chevron-down-outline"></ion-icon>Lección 1.1</span>
-              <span class="expandido oculto"><ion-icon class="btn-mostrar-ocultar-materiales"
-                  name="chevron-up-outline"></ion-icon>Lección 1.1</span>
-              <ol class="materiales oculto">
-                <li class="material" id="1-1-1"><ion-icon class="btn-material"
-                    name="play-outline"></ion-icon>Introduccion a C
-                </li>
-                <li class="material" id="1-1-2"><ion-icon class="btn-material"
-                    name="document-text-outline"></ion-icon>Palabras
-                  clave e identificadores
-                </li>
-                <li class="material" id="1-1-3"><ion-icon class="btn-material" name="document-text-outline">
-                  </ion-icon>Variables
-                  y constantes</li>
-                <li class="material" id="1-1-4"><ion-icon class="btn-material" name="document-text-outline">
-                  </ion-icon>Tipos de
-                  datos</li>
-                <li class="material" id="1-1-5"><ion-icon class="btn-material" name="document-text-outline">
-                  </ion-icon>Entrada /
-                  Salida</li>
-                <li class="material" id="1-1-6"><ion-icon class="btn-material" name="document-text-outline">
-                  </ion-icon>Operadores
-                </li>
-                <li class="material" id="1-1-7"><ion-icon class="btn-material" name="document-text-outline">
-                  </ion-icon>Ejemplos
-                </li>
-                <li class="material" id="1-1-8"><ion-icon class="btn-material" name="pencil-outline"></ion-icon>Prueba
-                  1.1</li>
-              </ol>
-            </li>
-          </ol>
-        </li>
-        <li class="modulo"><span class="comprimido"><ion-icon class="btn-mostrar-ocultar-lecciones"
-              name="chevron-down-outline"></ion-icon>
-            Módulo 2</span>
-          <span class="expandido oculto"><ion-icon class="btn-mostrar-ocultar-lecciones"
-              name="chevron-up-outline"></ion-icon>
-            Módulo 2</span>
-        </li>
-        <li class="modulo"><span class="comprimido"><ion-icon class="btn-mostrar-ocultar-lecciones"
-              name="chevron-down-outline"></ion-icon>
-            Módulo 3</span>
-          <span class="expandido oculto"><ion-icon class="btn-mostrar-ocultar-lecciones"
-              name="chevron-up-outline"></ion-icon>
-            Módulo 3</span>
-        </li>
-        <li class="modulo"><span class="comprimido"><ion-icon class="btn-mostrar-ocultar-lecciones"
-              name="chevron-down-outline"></ion-icon>
-            Módulo 4</span>
-          <span class="expandido oculto"><ion-icon class="btn-mostrar-ocultar-lecciones"
-              name="chevron-up-outline"></ion-icon>
-            Módulo 4</span>
-        </li>
-      </ol>
-    </div>
-    <div class="contenido">
-      <h1 class="titulo-leccion"></h1>
-      <div class="contenedor-leccion">
-        <div class="contenido-leccion oculto 1-1-1">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/rEsSxd0L4GI?si=kEn3pvHqVR57TxKt"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+  <body>
+    <nav class="nav">
+      <a href="http://localhost:8000/cuentaUsuario/cuentaUsuario.html" class="logo"
+        >UNI STUDY HUB</a
+      >
+      <a href="#" class="nombre-curso">Fundamentos de programación en C</a>
+      <span class="secciones">
+        <a href="#" class="seccion activo">Curso</a>
+        <a href="progreso.html" class="seccion">Progreso</a>
+        <a href="notas.html" class="seccion">Notas</a>
+        <a href="recursos.html" class="seccion">Recursos</a>
+      </span>
+      <ion-icon name="person-circle-outline" class="icono-usuario"></ion-icon>
+      <div class="menu-usuario oculto">
+        <div class="opc-usr">
+          <a href="../misCursos/misCursos.html">Mis cursos</a>
         </div>
-        <div class="contenido-leccion oculto 1-1-2">
-          <p>Las palabras clave son palabras que tienen un significado especial en el compilador de C. En las fases de
-            traducción 7 y
-            8, un identificador no puede escribirse igual, incluido el uso de mayúsculas y minúsculas, que una palabra
-            clave de C.</p>
-          <h2>Palabras clave de C estándar</h2>
-          <ul class="lista">
-            <li>auto</li>
-            <li>break</li>
-            <li>case</li>
-            <li>char</li>
-            <li>const</li>
-            <li>continue</li>
-          </ul>
-          <h2>Identificadores</h2>
-          <p>Los usamos para nombrar a varios elementos de un programa, como variables, funciones y arrays. Un
-            identificador está
-            formado por letras (a|b|c|...|z|A|B|C|...|Z), y dígitos (0|1|2|3|...|9), la única restricción que se nos
-            pone es que el
-            primer carácter tiene que ser una letra. El lenguaje C distingue entre mayúsculas y minúsculas, entonces
-            hemos de tener
-            cuidado si se intercambian dentro de un mismo identificador (aunque esto no es una buena práctica). El
-            carácter
-            subrayado (_), también lo podemos incluir como una letra.</p>
-          <button class="lectura-completada">Marcar como completo</button>
+        <div class="opc-usr">
+          <a href="http://localhost:8000/cuentaUsuario/perfil.html">Perfil</a>
         </div>
-        <div class="contenido-leccion oculto 1-1-3">
-          <h2>Variables</h2>
-          <p>Las variables son altamente imprescindibles al momento de programar, de hecho sería imposible conseguir una
-            aplicación
-            con una funcionalidad básica sin usar variables; por esta misma razón es necesario aprender a usarlas bien y
-            lo tenemos
-            muy fácil, pues su uso es bastante sencillo e intuitivo, tanto para declararlas como para asignarles
-            valores.</p>
-          <p>
-            Las variables son posiciones en memoria donde estarán guardados los diferentes valores que le damos o que
-            toman duranet
-            ejecución los datos que usamos y normalmente estarán disponibles a lo largo de la ejecución de nuestro
-            programa. Para
-            asignar valores a una variable en una gran variedad de lenguajes que incluye a C se usa el operador "="
-            seguido del
-            valor que le daremos a la variable (no todos usan el "=" para esto). Veamos un ejemplo completo con todos
-            los posibles
-            usos que le damos a una variable.</p>
-          <h2>Constantes</h2>
-          <p>Las datos constantes, mal llamadas por algunos "variables constantes" (realmente no son variables) tienen
-            un valor fijo
-            durante toda la ejecución del programa, es decir, este valor no cambia ni puede ser cambiado a lo largo de
-            la ejecución
-            de nuestro programa. Las constantes son muy útiles para especificar el tamaño de un vector y para algunas
-            otras cosas,
-            como facilidad de uso y confiabilidad del código. Para declarar una constante, se hace despues de declarar
-            las librerías
-            y antes de las funciones, la sintaxis es la siguiente: #define nombre_constante valor.</p>
-          <button class="lectura-completada">Marcar como completo</button>
-        </div>
-        <div class="contenido-leccion oculto 1-1-8">
-          <p>La siguiente prueba es cronometrada, consta de 10 preguntas y tiene una duración de 15 minutos.</p>
-          <button class="btn-iniciar-prueba">Iniciar Prueba</button>
-          <form action="#" class="formulario-prueba oculto">
-            <p class="pregunta">Qué es el lenguaje C?</p>
-            <input type="radio" name="preg1">
-            <label>Es un lenguaje de programación estructurado de propósito general</label><br>
-            <input type="radio" name="preg1">
-            <label>Es un programa destinado a la construcción de otros programas informáticos</label><br>
-            <input type="radio" name="preg1">
-            <label>Sistema de signos que utiliza una comunidad para comunicarse oralmente o por escrito</label><br>
+        <button class="btn-salir">
+          <a href="http://localhost:8000/vistaPrincipal/principal.html">CERRAR SESION</a>
+        </button>
+      </div>
+    </nav>
 
-            <p class="pregunta">Quién lo desarrolló?</p>
-            <input type="radio" name="preg2">
-            <label>Dennis Ritchie</label><br>
-            <input type="radio" name="preg2">
-            <label>George Dantzig</label><br>
-            <input type="radio" name="preg2">
-            <label>Leonid Kantoróvich</label><br>
+    <div class="contenedor2">
+      <div class="contenidos">
+        <h2>Contenidos</h2>
+        <ol class="modulos">
+          <li class="modulo">
+            <span class="comprimido"
+              ><ion-icon
+                class="btn-mostrar-ocultar-lecciones"
+                name="chevron-down-outline"
+              ></ion-icon>
+              Módulo 1</span
+            >
+            <span class="expandido oculto"
+              ><ion-icon
+                class="btn-mostrar-ocultar-lecciones"
+                name="chevron-up-outline"
+              ></ion-icon>
+              Módulo 1</span
+            >
+            <ol class="lecciones oculto">
+              <li class="leccion">
+                <span class="comprimido"
+                  ><ion-icon
+                    class="btn-mostrar-ocultar-materiales"
+                    name="chevron-down-outline"
+                  ></ion-icon
+                  >Lección 1</span
+                >
+                <span class="expandido oculto"
+                  ><ion-icon
+                    class="btn-mostrar-ocultar-materiales"
+                    name="chevron-up-outline"
+                  ></ion-icon
+                  >Lección 1</span
+                >
+                <ol class="materiales oculto">
+                  <li class="material" id="1-1-1">
+                    <ion-icon
+                      class="btn-material"
+                      name="play-outline"
+                    ></ion-icon
+                    >Introduccion a C
+                  </li>
+                  <li class="material" id="1-1-2">
+                    <ion-icon
+                      class="btn-material"
+                      name="document-text-outline"
+                    ></ion-icon
+                    >Palabras clave e identificadores
+                  </li>
+                  <li class="material" id="1-1-3">
+                    <ion-icon class="btn-material" name="document-text-outline">
+                    </ion-icon
+                    >Variables y constantes
+                  </li>
+                  <li class="material" id="1-1-4">
+                    <ion-icon class="btn-material" name="document-text-outline">
+                    </ion-icon
+                    >Tipos de datos
+                  </li>
+                  <li class="material" id="1-1-5">
+                    <ion-icon class="btn-material" name="document-text-outline">
+                    </ion-icon
+                    >Entrada / Salida
+                  </li>
+                  <li class="material" id="1-1-6">
+                    <ion-icon class="btn-material" name="document-text-outline">
+                    </ion-icon
+                    >Operadores
+                  </li>
+                  <li class="material" id="1-1-7">
+                    <ion-icon class="btn-material" name="document-text-outline">
+                    </ion-icon
+                    >Ejemplos
+                  </li>
+                  <li class="material" id="1-1-8">
+                    <ion-icon
+                      class="btn-material"
+                      name="pencil-outline"
+                    ></ion-icon
+                    >Prueba 1
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li class="modulo">
+            <span class="comprimido"
+              ><ion-icon
+                class="btn-mostrar-ocultar-lecciones"
+                name="chevron-down-outline"
+              ></ion-icon>
+              Módulo 2</span
+            >
+            <span class="expandido oculto"
+              ><ion-icon
+                class="btn-mostrar-ocultar-lecciones"
+                name="chevron-up-outline"
+              ></ion-icon>
+              Módulo 2</span
+            >
+          </li>
+          <li class="modulo">
+            <span class="comprimido"
+              ><ion-icon
+                class="btn-mostrar-ocultar-lecciones"
+                name="chevron-down-outline"
+              ></ion-icon>
+              Módulo 3</span
+            >
+            <span class="expandido oculto"
+              ><ion-icon
+                class="btn-mostrar-ocultar-lecciones"
+                name="chevron-up-outline"
+              ></ion-icon>
+              Módulo 3</span
+            >
+          </li>
+          <li class="modulo">
+            <span class="comprimido"
+              ><ion-icon
+                class="btn-mostrar-ocultar-lecciones"
+                name="chevron-down-outline"
+              ></ion-icon>
+              Módulo 4</span
+            >
+            <span class="expandido oculto"
+              ><ion-icon
+                class="btn-mostrar-ocultar-lecciones"
+                name="chevron-up-outline"
+              ></ion-icon>
+              Módulo 4</span
+            >
+          </li>
+        </ol>
+      </div>
+      <div class="contenido">
+        <h1 class="titulo-leccion"></h1>
+        <div class="contenedor-leccion">
+          <div class="contenido-leccion oculto 1-1-1">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/rEsSxd0L4GI?si=kEn3pvHqVR57TxKt"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <br />
+            <button class="video-completado">Marcar como completo</button>
+          </div>
+          <div class="contenido-leccion oculto 1-1-2">
+            <audio controls>
+              <source
+                src="audio/palabras_clave_identificadores.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
 
-            <p class="pregunta">¿Los comentarios para qué son útiles?</p>
-            <input type="radio" name="preg3">
-            <label>Para identificar los elementos principales de un programa</label><br>
-            <input type="radio" name="preg3">
-            <label>Para separar un programa de otro</label><br>
-            <input type="radio" name="preg3">
-            <label>Para ocultar información</label><br>
+            <h2>Palabras clave de C estándar</h2>
+            <p>
+              A continuación se listan todas las palabras clave reservadas por
+              el lenguaje C. Estas palabras clave no se pueden abreviar,
+              utilizarse como nombres de variable o utilizarse como cualquier
+              otro tipo de identificador.
+            </p>
+            <ul class="lista">
+              <li>auto</li>
+              <li>break</li>
+              <li>case</li>
+              <li>char</li>
+              <li>const</li>
+              <li>continue</li>
+            </ul>
+            <h2>Identificadores</h2>
+            <p>
+              Los "identificadores" o "símbolos" son los nombres que se
+              proporcionan para variables, tipos, funciones y etiquetas del
+              programa. Los nombres de identificadores deben diferir en
+              ortografía y mayúsculas y minúsculas de cualquier palabra clave.
+              No se puede utilizar palabras clave como identificadores; se
+              reservan para uso especial. Para crear un identificador,
+              especifíquelo en la declaración de una variable, un tipo o una
+              función.
+            </p>
+            <p>
+              El primer carácter de un nombre de identificador debe ser nondigit
+              (es decir, el primer carácter debe ser un subrayado o una letra
+              mayúscula o minúscula). ANSI permite seis caracteres
+              significativos en el nombre de un identificador externo y 31 para
+              los nombres de identificadores internos (dentro de una función).
+              Los identificadores externos (los declarados en el ámbito global o
+              declarados con la clase de almacenamiento extern) pueden estar
+              sujetos a más restricciones de nomenclatura, porque estos
+              identificadores se tienen que procesar con otro software, tal como
+              vinculadores.
+            </p>
+            <button class="lectura-completada">Marcar como completo</button>
+          </div>
+          <div class="contenido-leccion oculto 1-1-3">
+            <audio controls>
+              <source
+                src="audio/variables_y_constantes.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+            <h2>Variables</h2>
+            <p>
+              Las variables son altamente imprescindibles al momento de
+              programar, de hecho sería imposible conseguir una aplicación con
+              una funcionalidad básica sin usar variables; por esta misma razón
+              es necesario aprender a usarlas bien y lo tenemos muy fácil, pues
+              su uso es bastante sencillo e intuitivo, tanto para declararlas
+              como para asignarles valores.
+            </p>
+            <p>
+              Las variables son posiciones en memoria donde estarán guardados
+              los diferentes valores que le damos o que toman duranet ejecución
+              los datos que usamos y normalmente estarán disponibles a lo largo
+              de la ejecución de nuestro programa. Para asignar valores a una
+              variable en una gran variedad de lenguajes que incluye a C se usa
+              el operador "=" seguido del valor que le daremos a la variable (no
+              todos usan el "=" para esto). Veamos un ejemplo completo con todos
+              los posibles usos que le damos a una variable.
+            </p>
+            <h2>Constantes</h2>
+            <p>
+              Las datos constantes, mal llamadas por algunos "variables
+              constantes" (realmente no son variables) tienen un valor fijo
+              durante toda la ejecución del programa, es decir, este valor no
+              cambia ni puede ser cambiado a lo largo de la ejecución de nuestro
+              programa. Las constantes son muy útiles para especificar el tamaño
+              de un vector y para algunas otras cosas, como facilidad de uso y
+              confiabilidad del código. Para declarar una constante, se hace
+              despues de declarar las librerías y antes de las funciones, la
+              sintaxis es la siguiente: #define nombre_constante valor.
+            </p>
+            <button class="lectura-completada">Marcar como completo</button>
+          </div>
+          <div class="contenido-leccion oculto 1-1-4">
+            <audio controls>
+              <source src="audio/tiposDeDatos.mp3" type="audio/mpeg" />
+            </audio>
+            <p>C ofrece tres tipos de datos básicos:</p>
+            <h2>Enteros</h2>
+            <p>
+              Se definen con “int” y admiten de forma opcional dos prefijos
+              modificadores: short” y “long”: Modifica el tamaño en bits del
+              entero. Existen por tanto tres tipos de enteros: “int”, “short
+              int” (que se puede abreviar como “short”), y “long int” (que se
+              puede abreviar como “long”). “unsigned”: define un número natural
+              (mayor o igual a cero).
+            </p>
+            <h2>Letras y cadenas</h2>
+            <p>
+              Las variables de tipo letra se declaran como “char”. Para
+              referirse a una letra se rodea de comillas simples: 'M'. Como las
+              letras se representan internamente como números, el lenguaje C
+              permite realizar operaciones aritméticas como 'M' + 25.
+            </p>
+            <h2>Números reales</h2>
+            <p>
+              Los números reales se definen con “float” o “double”. La
+              diferencia entre ambas es la precisión que ofrece su
+              representación interna. Hay un número infinito de reales, pero se
+              representan con un número finito de bits. A mayor número de bits,
+              mayor número de reales se representan, y por tanto, mayor
+              precisión. Los reales definidos con “double” tienen un tamaño
+              doble a los definidos con “float”. Al igual que en el caso de los
+              enteros, el tamaño de estas representaciones varía de una
+              plataforma a otra.
+            </p>
+            <button class="lectura-completada">Marcar como completo</button>
+          </div>
+          <div class="contenido-leccion oculto 1-1-8">
+            <p class="mensaje-prueba">
+              La siguiente prueba es cronometrada, consta de 10 preguntas y
+              tiene una duración de 5 minutos.
+            </p>
+            <button class="btn-iniciar-prueba">Iniciar Prueba</button>
+            <div class="formulario-prueba oculto">
+              <div class="temporizador">
+                <div>
+                  <span class="minuto">5</span>:<span class="segundo">00</span>
+                </div>
+              </div>
 
-            <p class="pregunta">¿Para qué es el tipo "int"?</p>
-            <input type="radio" name="preg4">
-            <label>Para variables</label><br>
-            <input type="radio" name="preg4">
-            <label>Para números enteros</label><br>
-            <input type="radio" name="preg4">
-            <label>Para números decimales</label><br>
+              <p class="pregunta">Qué es el lenguaje C?</p>
+              <div>
+                <input type="radio" id="p1-a" name="p1" value="a" class="rc" />
+                <label for="p1-a"
+                  >Es un lenguaje de programación estructurado de propósito
+                  general</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" id="p1-b" name="p1" value="b" />
+                <label for="p1-b"
+                  >Es un programa destinado a la construcción de otros programas
+                  informáticos</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" id="p1-c" name="p1" value="c" />
+                <label for="p1-c"
+                  >Sistema de signos que utiliza una comunidad para comunicarse
+                  oralmente o por escrito</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-            <p class="pregunta">Qué es el lenguaje C?</p>
-            <input type="radio" name="preg1">
-            <label>Es un lenguaje de programación estructurado de propósito general</label><br>
-            <input type="radio" name="preg1">
-            <label>Es un programa destinado a la construcción de otros programas informáticos</label><br>
-            <input type="radio" name="preg1">
-            <label>Sistema de signos que utiliza una comunidad para comunicarse oralmente o por escrito</label><br>
+              <p class="pregunta">Quién lo desarrolló?</p>
+              <div>
+                <input type="radio" name="p2" id="p2-a" value="a" class="rc" />
+                <label for="p2-a">Dennis Ritchie</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p2" id="p2-b" value="b" />
+                <label for="p2-b">George Dantzig</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p2" id="p2-c" value="c" />
+                <label for="p2-c">Leonid Kantoróvich</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-            <p class="pregunta">Quién lo desarrolló?</p>
-            <input type="radio" name="preg2">
-            <label>Dennis Ritchie</label><br>
-            <input type="radio" name="preg2">
-            <label>George Dantzig</label><br>
-            <input type="radio" name="preg2">
-            <label>Leonid Kantoróvich</label><br>
+              <p class="pregunta">¿Los comentarios para qué son útiles?</p>
+              <div>
+                <input type="radio" name="p3" id="p3-a" value="a" class="rc" />
+                <label for="p3-a"
+                  >Para identificar los elementos principales de un
+                  programa</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p3" id="p3-b" value="b" />
+                <label for="p3-b">Para separar un programa de otro</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p3" id="p3-c" value="c" />
+                <label for="p3-c">Para ocultar información</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-            <p class="pregunta">¿Los comentarios para qué son útiles?</p>
-            <input type="radio" name="preg3">
-            <label>Para identificar los elementos principales de un programa</label><br>
-            <input type="radio" name="preg3">
-            <label>Para separar un programa de otro</label><br>
-            <input type="radio" name="preg3">
-            <label>Para ocultar información</label><br>
+              <p class="pregunta">¿Para qué es el tipo "int"?</p>
+              <div>
+                <input type="radio" name="p4" id="p4-a" value="a" />
+                <label for="p4-a">Para variables</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p4" id="p4-b" value="b" class="rc" />
+                <label for="p4-a">Para números enteros</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p4" id="p4-c" value="c" />
+                <label for="p4-a">Para números decimales</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-            <p class="pregunta">¿Para qué es el tipo "int"?</p>
-            <input type="radio" name="preg4">
-            <label>Para variables</label><br>
-            <input type="radio" name="preg4">
-            <label>Para números enteros</label><br>
-            <input type="radio" name="preg4">
-            <label>Para números decimales</label><br>
+              <p class="pregunta">
+                Qué palabra se puede emplear para declarar un carácter?
+              </p>
+              <div>
+                <input type="radio" name="p5" id="p5-a" value="a" />
+                <label for="p5-a">int</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p5" id="p5-b" value="b" />
+                <label for="p5-b">float</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p5" id="p5-c" value="c" class="rc" />
+                <label for="p5-c">char</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-            <p class="pregunta">Qué es el lenguaje C?</p>
-            <input type="radio" name="preg1">
-            <label>Es un lenguaje de programación estructurado de propósito general</label><br>
-            <input type="radio" name="preg1">
-            <label>Es un programa destinado a la construcción de otros programas informáticos</label><br>
-            <input type="radio" name="preg1">
-            <label>Sistema de signos que utiliza una comunidad para comunicarse oralmente o por escrito</label><br>
+              <p class="pregunta">que significa el operador "||" ?</p>
+              <div>
+                <input type="radio" name="p6" id="p6-a" value="a" />
+                <label for="p6-a">AND</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p6" id="p6-b" value="b" class="rc" />
+                <label for="p6-b">OR</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p6" id="p6-c" value="c" />
+                <label for="p6-c">XOR</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-            <p class="pregunta">Quién lo desarrolló?</p>
-            <input type="radio" name="preg2">
-            <label>Dennis Ritchie</label><br>
-            <input type="radio" name="preg2">
-            <label>George Dantzig</label><br>
-            <input type="radio" name="preg2">
-            <label>Leonid Kantoróvich</label><br>
+              <p class="pregunta">como es la sintaxis de for</p>
+              <div>
+                <input type="radio" name="p7" id="p7-a" value="a" class="rc" />
+                <label for="p7-a"
+                  >for(inicialización; expresión; progresión)
+                  proposición;</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p7" id="p7-b" value="b" />
+                <label for="p7-b"
+                  >for(inicialización; proposición; expresión)
+                  inicialización;</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p7" id="p7-c" value="c" />
+                <label for="p7-c"
+                  >for(expresión; inicialización; progresión)
+                </label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-            <input type="submit" value="Enviar" class="btn-enviar">
+              <p class="pregunta">Para qué se emplea el término return?</p>
+              <div>
+                <input type="radio" name="p8" id="p8-a" value="a" />
+                <label for="p8-a">Para finalizar un bucle</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p8" id="p8-b" value="b" />
+                <label for="p8-b">Para finalizar el programa</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p8" id="p8-c" value="c" class="rc" />
+                <label for="p8-c"
+                  >Para devolver un valor o una dirección al finalizar la
+                  ejecución de la función en la que se encuentra</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
-          </form>
+              <p class="pregunta">¿Qué significa declarar una variable?</p>
+              <div>
+                <input type="radio" name="p9" id="p9-a" value="a" />
+                <label for="p9-a">significa Describir una variable</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p9" id="p9-b" value="b" class="rc" />
+                <label for="p9-b"
+                  >Significa reservar en memoria espacio para almacenar el valor
+                  de dicha variable y asignarle un nombre</label
+                >
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p9" id="p9-c" value="c" />
+                <label for="p9-c">significa guardar información</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
 
+              <p class="pregunta">En que año fue creado el lenguaje c?</p>
+              <div>
+                <input type="radio" name="p10" id="p10-a" value="a" />
+                <label for="p10-a">1962</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="p10"
+                  id="p10-b"
+                  value="b"
+                  class="rc"
+                />
+                <label for="p10-b">1972</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+              <div>
+                <input type="radio" name="p10" id="p10-c" value="c" />
+                <label for="p10-c">1982</label>
+                <ion-icon
+                  name="checkmark-outline"
+                  class="correcto oculto"
+                ></ion-icon>
+                <ion-icon
+                  name="close-outline"
+                  class="incorrecto oculto"
+                ></ion-icon>
+              </div>
+
+              <input type="submit" value="Enviar" class="btn-enviar-prueba" />
+            </div>
+            <p class="resultado-prueba oculto"></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <ion-icon name="chevron-back-circle" class="btn-llm-mostrar"></ion-icon>
-  <ion-icon name="chevron-forward-circle" class="btn-llm-ocultar oculto"></ion-icon>
+    <ion-icon name="chevron-back-circle" class="btn-llm-mostrar"></ion-icon>
+    <ion-icon
+      name="chevron-forward-circle"
+      class="btn-llm-ocultar oculto"
+    ></ion-icon>
 
-  <div class="contenedor-llm oculto">
-    <div class="llm-cabecera">
-      <input type="text" placeholder="Escriba su pregunta" class="consulta-llm">
-      <ion-icon name="send" class="enviar-llm"></ion-icon>
-      <ion-icon name="mic" class="hablar-llm"></ion-icon>
+    <div class="contenedor-llm oculto">
+      <form id="llm-cabecera">
+        <input
+          id="pregunta"
+          type="text"
+          placeholder="Escriba su pregunta"
+          class="consulta-llm"
+          name="pregunta"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn-enviar-llm">
+          <ion-icon name="send" class="enviar-llm"></ion-icon>
+        </button>
+
+        <ion-icon name="mic" class="hablar-llm" id="btn-hablar-llm"></ion-icon>
+      </form>
+
+      <p id="llm-respuesta"></p>
     </div>
 
-    <p class="llm-respuesta"></p>
-  </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="module" src="curso.js"></script>
 
-  <script src="curso.js"></script>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
