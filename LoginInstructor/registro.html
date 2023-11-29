@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+        <link rel="stylesheet" href="../vistaPrincipal/principal.css">
+    </head>
+<body>
+
+    <header>
+        <div class="contenedor-header">
+            <div class="panel-izquierdo">
+                <a href="../vistaPrincipal/principal.html">
+                    <!-- <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px">  -->
+                    <a href="../vistaPrincipal/principal.html" class="logo">UNI STUDY HUB</a>  
+                </a>
+                
+                <nav>
+                    <ul class="lista1">
+                        <li> <a href="#">Inicio</a> </li> 
+                        <li> <a href="#">Curso</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="panel-derecho">
+                <input type="text" placeholder="Buscar" >
+                <button>  <a href="#">Iniciar Sesion</a>  </button>
+            </div>
+        </div>
+    </header>
+    <div class="divLoginRegistro">
+
+        <div id="logoInstructor">
+            <img src="./img/sello.png" alt="" width="40px">
+        </div>
+        <h2>Registro instructor</h2>
+
+        <form id="storeInstructorAccount" enctype="multipart/form-data">
+            <label for="account">Cuenta:</label><br>
+            <input type="text" id="account" name="account"><br>
+            <label for="password">Contrasena:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+    <script>
+        document.getElementById('storeInstructorAccount').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var account = document.getElementById('account').value;
+            var password = document.getElementById('password').value;
+
+            var data = { account: account, password: password };
+
+            fetch('http://localhost:3000/storeInstructor', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
+        });
+
+    </script>
+
+</body>
+
+</html>

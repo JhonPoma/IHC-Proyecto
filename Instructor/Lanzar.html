@@ -1,31 +1,37 @@
 <html>
+
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .row {
-            width: 95%; /* Adjust the width as needed */
-            height: 25%; /* Adjust the height as needed */
-            margin: 10px; /* Adjust the margin as needed */
-            display: inline-block; /* Display the containers inline */
-            border: 1px solid #ccc; /* Add a border for a box-like appearance */
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-            background-color: #f9f9f9; /* Set a background color */
-            padding: 10px; /* Add padding inside the container */
+            width: 95%;
+            /* Adjust the width as needed */
+            height: 25%;
+            /* Adjust the height as needed */
+            margin: 10px;
+            /* Adjust the margin as needed */
+            display: inline-block;
+            /* Display the containers inline */
+            border: 1px solid #ccc;
+            /* Add a border for a box-like appearance */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            /* Add a shadow for depth */
+            background-color: #f9f9f9;
+            /* Set a background color */
+            padding: 10px;
+            /* Add padding inside the container */
         }
     </style>
 </head>
 
 <body>
     <script>
- 
+
         window.onload = function () {
 
-            console.log("hola");
 
             // Get course objects from local storage
             var cursos = JSON.parse(localStorage.getItem('cursos'));
-            console.log(cursos);
-            console.log(cursos.length);
 
             // For each course object
             for (var i = 0; i < cursos.length; i++) {
@@ -34,11 +40,6 @@
                 // Create a new row div
                 var rowDiv = document.createElement('div');
                 rowDiv.className = 'row';
-
-                // rowDiv.style.margin = '10px'; // Add margin
-                // rowDiv.style.height = '26%';
-                // rowDiv.style.width = '100%';
-
 
                 // Create and append rectangle div
                 var rectangleDiv = document.createElement('div');
@@ -110,12 +111,7 @@
                 var gestionarContenidoButton = document.createElement('button');
                 gestionarContenidoButton.className = 'gestionarContenido';
                 gestionarContenidoButton.textContent = 'Gestionar';
-                // gestionarContenidoButton.onclick = function () {
-                //     var courseName = curso.nombre; // replace this with the actual course name
-                //     window.location.href = `http://localhost:3000/create_course_page/${courseName}`;
-                //     window.open(`http://localhost:3000/create_course_page/${courseName}`);
 
-                // };
                 (function (courseName) {
                     gestionarContenidoButton.onclick = function () {
                         window.location.href = `http://localhost:3000/create_course_page/${courseName}`;
@@ -153,7 +149,7 @@
                 // Append the icon to the button
                 deleteButton.appendChild(icon);
 
-                deleteButton.onclick = (function (index) {
+                deleteButton.onclick = (function (courseName, index) {
                     return function () {
                         // Remove the div from the document
                         this.parentNode.parentNode.removeChild(this.parentNode);
@@ -163,17 +159,29 @@
 
                         // Update the localStorage
                         localStorage.setItem('cursos', JSON.stringify(cursos));
-                    };
-                })(i);
-                rowDiv.appendChild(deleteButton);
-                // Append row div to body
-                document.body.appendChild(rowDiv);
-                console.log("hola9");
-            }
 
-            console.log("hola2");
+                        // Send a delete request to the server to delete the corresponding course page
+                        fetch(`http://localhost:3000/delete_course_page/${courseName}`, {
+                            method: 'DELETE',
+                        })
+                            .then(response => response.text())
+                            .then(data => console.log(data))
+                            .catch((error) => {
+                                console.error('Error:', error);
+                            });
+                    };
+                })(curso.nombre, i);
+
+
+            rowDiv.appendChild(deleteButton);
+            // Append row div to body
+            document.body.appendChild(rowDiv);
+        }
+
+        console.log("hola2");
         }
     </script>
 
 </body>
+
 </html>
