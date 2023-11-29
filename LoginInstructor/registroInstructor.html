@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../vistaPrincipal/principal.css">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="panel-izquierdo">
+                <a href="../vistaPrincipal/principal.html">
+                    <!-- <img id="logo" src="../vistaPrincipal/logo/logo2.png" alt="Logo" width="100px">  -->
+                    <a href="../vistaPrincipal/principal.html" class="logo">UNI STUDY HUB</a>
+                </a>
+
+                <nav>
+                    <ul class="lista1">
+                        <li> <a href="../vistaPrincipal/principal.html">Inicio</a> </li>
+                        <li> <a href="#">Curso</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="panel-derecho">
+                <input type="text" placeholder="Buscar">
+                <button> <a href="#">Iniciar Sesion</a> </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="divLoginRegistro">
+        <div id="logoInstructor">
+            <img src="./img/sello.png" alt="" width="40px">
+        </div>
+
+        <h2> Solicitud</h2>
+
+        <form id="registerForm" enctype="multipart/form-data">
+            <label for="name">Nombre</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="career">Carrera</label><br>
+            <input type="text" id="career" name="career"><br>
+            <label for="description">Descripcion</label><br>
+            <textarea id="description" name="description"></textarea><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="certificate">Certificado</label><br>
+            <input type="file" id="certificate" name="certificate"><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+    </div>
+
+
+
+
+    <!--=================================================================================================================-->
+    <footer>
+        <div class="contenedor-header">
+            <div class="panel-izquierdo">
+                <nav>
+                    <ul class="lista1">
+                        <li> <a href="#" style="color: white;">Sobre Nosotros</a> </li>
+                        <li> <a href="#" style="color: white;">Contactenos</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </footer>
+
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var formData = new FormData(event.target);
+
+            fetch('http://localhost:3000/register', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+
+</html>

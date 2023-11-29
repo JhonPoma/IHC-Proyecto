@@ -93,17 +93,14 @@
 <button type="button" onclick="submitForms()">Crear Curso</button>
 
 <script>
-    console.log("hola3");
 
     function submitForms() {
-        console.log("hola4");
 
         // Get form data
         var nombre = document.getElementById('nombre').value;
         var idioma = document.getElementById('idioma').value;
         var descripcion = document.getElementById('descripcion').value;
         var categoria = document.getElementById('categoria').value;
-        console.log("hola5");
 
         var objetivos = document.getElementById('objetivos').value;
 
@@ -115,14 +112,7 @@
             categoria: categoria,
             objetivos: objetivos
         };
-        // console.log("hola6");
-
-        // // Store course object in local storage
-        // localStorage.setItem('curso', JSON.stringify(curso));
-        // console.log("hola7");
-
-
-        // }
+       
         // Get the existing cursos array from local storage
         var cursos = JSON.parse(localStorage.getItem('cursos')) || [];
 
@@ -131,6 +121,5 @@
 
         // Store the updated cursos array in local storage
         localStorage.setItem('cursos', JSON.stringify(cursos));
-        console.log("hola7");
     }
 </script>

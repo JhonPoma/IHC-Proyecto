@@ -27,6 +27,8 @@ $validaSesion.addEventListener("click", async(e)=>{
     //alert("jhonFronted");
     if(response.ok){
       window.location.href="../cuentaUsuario/cuentaUsuario.html";
+      // localhost:8000/cuentaUsuario/cuentaUsuario.html
+      // window.location.href="http://localhost:8000/cuentaUsuario/cuentaUsuario.html";
     }else{
       //alert("credenciales incorrectAss-FRONTED");
       $textCorreo.value = "";

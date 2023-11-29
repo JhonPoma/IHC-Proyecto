@@ -1,46 +1,70 @@
 
-// const btnIniciarSesionInstructor = document.getElementById("btnValidaSesion");
 
-// btnIniciarSesionInstructor.addEventListener("click",e=>{
-//     window.location.href = "../LoginInstructor/principalInstructor.html";
+// document.querySelector('form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     var correo = document.querySelector('#correo').value;
+//     var pass = document.querySelector('#pass').value;
+
+//     console.log(correo); // Corrected line
+
+//     fetch('http://localhost:3000/login', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({ correo: correo, pass: pass }),
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         if (data.success) {
+//             // login successful, redirect to dashboard
+//             window.location.href = "../LoginInstructor/principalInstructor.html";
+//         } else {
+//             alert('usuario no registrado');
+//         }
+//     })
+//     .catch((error) => {
+//         console.error('Error:', error);
+//     });
 // });
 
+// document.getElementById('loginInstr').addEventListener('submit', function(event) {
+//     event.preventDefault();
 
-const d = document;
-const $loginForm = d.getElementById('login-form');
-const $validaSesion = d.getElementById('btnValidaSesion');
-const $textCorreo = d.getElementById('correo');
-const $textPass = d.getElementById('pass');
+//     var account = document.getElementById('account').value;
+//     var password = document.getElementById('password').value;
 
+//     var data = { account: account, password: password };
 
-$validaSesion.addEventListener("click", async(e)=>{
-  e.preventDefault();
-  const correo = $textCorreo.value;
-  const pass = $textPass.value;
+//     fetch('http://localhost:3000/login', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//     })
+//     .then(response => response.text())
+//     .then(data => alert(data))
+//     .catch(error => console.error('Error:', error));
+// });
 
-  //Solicitud POST al servidor
-  try{
-    const response = await fetch('http://localhost:5500/validar',{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json",
-      },
-      body: JSON.stringify({correo,pass}),
-    });
-    //alert("jhonFronted");
-    if(response.ok){
-      window.location.href="../LoginInstructor/principalInstructor.html";
-    }else{
-      //alert("credenciales incorrectAss-FRONTED");
-      $textCorreo.value = "";
-      $textPass.value = "";
-    }
-  }
-  catch (error){
-    console.error(error);
-  }
-})
+document.getElementById('loginInstr').addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    var correo = document.getElementById('account').value;
+    var pass = document.getElementById('password').value;
 
+    var data = { correo: correo, pass: pass };
 
-
+    fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.text())
+    .then(data => alert(data))
+    .catch(error => console.error('Error:', error));
+});

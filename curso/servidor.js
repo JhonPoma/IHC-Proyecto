@@ -6,7 +6,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,7 +31,8 @@ app.post("/procesar-pregunta", (req, res) => {
   // Configura tu clave de API de OpenAI
   //const apiKey = "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";
   //const apiKey = "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";
-  const apiKey = "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";
+  // const apiKey = "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";
+  const apiKey = "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";
 
   // Configura la URL de la API de OpenAI
   const apiUrl = "https://api.openai.com/v1/chat/completions";

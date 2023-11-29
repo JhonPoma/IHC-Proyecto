@@ -5,20 +5,40 @@ const { Client } = require('pg');
 const app = express();
 const PORT =5500;
 
-app.use(cors());
-const corsOptions = {
-    origin: 'http://127.0.0.1:5500',
-    optionsSuccessStatus: 200,
-  };  
-app.use(cors(corsOptions));
+// app.use(cors());
+// const corsOptions = {
+//     // origin: 'http://127.0.0.1:5500',
+//     origin: 'http://127.0.0.1:8000',
+
+//     optionsSuccessStatus: 200,
+//   };  
+// app.use(cors(corsOptions));
   
-const client = new Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'loginIHC',
-  password: 'pomita123',
-  port: 5432, 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:8000'); // replace this with your frontend application's origin
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
 });
+
+
+
+
+
+// const client = new Client({
+//   user: 'postgres',
+//   host: 'localhost',
+//   database: 'PostgreSQL 16',
+//   password: '1234',
+//   port: 5432, 
+// });
+const client = new Client({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'instructor',
+    password: '1234',
+    port: 5432, 
+  });
 //console.log("jhonnnnnnnnnn");
 client.connect();
 
