@@ -161,6 +161,23 @@
     
 
 
+    <!-- =============   CAHTBOT ======================================================-->
+    <div id="chatbot-contenedor">
+        
+            <img id="chatbot-image" src="../CursoRecomendados/img/chatbot.png" alt="Chatbot" >
+  
+        <div id="chatbot-llm">
+            <input style="width: 180px" type="text" placeholder="Escribe tu Duda">
+            <ion-icon name="send" style="color: black; position: relative; top: 3.5px; "></ion-icon>
+            <div id="charbot-respuesta" style="border: red solid; height: 150px;">
+                jkho skdjs
+            </div>    
+        </div>
+    </div>
+
+
+
+
     <footer>
         <div class="contenedor-header">
             <div class="panel-izquierdo">
@@ -190,6 +207,14 @@
             //window.location.href = '../misCursos/navCurso.html';
 
         });
+
+        /*========= CHATBOT ===============*/
+        document.getElementById('chatbot-image').addEventListener('click', function() {
+        //alert("hola");
+            var llmContainer = document.getElementById('chatbot-llm');
+            llmContainer.style.display = (llmContainer.style.display === 'none') ? 'block' : 'none';
+        });
+
     </script>
 
 

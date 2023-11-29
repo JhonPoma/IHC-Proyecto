@@ -49,3 +49,4 @@ document.getElementById('comprarAhoraBtn').addEventListener('click', function() 
 
 
 
+

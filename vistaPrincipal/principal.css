@@ -363,6 +363,31 @@ footer{
 
 
 
+/*======== CHAT BOT ==============*/
 
+#chatbot-contenedor {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    display: flex;
+    align-items: flex-end;
+}
+
+#chatbot-image {
+    width: 100px; 
+    height: auto; 
+    cursor: pointer;
+}
+
+#chatbot-llm {
+    display: none; /* Oculta el contenedor del LLM inicialmente */
+    border: #14519c solid;
+    border-radius: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 120px;
+    width: 210px;
+    height: 210px;
+}
 
 
