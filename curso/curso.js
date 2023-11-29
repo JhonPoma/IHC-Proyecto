@@ -236,3 +236,45 @@ $(document).ready(function () {
     });
   });
 });
+
+// voz a texto
+document.addEventListener("DOMContentLoaded", () => {
+  const btnHablarLLM = document.getElementById("btn-hablar-llm");
+  const preguntaLLM = document.getElementById("pregunta");
+
+  const recognition = new (window.SpeechRecognition ||
+    window.webkitSpeechRecognition ||
+    window.mozSpeechRecognition ||
+    window.msSpeechRecognition)();
+  recognition.lang = "es-ES"; // Establece el idioma a español
+
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    //preguntaLLM.value = transcript;
+
+    // Realizar una solicitud al servidor
+    $.ajax({
+      type: "POST",
+      url: "/procesar-pregunta", // Puedes ajustar la ruta del servidor
+      data: { pregunta: transcript },
+      success: function (respuesta) {
+        // Mostrar la respuesta en el párrafo
+        $("#llm-respuesta").text(respuesta);
+        preguntaLLM.value = "";
+      },
+      error: function () {
+        console.error("Error al procesar la pregunta");
+      },
+    });
+  };
+
+  recognition.onerror = (event) => {
+    preguntaLLM.value = "Error al reconocer la voz.";
+    console.error(event.error);
+  };
+
+  btnHablarLLM.addEventListener("click", () => {
+    recognition.start();
+    preguntaLLM.value = "Escuchando...";
+  });
+});
